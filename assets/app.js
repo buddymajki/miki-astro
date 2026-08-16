@@ -1015,8 +1015,9 @@ function showSlide() {
     item.preview ? t("previewNote") : "",
   ].filter(Boolean).map(esc).join(' <i class="dot"></i> ');
 
-  $("#vwPrev").disabled = vw.seqPos <= 0;
-  $("#vwNext").disabled = vw.seqPos >= vw.seq.length - 1;
+  // körbeér, ezért a nyilak sosem tiltottak
+  $("#vwPrev").disabled = vw.seq.length < 2;
+  $("#vwNext").disabled = vw.seq.length < 2;
 
   $("#vwRail").innerHTML = vw.items.map((it, i) => {
     const cls = i === vw.index ? "on" : "";
@@ -1108,12 +1109,39 @@ function buildSequence() {
   return visibleObjects().flatMap((o) => o.items.map((_it, i) => ({ id: o.id, i })));
 }
 
+/** Lapozás a teljes album sorrendjében – az utolsó után az elsőre ér körbe. */
 function step(delta) {
-  const pos = vw.seqPos + delta;
-  if (pos < 0 || pos >= vw.seq.length) return;
+  if (!vw.seq.length) return;
+  const pos = (vw.seqPos + delta + vw.seq.length) % vw.seq.length;
   const next = vw.seq[pos];
-  // lapozás ne szemetelje tele az előzményeket, de az összehasonlítás maradjon bekapcsolva
+  // lapozás ne szemetelje tele az előzményeket, de a mód maradjon meg
   gotoShot(next.id, next.i, true, vw.mode);
+}
+
+/** Ugrás a következő/előző objektum első képére – szintén körbeér. */
+function stepObject(delta) {
+  const list = visibleObjects();
+  if (list.length < 2) return;
+  const at = list.findIndex((o) => o.id === vw.obj?.id);
+  const next = list[((at < 0 ? 0 : at) + delta + list.length) % list.length];
+  gotoShot(next.id, 0, true, vw.mode);
+}
+
+/** Egy befejezett húzásból eldönti, mi történjen.
+    Vízszintes = kép a soron belül, függőleges = másik objektum.
+    Igazzal tér vissza, ha lapozott – ilyenkor nincs nagyítás. */
+function swipeAction(dx, dy, width, height) {
+  const minX = Math.max(40, width * 0.07);
+  const minY = Math.max(55, height * 0.12);
+  if (Math.abs(dx) > minX && Math.abs(dx) > Math.abs(dy) * 1.4) {
+    step(dx < 0 ? 1 : -1);                   // balra húzás = következő kép
+    return true;
+  }
+  if (Math.abs(dy) > minY && Math.abs(dy) > Math.abs(dx) * 1.4) {
+    stepObject(dy < 0 ? 1 : -1);             // felfelé húzás = következő objektum
+    return true;
+  }
+  return false;
 }
 
 async function shellAction(action) {
@@ -1288,11 +1316,7 @@ function wire() {
     if (g.panning) return;
 
     const dx = e.clientX - g.x, dy = e.clientY - g.y;
-    const minSwipe = Math.max(40, stage.clientWidth * 0.07);
-    if (Math.abs(dx) > minSwipe && Math.abs(dx) > Math.abs(dy) * 1.4) {
-      step(dx < 0 ? 1 : -1);                 // balra húzás = következő kép
-      return;
-    }
+    if (swipeAction(dx, dy, stage.clientWidth, stage.clientHeight)) return;
     if (!g.moved && g.onImage) zoomAt(e.clientX, e.clientY, vw.scale > 1.01 ? 1 : 2.8);
   });
 
@@ -1306,6 +1330,25 @@ function wire() {
     if (e.target === stage) dismissViewer();   // a kép melletti üres részre kattintás = bezárás
   });
 
+  /* Az infópanelen is lehet vízszintesen lapozni. Függőlegesen nem nyúlunk
+     bele: ott a szöveg görgetése a fontos. */
+  const side = $("#vwSide");
+  let sideStart = null;
+
+  side.addEventListener("pointerdown", (e) => {
+    sideStart = e.target.closest("a, button") ? null
+              : { x: e.clientX, y: e.clientY };
+  });
+  side.addEventListener("pointerup", (e) => {
+    if (!sideStart) return;
+    const dx = e.clientX - sideStart.x, dy = e.clientY - sideStart.y;
+    sideStart = null;
+    const minX = Math.max(40, side.clientWidth * 0.07);
+    if (Math.abs(dx) > minX && Math.abs(dx) > Math.abs(dy) * 1.4) step(dx < 0 ? 1 : -1);
+  });
+  side.addEventListener("pointercancel", () => { sideStart = null; });
+  side.addEventListener("pointerleave", () => { sideStart = null; });
+
   window.addEventListener("resize", () => { if (vw.scale > 1.01) applyZoom(); });
 
   // --- billentyűzet
@@ -1316,6 +1359,8 @@ function wire() {
       if (e.key === "Escape") { dismissViewer(); e.preventDefault(); }
       else if (e.key === "ArrowLeft") step(-1);
       else if (e.key === "ArrowRight") step(1);
+      else if (e.key === "ArrowUp") { stepObject(-1); e.preventDefault(); }
+      else if (e.key === "ArrowDown") { stepObject(1); e.preventDefault(); }
       else if (e.key === "0") resetZoom();
       else if (e.key === "c" || e.key === "C") setMode(vw.mode === "compare" ? vw.prefMode : "compare");
       else if (e.key === "i" || e.key === "I") setMode(vw.mode === "info" ? "photo" : "info");

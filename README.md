@@ -121,8 +121,17 @@ szöveg**.
 3. Egy képre kattintva teljes képernyős nézegető nyílik – **csak a kép**,
    levágás nélkül. Az **Infó** gomb (`I`) hozza elő mellé a leírást.
 
-A `←` `→` **végiglapoz az egész albumon**: az egyik objektum utolsó képe után
-a következő objektum első képére lép, a beállított rendezés sorrendjében.
+A lapozás kétirányú, mint egy telefonos galériában:
+
+- **Vízszintesen** (nyilak vagy swipe) végiglapozol az egész albumon – az
+  egyik objektum utolsó képe után a következő objektum első képére lép, a
+  legvégén pedig körbeér az elsőre.
+- **Függőlegesen** (swipe fel/le, vagy `↑` `↓`) egyben ugrasz a következő
+  vagy előző objektumra – így nem kell végigpörgetni például a Hold
+  tizenkilenc felvételét.
+
+Infó módban a leírás panelen is lehet vízszintesen lapozni; függőlegesen
+ott a szöveg görgetése marad.
 
 ## Felvételi adatok (amatőrcsillagászoknak)
 
@@ -231,8 +240,8 @@ A nagy nézet URL-je megosztható és elmenthető:
 |---|---|
 | `/` | ugrás a keresőbe |
 | kattintás egy felvételre | teljes képernyős nézegető |
-| `←` `→` | lapozás – az objektumok között is |
-| **swipe balra / jobbra** | lapozás érintőképernyőn (mindhárom módban) |
+| `←` `→` vagy **swipe balra / jobbra** | következő / előző kép – az objektumok között is, a végén körbeér |
+| `↑` `↓` vagy **swipe fel / le** | ugrás a következő / előző objektumra |
 | `I` | leírás ki/be a kép mellett |
 | `C` | összehasonlító kép |
 | görgetés / kattintás | nagyítás, `0` = alaphelyzet |
