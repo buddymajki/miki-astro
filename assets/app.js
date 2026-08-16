@@ -837,12 +837,16 @@ function applyZoom() {
   vw.tx = Math.min(maxX, Math.max(-maxX, vw.tx));
   vw.ty = Math.min(maxY, Math.max(-maxY, vw.ty));
   vw.img.style.transform = `translate(${vw.tx}px, ${vw.ty}px) scale(${vw.scale})`;
-  vw.img.classList.toggle("zoomed", vw.scale > 1.01);
+  const zoomed = vw.scale > 1.01;
+  vw.img.classList.toggle("zoomed", zoomed);
+  // nagyítva a függőleges gesztus is a képé, ne a böngészőé
+  $("#vwStage").classList.toggle("zoom-active", zoomed);
 }
 
 function resetZoom() {
   vw.scale = 1; vw.tx = 0; vw.ty = 0;
   if (vw.img) { vw.img.style.transform = ""; vw.img.classList.remove("zoomed"); }
+  $("#vwStage").classList.remove("zoom-active");
 }
 
 function zoomAt(clientX, clientY, next) {
@@ -1244,30 +1248,63 @@ function wire() {
     zoomAt(e.clientX, e.clientY, vw.scale * (e.deltaY < 0 ? 1.22 : 1 / 1.22));
   }, { passive: false });
 
-  let drag = null;
+  /* Egy gesztus háromféle lehet:
+     – nagyítva húzás   = a kép mozgatása,
+     – vízszintes húzás = lapozás (mobilon swipe, mindhárom módban),
+     – rövid koppintás  = nagyítás ki/be.                                   */
+  let gesture = null;
+
   stage.addEventListener("pointerdown", (e) => {
-    if (!vw.img || e.target !== vw.img || vw.compare) return;
-    drag = { x: e.clientX, y: e.clientY, tx: vw.tx, ty: vw.ty, moved: false };
-    vw.img.setPointerCapture(e.pointerId);
+    if (e.button > 0) return;
+    if (e.target.closest("video, .vw-nav")) return;   // videóvezérlők és a nyilak maradjanak
+    gesture = {
+      x: e.clientX, y: e.clientY, tx: vw.tx, ty: vw.ty,
+      onImage: e.target === vw.img,
+      panning: vw.scale > 1.01 && e.target === vw.img,
+      moved: false,
+    };
+    try { stage.setPointerCapture(e.pointerId); } catch (_) {}
   });
+
   stage.addEventListener("pointermove", (e) => {
-    if (!drag) return;
-    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-    if (Math.abs(dx) + Math.abs(dy) > 4) drag.moved = true;
-    if (vw.scale > 1.01) {
+    if (!gesture) return;
+    const dx = e.clientX - gesture.x, dy = e.clientY - gesture.y;
+    if (Math.abs(dx) + Math.abs(dy) > 6) gesture.moved = true;
+    if (gesture.panning) {
       vw.img.classList.add("dragging");
-      vw.tx = drag.tx + dx; vw.ty = drag.ty + dy;
+      vw.tx = gesture.tx + dx;
+      vw.ty = gesture.ty + dy;
       applyZoom();
     }
   });
+
   stage.addEventListener("pointerup", (e) => {
-    if (!drag) return;
-    const wasDrag = drag.moved;
-    drag = null;
+    if (!gesture) return;
+    const g = gesture;
+    gesture = null;
     if (vw.img) vw.img.classList.remove("dragging");
-    if (!wasDrag) zoomAt(e.clientX, e.clientY, vw.scale > 1.01 ? 1 : 2.8);
+    vw.swallowClick = g.moved;               // húzás után ne záruljon be a nézegető
+
+    if (g.panning) return;
+
+    const dx = e.clientX - g.x, dy = e.clientY - g.y;
+    const minSwipe = Math.max(40, stage.clientWidth * 0.07);
+    if (Math.abs(dx) > minSwipe && Math.abs(dx) > Math.abs(dy) * 1.4) {
+      step(dx < 0 ? 1 : -1);                 // balra húzás = következő kép
+      return;
+    }
+    if (!g.moved && g.onImage) zoomAt(e.clientX, e.clientY, vw.scale > 1.01 ? 1 : 2.8);
   });
-  stage.addEventListener("pointercancel", () => { drag = null; });
+
+  stage.addEventListener("pointercancel", () => {
+    gesture = null;
+    if (vw.img) vw.img.classList.remove("dragging");
+  });
+
+  stage.addEventListener("click", (e) => {
+    if (vw.swallowClick) { vw.swallowClick = false; return; }
+    if (e.target === stage) dismissViewer();   // a kép melletti üres részre kattintás = bezárás
+  });
 
   window.addEventListener("resize", () => { if (vw.scale > 1.01) applyZoom(); });
 

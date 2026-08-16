@@ -232,6 +232,7 @@ A nagy nézet URL-je megosztható és elmenthető:
 | `/` | ugrás a keresőbe |
 | kattintás egy felvételre | teljes képernyős nézegető |
 | `←` `→` | lapozás – az objektumok között is |
+| **swipe balra / jobbra** | lapozás érintőképernyőn (mindhárom módban) |
 | `I` | leírás ki/be a kép mellett |
 | `C` | összehasonlító kép |
 | görgetés / kattintás | nagyítás, `0` = alaphelyzet |
