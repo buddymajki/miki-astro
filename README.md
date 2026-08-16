@@ -4,6 +4,44 @@ Lokális, offline működő nézegető a saját asztrofotóidhoz és videóidhoz
 Objektumonként csoportosítja az anyagot, ad hozzá egy rövid szakmai adatlapot,
 és ha van net, élő Wikipédia-összefoglalót is húz mellé.
 
+## Két üzemmód
+
+| | Helyi (`start.bat`) | Publikált (GitHub Pages) |
+|---|---|---|
+| Címe | `http://127.0.0.1:8765` | https://buddymajki.github.io/miki-astro/ |
+| Képek | eredetik + WebP előnézetek | csak a WebP előnézetek |
+| Videók | igen | nem (túl nagyok a repóhoz) |
+| Újraolvasás gomb | igen | automatikusan eltűnik |
+| Eredeti / Mappa gomb | igen | automatikusan eltűnik |
+
+A felület indításkor lekérdezi az `/api/ping` végpontot. Ha válaszol, helyi
+módban fut; ha nem (statikus tárhely), magától elrejti azokat a gombokat,
+amiknek ott nincs értelmük, és kihagyja a nem publikált fájlokat. Nincs külön
+build, ugyanaz a kód fut mindkét helyen.
+
+### Publikálás
+
+Dupla kattintás a **`publish.bat`** fájlra. Ez beolvassa az új képeket,
+legenerálja a WebP változatokat, commitol és feltölt. Pár perc múlva frissül
+a publikus oldal.
+
+A `start.bat` **nem** publikál – az csak megnyitja helyben az albumot.
+
+### Mi kerül fel és mi nem
+
+| | |
+|---|---|
+| Felkerül | kód, objektum-adatbázis, felvételi adatok, `thumbs/` WebP (~9 MB) |
+| Nem kerül fel | `DONE/` eredetik (~830 MB), videók (~146 MB) |
+
+Az eredetiket nincs értelme feltölteni: a nagy nézet úgyis a 2400 px-es
+előnézetet mutatja, és a GitHub 100 MB felett nem is fogadna el fájlt (a
+legnagyobb PNG-d 156 MB). A WebP ugyanazt a minőséget 58%-kal kisebb fájlban
+adja, mint a JPEG – ezért fér el az egész képanyag 9 MB-ban.
+
+Ha a videókat is meg akarod osztani, töltsd fel őket YouTube-ra vagy pCloudra,
+és tegyél linket az objektum leírásába.
+
 ## Indítás
 
 Dupla kattintás a **`start.bat`** fájlra.

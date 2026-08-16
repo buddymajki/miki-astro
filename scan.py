@@ -49,6 +49,14 @@ THUMB_W = 760          # a kartyakon lathato kis kep
 PREVIEW_W = 2400       # a nezegetoben megnyilo kozepes kep
 BLUR_W = 20            # base64 elmosott helykitolto
 
+# A generalt kepek WebP-ben keszulnek: ugyanaz a minoseg ~58%-kal kisebb
+# fajlban, mint JPEG-ben - igy a publikus oldal is elfer a repoban.
+ASSET_EXT = ".webp"
+ASSET_FORMAT = "WEBP"
+ASSET_VERSION = "webp1"       # a gyorsitotar kulcsaban: formatumvaltasnal ujragenerlas
+THUMB_QUALITY = 78
+PREVIEW_QUALITY = 80
+
 # Vizjel: a data/logo.png rakerul a GENERALT kepekre (bebyeg + elonezet).
 # Az eredeti fajlokhoz a program soha nem nyul hozza.
 LOGO_PATH = os.path.join(DATA_DIR, "logo.png")
@@ -554,8 +562,8 @@ def build_thumbs(src, thumb_path, preview_path, Image):
     preview = resize_to_width(image, PREVIEW_W, Image)
     thumb = resize_to_width(preview, THUMB_W, Image)   # meg vizjel nelkul, hogy ne duplazodjon
 
-    stamp_logo(preview, Image).save(preview_path, "JPEG", quality=88, optimize=True, progressive=True)
-    stamp_logo(thumb, Image).save(thumb_path, "JPEG", quality=82, optimize=True, progressive=True)
+    stamp_logo(preview, Image).save(preview_path, ASSET_FORMAT, quality=PREVIEW_QUALITY, method=5)
+    stamp_logo(thumb, Image).save(thumb_path, ASSET_FORMAT, quality=THUMB_QUALITY, method=5)
 
     return width, height, accent, blur
 
@@ -626,10 +634,10 @@ def scan(force=False, quiet=False):
         is_video = ext in VIDEO_EXT
         total_bytes += stat.st_size
 
-        signature = f"{rel}|{int(stat.st_mtime)}|{stat.st_size}|{logo_sig}"
+        signature = f"{rel}|{int(stat.st_mtime)}|{stat.st_size}|{logo_sig}|{ASSET_VERSION}"
         digest = hashlib.md5(signature.encode("utf-8")).hexdigest()[:16]
-        thumb_name = digest + "_t.jpg"
-        preview_name = digest + "_p.jpg"
+        thumb_name = digest + "_t" + ASSET_EXT
+        preview_name = digest + "_p" + ASSET_EXT
         thumb_path = os.path.join(THUMB_DIR, thumb_name)
         preview_path = os.path.join(THUMB_DIR, preview_name)
 
@@ -664,6 +672,9 @@ def scan(force=False, quiet=False):
         if is_video:
             n_videos += 1
             item["accent"] = "#7c8cff"
+            # A videok tul nagyok a repohoz, ezert a publikalt oldalon nem
+            # jelennek meg - a helyi dashboardon viszont igen.
+            item["localOnly"] = True
         else:
             n_images += 1
             cached = cache.get(signature)
@@ -694,7 +705,7 @@ def scan(force=False, quiet=False):
     # elavult bebyegek takaritasa
     removed = 0
     for name in os.listdir(THUMB_DIR):
-        if name.endswith((".jpg", ".jpeg")) and name not in keep_thumbs:
+        if name.endswith((".jpg", ".jpeg", ".webp")) and name not in keep_thumbs:
             try:
                 os.remove(os.path.join(THUMB_DIR, name))
                 removed += 1

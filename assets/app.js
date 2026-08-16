@@ -8,6 +8,21 @@
 
 const SERVED = location.protocol === "http:" || location.protocol === "https:";
 
+/* Helyben fut (serve.py) vagy publikált statikus oldal? A helyi szerveren van
+   /api/ping; a GitHub Pages-en nincs, ott elrejtjük a helyi funkciókat. */
+let IS_LOCAL = false;
+
+async function detectLocal() {
+  if (!SERVED) return false;
+  try {
+    const res = await fetch("api/ping", { cache: "no-store" });
+    if (!res.ok) return false;
+    return (await res.json()).local === true;
+  } catch (_) {
+    return false;
+  }
+}
+
 /* --- nyelvek / i18n ------------------------------------------------------ */
 
 const STRINGS = {
@@ -331,18 +346,36 @@ async function loadAll() {
   for (const o of (objects?.objects || [])) state.db.set(o.id.toUpperCase(), o);
 }
 
-/** Egyesíti a fájlrendszerből jött csoportot az adatbázis-bejegyzéssel. */
+/** Egyesíti a fájlrendszerből jött csoportot az adatbázis-bejegyzéssel.
+    A csak helyben elérhető elemeket (videók) a publikált oldalon kihagyjuk,
+    és a darabszámot is újraszámoljuk, hogy ne ígérjünk többet a valóságnál. */
 function merged(group) {
   const info = state.db.get(group.id.toUpperCase()) || null;
+  const items = IS_LOCAL ? group.items : group.items.filter((it) => !it.localOnly);
   return {
     ...group,
+    items,
+    count: items.length,
+    bytes: items.reduce((sum, it) => sum + (it.bytes || 0), 0),
     info,
     name: info ? L(info.name) : spaced(group.id),
     category: info?.category || "other",
   };
 }
 
-const allObjects = () => (state.library.objects || []).map(merged);
+const allObjects = () =>
+  (state.library.objects || []).map(merged).filter((o) => o.count > 0);
+
+/** A statisztikát a ténylegesen látható elemekből számoljuk, hogy a
+    publikált oldal ne ígérjen több felvételt, mint amennyi elérhető rajta. */
+function visibleStats() {
+  const objects = allObjects();
+  return {
+    objects: objects.length,
+    files: objects.reduce((n, o) => n + o.count, 0),
+    bytes: objects.reduce((n, o) => n + o.bytes, 0),
+  };
+}
 
 function visibleObjects() {
   const q = state.query.trim().toLowerCase();
@@ -537,7 +570,7 @@ function renderSidebar() {
     </button>`).join("")
     : `<div class="note" style="padding:12px 8px">${esc(t("noResults"))}</div>`;
 
-  const s = state.library.stats || {};
+  const s = visibleStats();
   $("#sidefoot").innerHTML = `
     <div><b>${s.objects ?? 0}</b> ${esc(t("footObjects"))} &middot; <b>${s.files ?? 0}</b> ${esc(t("footShots"))}</div>
     <div><b>${bytes(s.bytes || 0)}</b> ${esc(t("footData"))}</div>
@@ -563,7 +596,7 @@ function renderStatic() {
 
 function renderHome() {
   const list = visibleObjects();
-  const s = state.library.stats || {};
+  const s = visibleStats();
 
   $("#content").innerHTML = `
     <section class="hero">
@@ -1053,7 +1086,7 @@ function step(delta) {
 async function shellAction(action) {
   const item = currentItem();
   if (!item) return;
-  if (!SERVED) { window.open(url(item.file), "_blank"); return; }
+  if (!IS_LOCAL) { window.open(url(item.file), "_blank"); return; }
   try {
     const res = await fetch(`/api/${action}?p=${encodeURIComponent(item.file)}`);
     const j = await res.json();
@@ -1162,7 +1195,6 @@ function wire() {
   $("#vwOpen").addEventListener("click", () => shellAction("open"));
   $("#vwReveal").addEventListener("click", () => shellAction("reveal"));
   $("#vwCompare").addEventListener("click", toggleCompare);
-  if (!SERVED) $("#vwReveal").style.display = "none";
 
   $("#vwInfo").addEventListener("click", () => {
     vw.info = !vw.info;
@@ -1238,7 +1270,7 @@ function wire() {
   // --- újraolvasás
   $("#rescan").addEventListener("click", async (e) => {
     const btn = e.currentTarget;
-    if (!SERVED) { toast(t("needServer"), "err"); return; }
+    if (!IS_LOCAL) { toast(t("needServer"), "err"); return; }
     btn.classList.add("spin");
     btn.disabled = true;
     try {
@@ -1262,6 +1294,9 @@ function wire() {
 (async function boot() {
   wire();
   renderStatic();
+  IS_LOCAL = await detectLocal();
+  // publikált oldalon nincs mit újraolvasni, és nincs eredeti fájl sem
+  document.body.classList.toggle("static-site", !IS_LOCAL);
   await loadAll();
   if (!state.library.objects?.length) {
     $("#content").innerHTML =

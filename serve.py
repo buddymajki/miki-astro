@@ -111,6 +111,11 @@ class Handler(SimpleHTTPRequestHandler):
         route = parsed.path[len("/api/"):]
         query = urllib.parse.parse_qs(parsed.query)
 
+        if route == "ping":
+            # Ebbol tudja a felulet, hogy helyben fut - a publikalt (statikus)
+            # oldalon ez a keres 404-et ad, es a helyi gombok eltunnek.
+            return self.send_json({"ok": True, "local": True})
+
         if route == "rescan":
             if not _scan_lock.acquire(blocking=False):
                 return self.send_json({"ok": False, "error": "Mar fut egy szkenneles."}, HTTPStatus.CONFLICT)

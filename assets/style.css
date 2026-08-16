@@ -816,6 +816,11 @@ body.no-scroll { overflow: hidden; }
 
 /* --- reszponzív ---------------------------------------------------------- */
 
+/* Publikált (statikus) oldal: nincs helyi szerver, tehát ezek értelmetlenek */
+body.static-site #rescan,
+body.static-site #vwOpen,
+body.static-site #vwReveal { display: none; }
+
 .scrim { display: none; }
 
 @media (max-width: 1080px) {
