@@ -1,0 +1,46 @@
+{
+ "_comment": "Felszereles es felveteli adatok. Mindegyik resz opcionalis. A scan.py sorrendje: FITS (feldolgozo mappak) -> EXIF -> fajlnev -> byObject -> byFile. Ami lejjebb van, az nyer.",
+
+ "_processingRoots": "Hol keresse a stackelt FITS fajlokat. Alapertelmezes: a viewer mappa szuloje (d:\\STAR).",
+ "processingRoots": ["d:\\STAR"],
+
+ "_telescopeNames": "A FITS TELESCOP / EXIF Model nyers erteket emberi nevre forditja.",
+ "telescopeNames": {
+  "S30 Pro": "ZWO Seestar S30 Pro",
+  "Seestar S50": "ZWO Seestar S50",
+  "Pixel 8 Pro": "Google Pixel 8 Pro"
+ },
+
+ "_byObject": "Objektumonkenti alapertelmezes vagy javitas. Kulcs = objektum azonosito.",
+ "byObject": {
+  "M31": {
+   "framesRaw": 398,
+   "exposure": 20,
+   "total": 7960,
+   "filter": "IR-cut (LP nélkül)",
+   "nights": 2,
+   "dates": ["2026-08-10", "2026-08-12"],
+   "telescope": "ZWO Seestar S30 Pro",
+   "estimated": true,
+   "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
+   "note": {
+    "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
+    "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
+   }
+  }
+ },
+
+ "_byFile": "Egy konkret fajl adatai. Kulcs = pontos fajlnev a DONE mappaban. Ez mindent felulir.",
+ "_byFileExample": {
+  "NGC6888_HOO_final.png": {
+   "frames": 931,
+   "exposure": 30,
+   "filter": "HOO",
+   "gain": 200,
+   "telescope": "ZWO Seestar S30 Pro",
+   "note": {"hu": "Négy éjszaka anyagából", "en": "From four nights of data"}
+  }
+ },
+ "byFile": {
+ }
+}

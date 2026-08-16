@@ -1,0 +1,22 @@
+# --- Saját felvételek -------------------------------------------------------
+# A DONE mappa ~830 MB, és van benne 156 MB-os PNG. A GitHub 100 MB-nál
+# keményen elutasítja a fájlokat, ezért a képek NEM kerülnek fel a repóba.
+# A dashboard a saját gépeden változatlanul működik.
+DONE/
+
+# --- Generált tartalom (a scan.py bármikor újracsinálja) --------------------
+thumbs/
+data/library.json
+data/library.js
+data/objects.js
+data/.thumb-cache.json
+data/rename-log.txt
+
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+
+# --- Egyéb ------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
