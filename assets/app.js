@@ -837,16 +837,12 @@ function applyZoom() {
   vw.tx = Math.min(maxX, Math.max(-maxX, vw.tx));
   vw.ty = Math.min(maxY, Math.max(-maxY, vw.ty));
   vw.img.style.transform = `translate(${vw.tx}px, ${vw.ty}px) scale(${vw.scale})`;
-  const zoomed = vw.scale > 1.01;
-  vw.img.classList.toggle("zoomed", zoomed);
-  // nagyítva a függőleges gesztus is a képé, ne a böngészőé
-  $("#vwStage").classList.toggle("zoom-active", zoomed);
+  vw.img.classList.toggle("zoomed", vw.scale > 1.01);
 }
 
 function resetZoom() {
   vw.scale = 1; vw.tx = 0; vw.ty = 0;
   if (vw.img) { vw.img.style.transform = ""; vw.img.classList.remove("zoomed"); }
-  $("#vwStage").classList.remove("zoom-active");
 }
 
 function zoomAt(clientX, clientY, next) {

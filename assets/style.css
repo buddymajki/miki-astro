@@ -672,11 +672,12 @@ body.no-scroll { overflow: hidden; }
   display: grid; gap: 10px; padding: 14px;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
-  /* a vízszintes gesztust mi kezeljük (lapozás), a függőlegeset a böngésző */
-  touch-action: pan-y;
+  /* Minden gesztust mi kezelünk: vízszintes = lapozás, függőleges =
+     objektumváltás, nagyítva pedig a kép mozgatása. A színpad nem
+     görgethető, ezért nincs mit átengedni a böngészőnek – pan-y esetén
+     viszont a függőleges húzást elvenné, és meg sem kapnánk. */
+  touch-action: none;
 }
-/* nagyítva mindkét irányban mi mozgatjuk a képet */
-.vw-stage.zoom-active { touch-action: none; }
 .viewer.mode-compare .vw-stage { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 
 .vw-pane {
