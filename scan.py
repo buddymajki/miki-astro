@@ -22,11 +22,14 @@ Hasznalat:
 import argparse
 import base64
 import colorsys
+import glob
 import hashlib
 import io
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 import unicodedata
 from datetime import datetime
@@ -490,6 +493,58 @@ def pick_album_set(sets, key, taken):
     return dict((chosen or candidates[0])["acq"])
 
 
+# --------------------------------------------------------------------------
+# videok webes valtozata (ffmpeg, ha van)
+# --------------------------------------------------------------------------
+
+VIDEO_LONG_EDGE = 1920     # a hosszabbik oldal a webes valtozatban
+VIDEO_CRF = 26             # 4K telefonos felvetelnel ~86%-ot sporol
+_ffmpeg = None
+
+
+def find_ffmpeg():
+    """ffmpeg a PATH-on, vagy a winget telepitesi helyen (uj shell nelkul is)."""
+    global _ffmpeg
+    if _ffmpeg is not None:
+        return _ffmpeg or None
+
+    found = shutil.which("ffmpeg")
+    if not found:
+        pattern = os.path.join(os.environ.get("LOCALAPPDATA", ""), "Microsoft", "WinGet",
+                               "Packages", "Gyan.FFmpeg*", "*", "bin", "ffmpeg.exe")
+        matches = sorted(glob.glob(pattern))
+        found = matches[-1] if matches else ""
+    _ffmpeg = found or False
+    return _ffmpeg or None
+
+
+def run_ffmpeg(args):
+    exe = find_ffmpeg()
+    if not exe:
+        return False
+    try:
+        proc = subprocess.run([exe, "-y", "-v", "error", *args],
+                              stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=1800)
+        return proc.returncode == 0
+    except Exception:
+        return False
+
+
+def transcode_video(src, dst):
+    """Webre optimalizalt valtozat: hosszabbik oldal 1920 px, hang nelkul.
+       A +faststart miatt azonnal indul a lejatszas letoltes kozben."""
+    scale = (f"scale=w={VIDEO_LONG_EDGE}:h={VIDEO_LONG_EDGE}"
+             ":force_original_aspect_ratio=decrease:force_divisible_by=2")
+    return run_ffmpeg(["-i", src, "-vf", scale, "-c:v", "libx264", "-crf", str(VIDEO_CRF),
+                       "-preset", "medium", "-pix_fmt", "yuv420p",
+                       "-movflags", "+faststart", "-an", dst])
+
+
+def grab_video_frame(src, dst_png, seconds=1.5):
+    """Egy kocka a videobol - ebbol keszul a boritokep (vizjellel egyutt)."""
+    return run_ffmpeg(["-ss", str(seconds), "-i", src, "-frames:v", "1", dst_png])
+
+
 _logo = None
 
 
@@ -672,9 +727,51 @@ def scan(force=False, quiet=False):
         if is_video:
             n_videos += 1
             item["accent"] = "#7c8cff"
-            # A videok tul nagyok a repohoz, ezert a publikalt oldalon nem
-            # jelennek meg - a helyi dashboardon viszont igen.
-            item["localOnly"] = True
+            web_name = digest + "_v.mp4"
+            web_path = os.path.join(THUMB_DIR, web_name)
+            cached = cache.get(signature)
+
+            if cached and os.path.exists(web_path) and not force:
+                meta = cached
+            elif find_ffmpeg():
+                if not quiet:
+                    print(f"  [{index}/{len(files)}] video atkodolas: {name}")
+                meta = None
+                if transcode_video(path, web_path):
+                    meta = {"webBytes": os.path.getsize(web_path)}
+                    frame = os.path.join(THUMB_DIR, digest + "_frame.png")
+                    if grab_video_frame(path, frame):
+                        try:
+                            width, height, accent, blur = build_thumbs(
+                                frame, thumb_path, preview_path, Image)
+                            meta.update({"w": width, "h": height, "accent": accent, "blur": blur})
+                        except Exception as exc:
+                            print(f"  ! boritokep nem keszult: {name} ({exc})")
+                        finally:
+                            try:
+                                os.remove(frame)
+                            except OSError:
+                                pass
+                else:
+                    print(f"  ! a video atkodolasa nem sikerult: {name}")
+            else:
+                meta = None                       # nincs ffmpeg -> marad helyi
+
+            if meta:
+                new_cache[signature] = meta
+                keep_thumbs.add(web_name)
+                item["web"] = f"thumbs/{web_name}"
+                item["webBytes"] = meta.get("webBytes")
+                for key_name in ("w", "h", "accent", "blur"):
+                    if meta.get(key_name):
+                        item[key_name] = meta[key_name]
+                if meta.get("w"):
+                    keep_thumbs.update((thumb_name, preview_name))
+                    item["thumb"] = f"thumbs/{thumb_name}"
+                    item["preview"] = f"thumbs/{preview_name}"
+            else:
+                # ffmpeg nelkul a videot nem tudjuk webre keszíteni - marad helyi
+                item["localOnly"] = True
         else:
             n_images += 1
             cached = cache.get(signature)
@@ -705,7 +802,7 @@ def scan(force=False, quiet=False):
     # elavult bebyegek takaritasa
     removed = 0
     for name in os.listdir(THUMB_DIR):
-        if name.endswith((".jpg", ".jpeg", ".webp")) and name not in keep_thumbs:
+        if name.endswith((".jpg", ".jpeg", ".webp", ".mp4", ".png")) and name not in keep_thumbs:
             try:
                 os.remove(os.path.join(THUMB_DIR, name))
                 removed += 1

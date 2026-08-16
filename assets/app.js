@@ -64,8 +64,8 @@ const STRINGS = {
     wikiFail: "Most nem sikerült elérni a Wikipédiát (nincs net, vagy nincs szócikk ehhez az objektumhoz).",
     source: "Forrás", wikiHu: "magyar Wikipédia", wikiEn: "angol Wikipédia",
 
-    compare: "Összehasonlítás", compareOff: "Csak az én képem",
-    info: "Infó", original: "Eredeti", folder: "Mappa",
+    modePhoto: "Kép", modeInfo: "Infó", modeCompare: "Hasonlítás",
+    original: "Eredeti", folder: "Mappa",
     mine: "Az én felvételem", noRef: "Ehhez az objektumhoz nincs összehasonlító kép.",
     proLoading: "Profi felvétel betöltése…",
     proFail: "A profi felvétel nem tölthető be (nincs internet?).",
@@ -122,8 +122,8 @@ const STRINGS = {
     wikiFail: "Could not reach Wikipedia right now (no connection, or no article for this object).",
     source: "Source", wikiHu: "Hungarian Wikipedia", wikiEn: "English Wikipedia",
 
-    compare: "Compare", compareOff: "My shot only",
-    info: "Info", original: "Original", folder: "Folder",
+    modePhoto: "Photo", modeInfo: "Info", modeCompare: "Compare",
+    original: "Original", folder: "Folder",
     mine: "My shot", noRef: "No comparison image available for this object.",
     proLoading: "Loading professional image…",
     proFail: "The professional image could not be loaded (no internet?).",
@@ -246,12 +246,19 @@ function duration(sec) {
   if (sec < 60) return `${Number(sec.toFixed(sec < 1 ? 2 : 0))} s`;
   const mins = Math.floor(sec / 60);
   const h = Math.floor(mins / 60), m = mins % 60;
-  return h ? `${h} ${t("hUnit")} ${m} ${t("mUnit")}` : `${m} ${t("mUnit")}`;
+  if (!h) return `${m} ${t("mUnit")}`;
+  return m ? `${h} ${t("hUnit")} ${m} ${t("mUnit")}` : `${h} ${t("hUnit")}`;
 }
 
 function expo(sec) {
   if (!sec) return "";
   return sec < 1 ? `${Number(sec.toFixed(3))} s` : `${Number(sec.toFixed(sec % 1 ? 1 : 0))} s`;
+}
+
+/** Melyik videófájlt játsszuk le: a webre optimalizált változatot, ha van.
+    Helyben az eredeti is elérhető, de a kisebb gyorsabban indul. */
+function playableVideo(item) {
+  return item.web || item.file;
 }
 
 /** A megjelenítendő kockaszám: megtartott, ha van, különben nyers. */
@@ -495,8 +502,12 @@ function hydratePosters(root = document) {
 
 function shotThumb(item) {
   if (item.kind === "video") {
-    return `<img data-vfile="${esc(item.file)}" alt="">
-            <span class="play-orb"><b>${icon("play")}</b></span>`;
+    // ha az ffmpeg készített borítóképet, azt használjuk; különben a böngésző
+    // rajzolja ki az első kockát a videóból
+    const poster = item.thumb
+      ? `<img src="${url(item.thumb)}" alt="" loading="lazy" decoding="async">`
+      : `<img data-vfile="${esc(playableVideo(item))}" alt="">`;
+    return `${poster}<span class="play-orb"><b>${icon("play")}</b></span>`;
   }
   const src = item.thumb || item.file;
   return `<img src="${url(src)}" alt="${esc(item.name)}" loading="lazy" decoding="async"
@@ -783,10 +794,16 @@ function renderObject(id) {
    Osztott nézegető: bal oldalt a kép (levágás nélkül), jobb oldalt a leírás
    ========================================================================== */
 
+/* A nézegetőnek három, egymást kizáró módja van: csak a kép, kép + leírás,
+   vagy összehasonlítás. Egy háromállású kapcsoló vezérli – két külön
+   kapcsolóból négy állapot jönne ki, ami mobilon zavaros. */
+const MODES = ["photo", "info", "compare"];
+
 const vw = {
   el: null, obj: null, items: [], index: 0,
-  compare: false,
-  info: localStorage.getItem("miki:info") === "1",    // alapból csak a kép, infó gombra
+  mode: "photo",
+  compare: false,                                   // származtatott: mode === "compare"
+  prefMode: localStorage.getItem("miki:mode") === "info" ? "info" : "photo",
   seq: [], seqPos: 0,
   pushed: false,
   img: null, scale: 1, tx: 0, ty: 0,
@@ -867,17 +884,26 @@ function renderComparePane() {
   }
 }
 
-function updateCompareButton() {
-  const btn = $("#vwCompare");
-  btn.disabled = !referenceOf(vw.obj);
-  btn.classList.toggle("primary", vw.compare);
-  btn.querySelector("[data-i18n]").textContent = vw.compare ? t("compareOff") : t("compare");
+/** A kapcsoló és a nézegető osztályainak összehangolása az aktuális móddal. */
+function applyModeUI() {
+  vw.compare = vw.mode === "compare";
+  for (const m of MODES) vw.el.classList.toggle("mode-" + m, vw.mode === m);
+  const hasRef = !!referenceOf(vw.obj);
+  $$("#vwModes button").forEach((b) => {
+    b.classList.toggle("on", b.dataset.mode === vw.mode);
+    if (b.dataset.mode === "compare") b.disabled = !hasRef;
+  });
 }
 
-/** Az összehasonlítás is a címsorban van, így a link megosztható. */
-function toggleCompare() {
-  if (!referenceOf(vw.obj)) { toast(t("noRef"), "err"); return; }
-  gotoShot(vw.obj.id, vw.index, true, !vw.compare);
+/** A mód a címsorban van, így a link megosztható és a Vissza gomb is kezeli. */
+function setMode(mode) {
+  if (!MODES.includes(mode) || mode === vw.mode) return;
+  if (mode === "compare" && !referenceOf(vw.obj)) { toast(t("noRef"), "err"); return; }
+  if (mode !== "compare") {
+    vw.prefMode = mode;
+    localStorage.setItem("miki:mode", mode);
+  }
+  gotoShot(vw.obj.id, vw.index, true, mode);
 }
 
 /* --- a nézegető jobb oldali paneljei -------------------------------------- */
@@ -960,9 +986,11 @@ function showSlide() {
 
   if (item.kind === "video") {
     const video = document.createElement("video");
-    video.src = url(item.file);
+    video.src = url(playableVideo(item));
+    if (item.thumb) video.poster = url(item.thumb);
     video.controls = true;
     video.autoplay = true;
+    video.playsInline = true;
     media.appendChild(video);
     $("#vwHint").textContent = t("hintVideo");
   } else {
@@ -988,9 +1016,10 @@ function showSlide() {
 
   $("#vwRail").innerHTML = vw.items.map((it, i) => {
     const cls = i === vw.index ? "on" : "";
+    if (it.thumb) return `<img src="${url(it.thumb)}" data-i="${i}" class="${cls}" alt="" loading="lazy">`;
     return it.kind === "video"
-      ? `<img data-vfile="${esc(it.file)}" data-i="${i}" class="rail-video ${cls}" alt="">`
-      : `<img src="${url(it.thumb || it.file)}" data-i="${i}" class="${cls}" alt="" loading="lazy">`;
+      ? `<img data-vfile="${esc(playableVideo(it))}" data-i="${i}" class="rail-video ${cls}" alt="">`
+      : `<img src="${url(it.file)}" data-i="${i}" class="${cls}" alt="" loading="lazy">`;
   }).join("");
   hydratePosters($("#vwRail"));
   const active = $("#vwRail .on");
@@ -1000,7 +1029,7 @@ function showSlide() {
   renderViewerSide();
 }
 
-function openViewer(objId, index, wantCompare) {
+function openViewer(objId, index, wantMode) {
   const o = allObjects().find((x) => x.id === objId);
   if (!o || !o.items[index]) return;
 
@@ -1011,7 +1040,10 @@ function openViewer(objId, index, wantCompare) {
   vw.obj = o;
   vw.items = o.items;
   vw.index = index;
-  vw.compare = !!wantCompare && !!referenceOf(o);
+  // ha összehasonlítást kérnek, de ehhez az objektumhoz nincs kép,
+  // essünk vissza a legutóbb választott sima módra
+  vw.mode = MODES.includes(wantMode) ? wantMode : vw.prefMode;
+  if (vw.mode === "compare" && !referenceOf(o)) vw.mode = vw.prefMode;
 
   vw.seq = buildSequence();
   vw.seqPos = vw.seq.findIndex((s) => s.id === objId && s.i === index);
@@ -1021,12 +1053,10 @@ function openViewer(objId, index, wantCompare) {
   }
 
   vw.el.classList.add("open");
-  vw.el.classList.toggle("compare", vw.compare);
-  vw.el.classList.toggle("no-info", !vw.info);
   document.body.classList.add("no-scroll");
-  updateCompareButton();
+  applyModeUI();
 
-  if (sameShot) {                          // csak az összehasonlítás kapcsolt át
+  if (sameShot) {                          // csak a mód váltott
     $("#vwStage").classList.toggle("zoomable", !vw.compare && currentItem().kind !== "video");
     resetZoom();
     renderComparePane();
@@ -1034,7 +1064,6 @@ function openViewer(objId, index, wantCompare) {
     return;
   }
 
-  document.body.classList.add("no-scroll");
   showSlide();
 
   if (!wasOpen) {
@@ -1054,11 +1083,11 @@ function closeViewer() {
 
 /* A nagyított kép is a címsorban van: a Vissza gomb bezárja, és a konkrét
    felvételre mutató link is elmenthető. */
-const shotHash = (id, i, cmp) =>
-  `#/o/${encodeURIComponent(id)}/${i}${cmp ? "/compare" : ""}`;
+const shotHash = (id, i, mode) =>
+  `#/o/${encodeURIComponent(id)}/${i}` + (mode && mode !== "photo" ? "/" + mode : "");
 
-function gotoShot(id, index, replace, cmp) {
-  const hash = shotHash(id, index, cmp);
+function gotoShot(id, index, replace, mode) {
+  const hash = shotHash(id, index, mode);
   if (replace) location.replace(location.pathname + location.search + hash);
   else { vw.pushed = true; location.hash = hash; }
 }
@@ -1080,7 +1109,7 @@ function step(delta) {
   if (pos < 0 || pos >= vw.seq.length) return;
   const next = vw.seq[pos];
   // lapozás ne szemetelje tele az előzményeket, de az összehasonlítás maradjon bekapcsolva
-  gotoShot(next.id, next.i, true, vw.compare);
+  gotoShot(next.id, next.i, true, vw.mode);
 }
 
 async function shellAction(action) {
@@ -1107,11 +1136,11 @@ function render() {
 }
 
 function applyHash() {
-  const m = location.hash.match(/^#\/o\/([^/]+)(?:\/(\d+))?(?:\/(compare))?/);
+  const m = location.hash.match(/^#\/o\/([^/]+)(?:\/(\d+))?(?:\/(info|compare))?/);
   state.route = m
     ? { view: "object", id: decodeURIComponent(m[1]).toUpperCase(),
-        shot: m[2] === undefined ? null : Number(m[2]), compare: !!m[3] }
-    : { view: "home", id: null, shot: null, compare: false };
+        shot: m[2] === undefined ? null : Number(m[2]), mode: m[3] || null }
+    : { view: "home", id: null, shot: null, mode: null };
 
   // Objektumok közti lapozás közben a háttéroldalt nem rajzoljuk újra – a
   // nézegető úgyis eltakarja, és így nem indul fölösleges Wikipédia-kérés.
@@ -1122,7 +1151,7 @@ function applyHash() {
   else render();
 
   if (state.route.shot === null) closeViewer();
-  else openViewer(state.route.id, state.route.shot, state.route.compare);
+  else openViewer(state.route.id, state.route.shot, state.route.mode);
 
   // záráskor a helyes oldal legyen a nézegető alatt
   if (state.route.shot === null && wantedPage !== state.renderedId) render();
@@ -1136,7 +1165,7 @@ function setLang(next) {
   localStorage.setItem("miki:lang", lang);
   render();
   if (vw.el.classList.contains("open")) {   // a renderStatic visszaírta a gombfeliratokat
-    updateCompareButton();
+    applyModeUI();
     showSlide();
   }
 }
@@ -1185,7 +1214,7 @@ function wire() {
       return;
     }
     const shot = e.target.closest(".shot");
-    if (shot) gotoShot(shot.dataset.obj, Number(shot.dataset.idx), false);
+    if (shot) gotoShot(shot.dataset.obj, Number(shot.dataset.idx), false, vw.prefMode);
   });
 
   // --- nézegető vezérlés
@@ -1194,13 +1223,9 @@ function wire() {
   $("#vwNext").addEventListener("click", () => step(1));
   $("#vwOpen").addEventListener("click", () => shellAction("open"));
   $("#vwReveal").addEventListener("click", () => shellAction("reveal"));
-  $("#vwCompare").addEventListener("click", toggleCompare);
-
-  $("#vwInfo").addEventListener("click", () => {
-    vw.info = !vw.info;
-    localStorage.setItem("miki:info", vw.info ? "1" : "0");
-    vw.el.classList.toggle("no-info", !vw.info);
-    requestAnimationFrame(applyZoom);
+  $("#vwModes").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-mode]");
+    if (btn) setMode(btn.dataset.mode);
   });
 
   $("#vwRail").addEventListener("click", (e) => {
@@ -1208,7 +1233,7 @@ function wire() {
     if (!target) return;
     vw.index = Number(target.dataset.i);
     showSlide();
-    gotoShot(vw.obj.id, vw.index, true);
+    gotoShot(vw.obj.id, vw.index, true, vw.mode);
   });
 
   const stage = $("#vwStage");
@@ -1255,8 +1280,8 @@ function wire() {
       else if (e.key === "ArrowLeft") step(-1);
       else if (e.key === "ArrowRight") step(1);
       else if (e.key === "0") resetZoom();
-      else if (e.key === "c" || e.key === "C") toggleCompare();
-      else if (e.key === "i" || e.key === "I") $("#vwInfo").click();
+      else if (e.key === "c" || e.key === "C") setMode(vw.mode === "compare" ? vw.prefMode : "compare");
+      else if (e.key === "i" || e.key === "I") setMode(vw.mode === "info" ? "photo" : "info");
       return;
     }
     if (typing) {

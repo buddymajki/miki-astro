@@ -1,16 +1,9 @@
 # --- Eredeti felvételek -----------------------------------------------------
-# A DONE mappa ~830 MB, és van benne 156 MB-os PNG. A GitHub 100 MB felett
-# keményen elutasítja a fájlokat, ezért az eredetik NEM kerülnek fel.
-# A publikált oldal a thumbs/ mappában lévő WebP változatokat használja.
+# A DONE mappa ~830 MB, és van benne 156 MB-os PNG meg 76 MB-os videó.
+# A GitHub 100 MB felett keményen elutasítja a fájlokat, ezért az eredetik
+# NEM kerülnek fel. A publikált oldal a thumbs/ mappában lévő webre
+# optimalizált változatokat használja (WebP kép + 1080p mp4).
 DONE/
-
-# --- Videók -----------------------------------------------------------------
-# Együtt 146 MB, a legnagyobb 76 MB. Csak helyben jelennek meg.
-*.mp4
-*.mov
-*.avi
-*.mkv
-*.m4v
 
 # --- Munkafájlok ------------------------------------------------------------
 data/.thumb-cache.json
@@ -26,4 +19,4 @@ Thumbs.db
 desktop.ini
 
 # MEGJEGYZÉS: a thumbs/ és a data/library.* SZÁNDÉKOSAN nincs kizárva –
-# ezek alkotják a publikált oldal képanyagát (~10 MB WebP-ben).
+# ezek alkotják a publikált oldal teljes képanyagát.

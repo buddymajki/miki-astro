@@ -69,6 +69,10 @@
     <symbol id="i-telescope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M3.5 13.5l12-7 2.5 4.3-12 7z"/><path d="M11 17l2 4M9 18l-2 3"/><path d="M17.5 4.5l2.6 4.5"/>
     </symbol>
+    <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-6 8"/>
+    </symbol>
   </defs>
 </svg>
 
@@ -128,10 +132,14 @@
       <div class="vw-title" id="vwTitle"></div>
       <div class="vw-meta" id="vwMeta"></div>
     </div>
-    <button class="btn" id="vwCompare"><svg><use href="#i-compare"/></svg>
-      <span class="hide-sm" data-i18n="compare"></span></button>
-    <button class="btn" id="vwInfo"><svg><use href="#i-panel"/></svg>
-      <span class="hide-sm" data-i18n="info"></span></button>
+    <div class="vw-modes" id="vwModes" role="tablist">
+      <button data-mode="photo"><svg><use href="#i-image"/></svg>
+        <span class="hide-sm" data-i18n="modePhoto"></span></button>
+      <button data-mode="info"><svg><use href="#i-panel"/></svg>
+        <span class="hide-sm" data-i18n="modeInfo"></span></button>
+      <button data-mode="compare"><svg><use href="#i-compare"/></svg>
+        <span class="hide-sm" data-i18n="modeCompare"></span></button>
+    </div>
     <button class="btn" id="vwOpen"><svg><use href="#i-open"/></svg>
       <span class="hide-sm" data-i18n="original"></span></button>
     <button class="btn" id="vwReveal"><svg><use href="#i-folder"/></svg>
