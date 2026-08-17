@@ -69,8 +69,12 @@ if errorlevel 1 (
 
 echo.
 echo   ==========================================
-echo     KESZ. Par perc mulva elerheto:
+echo     KESZ.
 echo     https://buddymajki.github.io/miki-astro/
+echo.
+echo     A GitHub Pages 1-3 perc alatt epiti fel az oldalt.
+echo     Ha addig nezed meg, meg a regit latod - varj kicsit,
+echo     es ha kell, frissits Ctrl+F5-tel.
 echo   ==========================================
 echo.
 pause

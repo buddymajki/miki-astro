@@ -337,7 +337,10 @@ function toast(msg, kind = "ok") {
 
 async function loadJson(path, globalFallback) {
   try {
-    const res = await fetch(path, { cache: "no-store" });
+    // A GitHub Pages 10 percre gyorsítótárazza a fájlokat a CDN-en is, ezért
+    // az adatot egyedi paraméterrel kérjük – így publikálás után azonnal
+    // a friss album látszik, nem kell a böngészőt üríteni.
+    const res = await fetch(`${path}?t=${Date.now()}`, { cache: "no-store" });
     if (res.ok) return await res.json();
   } catch (_) { /* file:// alatt a fetch elhasal – megy a fallback */ }
   return window[globalFallback] || null;

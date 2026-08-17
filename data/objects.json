@@ -789,6 +789,87 @@
    }
   },
   {
+   "id": "STEPHAN",
+   "name": {
+    "hu": "Stephan-kvintett",
+    "en": "Stephan's Quintet"
+   },
+   "aliases": [
+    "HCG 92",
+    "Hickson 92",
+    "Arp 319",
+    "NGC 7317–7320"
+   ],
+   "category": "deepsky",
+   "constellationLat": "Pegasus",
+   "ra": "22h 35m 58s",
+   "dec": "+33° 57′ 36″",
+   "type": {
+    "hu": "Kölcsönható galaxiscsoport",
+    "en": "Interacting galaxy group"
+   },
+   "constellation": {
+    "hu": "Pegazus",
+    "en": "Pegasus"
+   },
+   "distance": {
+    "hu": "kb. 290 millió fényév (az NGC 7320 csak 40 millió)",
+    "en": "~290 million light-years (NGC 7320 is only 40 million)"
+   },
+   "magnitude": {
+    "hu": "13–14 (tagonként)",
+    "en": "13–14 (per member)"
+   },
+   "size": {
+    "hu": "3,2′ × 3,2′",
+    "en": "3.2′ × 3.2′"
+   },
+   "discovery": {
+    "hu": "1877 – Édouard Stephan",
+    "en": "1877 – Édouard Stephan"
+   },
+   "season": {
+    "hu": "Ősz – ugyanabban a mezőben, mint az NGC 7331",
+    "en": "Autumn – in the same field as NGC 7331"
+   },
+   "description": {
+    "hu": "Öt galaxis szoros csoportja a Pegazusban – valójában csak négy tartozik össze, az ötödik (NGC 7320) nyolcszor közelebb van, csak vetületben esik ide. A négy igazi tag egymásba szakad: az áthaladó NGC 7318B lökéshulláma az egyik legnagyobb ismert galaxisközi sokkfront.",
+    "en": "A tight group of five galaxies in Pegasus – though only four belong together; the fifth (NGC 7320) is eight times closer and merely lies along the same line of sight. The four true members are tearing into each other: the shock front driven by the intruder NGC 7318B is one of the largest known intergalactic shock waves."
+   },
+   "facts": {
+    "hu": [
+     "Ez volt az első felfedezett kompakt galaxiscsoport",
+     "A képen látható ötből csak négy van valóban egymás mellett",
+     "A James Webb űrtávcső első képei között szerepelt 2022-ben",
+     "Ugyanabban a látómezőben van, mint az NGC 7331"
+    ],
+    "en": [
+     "It was the first compact galaxy group ever discovered",
+     "Only four of the five galaxies are actually neighbours",
+     "It featured among the James Webb Space Telescope's first images in 2022",
+     "It shares the same field of view as NGC 7331"
+    ]
+   },
+   "wiki": {
+    "hu": null,
+    "en": "Stephan's Quintet"
+   },
+   "simbad": "HCG 92",
+   "related": [
+    "NGC7331"
+   ],
+   "reference": {
+    "file": "Stephan's Quintet Hubble 2009.full.jpg",
+    "kind": "hubble",
+    "credit": "NASA, ESA, and the Hubble SM4 ERO Team",
+    "license": "Public domain",
+    "telescope": {
+     "hu": "Hubble űrtávcső (WFC3) – 2009",
+     "en": "Hubble Space Telescope (WFC3) – 2009"
+    }
+   }
+  },
+  {
    "id": "MOON",
    "name": {
     "hu": "A Hold",
@@ -939,6 +1020,165 @@
     "telescope": {
      "hu": "Nemzetközi Űrállomás (ISS) – űrből nézve",
      "en": "International Space Station (ISS) – seen from orbit"
+    }
+   }
+  },
+  {
+   "id": "NGC7331",
+   "name": {
+    "hu": "NGC 7331",
+    "en": "NGC 7331"
+   },
+   "aliases": [
+    "NGC 7331",
+    "Caldwell 30",
+    "UGC 12113",
+    "Deer Lick-csoport"
+   ],
+   "category": "deepsky",
+   "constellationLat": "Pegasus",
+   "ra": "22h 37m 04s",
+   "dec": "+34° 24′ 56″",
+   "type": {
+    "hu": "Spirálgalaxis (SA(s)b)",
+    "en": "Spiral galaxy (SA(s)b)"
+   },
+   "constellation": {
+    "hu": "Pegazus",
+    "en": "Pegasus"
+   },
+   "distance": {
+    "hu": "kb. 40 millió fényév",
+    "en": "~40 million light-years"
+   },
+   "magnitude": {
+    "hu": "10,4",
+    "en": "10.4"
+   },
+   "size": {
+    "hu": "10,5′ × 3,7′",
+    "en": "10.5′ × 3.7′"
+   },
+   "discovery": {
+    "hu": "1784 – William Herschel",
+    "en": "1784 – William Herschel"
+   },
+   "season": {
+    "hu": "Ősz",
+    "en": "Autumn"
+   },
+   "description": {
+    "hu": "A Tejútrendszer ikertestvérének is nevezik: hasonló méretű és típusú spirálgalaxis, csak ferdén látjuk. A körülötte tolongó apró galaxisok – a Deer Lick-csoport – valójában tízszer messzebb vannak, csak vetületben esnek ide.",
+    "en": "Often called a twin of the Milky Way: a spiral of similar size and type, seen at a steep angle. The small galaxies crowding around it – the Deer Lick Group – are actually ten times further away and merely lie along the same line of sight."
+   },
+   "facts": {
+    "hu": [
+     "Magja szokatlanul gyorsan forog, ellentétes irányban a korongjához képest",
+     "A Deer Lick-csoport tagjai 300 millió fényévre vannak, nem 40-re",
+     "Ugyanabban a mezőben látszik a Stephan-kvintett",
+     "Herschel még ködnek gondolta – galaxis mivoltát csak a 20. században ismerték fel"
+    ],
+    "en": [
+     "Its core rotates unusually fast, counter to the disc around it",
+     "The Deer Lick Group members lie 300 million light-years away, not 40",
+     "Stephan's Quintet appears in the same field of view",
+     "Herschel took it for a nebula – its galactic nature was only recognised in the 20th century"
+    ]
+   },
+   "wiki": {
+    "hu": "NGC 7331",
+    "en": "NGC 7331"
+   },
+   "simbad": "NGC 7331",
+   "related": [
+    "STEPHAN"
+   ],
+   "reference": {
+    "file": "NGC 7331 Acquired with the Schulman Telescope at the Mount Lemmon SkyCenter.jpg",
+    "kind": "pro",
+    "credit": "Ngc1535 / Mount Lemmon SkyCenter",
+    "license": "CC BY 3.0",
+    "telescope": {
+     "hu": "Schulman 0,8 m távcső – Mount Lemmon SkyCenter",
+     "en": "0.8 m Schulman Telescope – Mount Lemmon SkyCenter"
+    }
+   }
+  },
+  {
+   "id": "NGC6946",
+   "name": {
+    "hu": "Tűzijáték-galaxis",
+    "en": "Fireworks Galaxy"
+   },
+   "aliases": [
+    "NGC 6946",
+    "Caldwell 12",
+    "Arp 29",
+    "UGC 11597"
+   ],
+   "category": "deepsky",
+   "constellationLat": "Cepheus",
+   "ra": "20h 34m 52s",
+   "dec": "+60° 09′ 14″",
+   "type": {
+    "hu": "Küllős spirálgalaxis (SAB(rs)cd)",
+    "en": "Barred spiral galaxy (SAB(rs)cd)"
+   },
+   "constellation": {
+    "hu": "Cefeusz",
+    "en": "Cepheus"
+   },
+   "distance": {
+    "hu": "kb. 25 millió fényév",
+    "en": "~25 million light-years"
+   },
+   "magnitude": {
+    "hu": "9,6",
+    "en": "9.6"
+   },
+   "size": {
+    "hu": "11,5′ × 9,8′",
+    "en": "11.5′ × 9.8′"
+   },
+   "discovery": {
+    "hu": "1798 – William Herschel",
+    "en": "1798 – William Herschel"
+   },
+   "season": {
+    "hu": "Nyár – ősz, magasan delel",
+    "en": "Summer – autumn, culminates high"
+   },
+   "description": {
+    "hu": "Szemből látott küllős spirálgalaxis a Cefeusz és a Hattyú határán. A becenevét arról kapta, hogy 1917 óta több szupernóvát figyeltek meg benne, mint bármely más galaxisban – tízet. A Tejút pora erősen halványítja, ezért nehezebb célpont, mint a fényessége sugallná.",
+    "en": "A face-on barred spiral on the border of Cepheus and Cygnus. Its nickname comes from hosting more observed supernovae than any other galaxy since 1917 – ten of them. Dust in the Milky Way dims it considerably, making it a harder target than its magnitude suggests."
+   },
+   "facts": {
+    "hu": [
+     "Tíz megfigyelt szupernóva 1917 óta – galaxisrekord",
+     "A Tejút porán át látjuk, ami közel egy magnitúdóval halványítja",
+     "A képen jobbra lent látszó halmaz az NGC 6939 nyílthalmaz",
+     "Szemből látjuk, ezért a spirálkarok rajzolata teljes"
+    ],
+    "en": [
+     "Ten observed supernovae since 1917 – a record among galaxies",
+     "We see it through Milky Way dust, which dims it by nearly a magnitude",
+     "The cluster at lower right in the frame is the open cluster NGC 6939",
+     "Seen face-on, so the full spiral pattern is visible"
+    ]
+   },
+   "wiki": {
+    "hu": "NGC 6946",
+    "en": "NGC 6946"
+   },
+   "simbad": "NGC 6946",
+   "reference": {
+    "file": "Fireworks Galaxy.jpg",
+    "kind": "amateur",
+    "credit": "Andreigusan",
+    "license": "CC0",
+    "telescope": {
+     "hu": "Összehasonlító felvétel – a teljes galaxis",
+     "en": "Reference photo – the whole galaxy"
     }
    }
   }

@@ -130,12 +130,47 @@ def object_key(stem):
     return re.split(r"[_\-]", stem)[0].upper()
 
 
+# A cimkebol kihagyando reszek: ezek kulon, rendezett formaban ugyis
+# megjelennek a felveteli adatok kozott.
+LABEL_DROP = (
+    re.compile(r"^\d+x\d+(?:[.,]\d+)?(?:ms|secs?|s|min|m)$", re.I),   # 931x30sec
+    re.compile(r"^\d{3,6}s$", re.I),                                  # 27930s
+    re.compile(r"^drizzle-\d+-\d+x$", re.I),
+    re.compile(r"^drz-?\d*(?:-\d+)?x?$", re.I),
+    re.compile(r"^\d{4}-\d{2}-\d{2}$"),                               # datum
+    re.compile(r"^og$", re.I),
+)
+LABEL_DROP_FILTERS = {"LP", "IRCUT", "HOO", "SHO", "HSO", "LRGB", "RGB",
+                      "HA", "OIII", "SII", "UHC", "NB", "BB"}
+
+
 def variant_label(stem, key):
-    """A fajlnev maradeka emberi cimkeve alakitva."""
+    """A fajlnev maradeka emberi cimkeve alakitva.
+
+    A kockaszam, expozicio, drizzle, datum es szuro kimarad - azok a
+    felveteli adatok kozott jelennek meg, itt csak zajt csinalnanak."""
     rest = stem[len(key):] if stem.upper().startswith(key) else stem
-    rest = rest.strip("_-")
-    rest = rest.replace("_", " ").strip()
-    return rest or "eredeti"
+    tokens = [t for t in rest.replace("-", "-").split("_") if t.strip("-")]
+
+    kept = []
+    prev_was_date = False
+    for tok in tokens:
+        t = tok.strip("-")
+        if not t:
+            continue
+        if any(rx.match(t) for rx in LABEL_DROP):
+            prev_was_date = bool(re.match(r"^\d{4}-\d{2}-\d{2}$", t))
+            continue
+        if t.upper() in LABEL_DROP_FILTERS:
+            prev_was_date = False
+            continue
+        if prev_was_date and re.match(r"^\d{3,4}$", t):     # a datumot koveto idopont
+            prev_was_date = False
+            continue
+        prev_was_date = False
+        kept.append(t)
+
+    return " ".join(kept).strip() or "eredeti"
 
 
 # --------------------------------------------------------------------------
@@ -815,10 +850,17 @@ def scan(force=False, quiet=False):
     objects = []
     for key, items in groups.items():
         items.sort(key=lambda it: (it["kind"] == "video", it["name"].lower()))
-        cover = next(
-            (it for it in items if it.get("thumb")),
-            items[0] if items else None,
-        )
+
+        # Boritonak ne a feliratozott vagy kinagyitott valtozat keruljon,
+        # ha van "sima" kep is az objektumhoz.
+        def cover_rank(it):
+            label = (it.get("label", "") + " " + it["name"]).lower()
+            technical = any(w in label for w in ("annot", "zoom", "invert", "mask"))
+            return (not it.get("thumb"), technical)
+
+        cover = min(items, key=cover_rank) if items else None
+        if cover is not None and not cover.get("thumb"):
+            cover = next((it for it in items if it.get("thumb")), cover)
         objects.append({
             "id": key,
             "count": len(items),

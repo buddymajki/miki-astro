@@ -13,6 +13,21 @@
 
  "_byObject": "Objektumonkenti alapertelmezes vagy javitas. Kulcs = objektum azonosito.",
  "byObject": {
+  "STEPHAN": {
+   "frames": 862,
+   "exposure": 20,
+   "total": 17240,
+   "filter": "IR-cut (LP nélkül)",
+   "nights": 1,
+   "dates": ["2026-08-13"],
+   "drizzle": "2,0×",
+   "telescope": "ZWO Seestar S30 Pro",
+   "source": "napló (az NGC 7331 szettjéből kivágva)",
+   "note": {
+    "hu": "Ezek a képek az NGC 7331 felvételéből kivágott részletek – ugyanabban a mezőben van a két objektum, tehát a felvételi adatok is közösek.",
+    "en": "These are crops from the NGC 7331 exposure – both objects share the same field, so the acquisition data is the same."
+   }
+  },
   "M31": {
    "framesRaw": 398,
    "exposure": 20,
