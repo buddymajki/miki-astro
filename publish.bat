@@ -32,7 +32,7 @@ if errorlevel 1 (
     exit /b 1
 )
 
-echo   [1/3] Uj kepek beolvasasa es WebP generalasa...
+echo   [1/4] Uj kepek beolvasasa es WebP generalasa...
 echo.
 python scan.py
 if errorlevel 1 (
@@ -43,7 +43,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo   [2/3] Valtozasok rogzitese...
+echo   [2/4] Valtozasok rogzitese...
 "%GIT%" add -A
 "%GIT%" diff --cached --quiet
 if not errorlevel 1 (
@@ -57,7 +57,7 @@ for /f "tokens=1-3 delims=/. " %%a in ("%DATE%") do set "STAMP=%%c-%%b-%%a"
 "%GIT%" commit -q -m "Album frissites %STAMP%"
 
 echo.
-echo   [3/3] Feltoltes a GitHubra...
+echo   [3/4] Feltoltes a GitHubra...
 "%GIT%" push origin main
 if errorlevel 1 (
     echo.
@@ -66,6 +66,10 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
+
+echo.
+echo   [4/4] Ertesites a feliratkozottaknak...
+python notify.py
 
 echo.
 echo   ==========================================
@@ -78,3 +82,4 @@ echo     es ha kell, frissits Ctrl+F5-tel.
 echo   ==========================================
 echo.
 pause
+

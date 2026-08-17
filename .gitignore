@@ -9,6 +9,12 @@ DONE/
 data/.thumb-cache.json
 data/rename-log.txt
 
+# --- Értesítés --------------------------------------------------------------
+# A téma nevét ismerve BÁRKI küldhetne üzenetet a családnak, ezért ez a két
+# fájl szándékosan nem kerül fel a nyilvános repóba.
+data/notify.json
+data/.notify-state.json
+
 # --- Python -----------------------------------------------------------------
 __pycache__/
 *.py[cod]

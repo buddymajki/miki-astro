@@ -220,6 +220,46 @@ A `data/equipment.json` fájlban:
 
 Sorrend: FITS → EXIF → fájlnév → `byObject` → `byFile`. Ami lejjebb van, az nyer.
 
+## Értesítés a családnak
+
+Amikor publikálsz, a `publish.bat` értesítést küld a feliratkozottaknak:
+*„4 új felvétel: A Hold (3), Sarló-köd"*, rákoppintva megnyílik az album.
+
+A GitHub Pages statikus, tehát magától nem tud értesítést küldeni – a
+küldést az **ntfy.sh** ingyenes szolgáltatása végzi, szerver és regisztráció
+nélkül.
+
+### Hogyan iratkozzon fel valaki
+
+1. Telepítse az **ntfy** alkalmazást (App Store / Google Play, ingyenes).
+2. Nyissa meg a `data/notify.json` fájlban lévő `feliratkozas` címet,
+   vagy írja be a `topic` értékét az appban.
+
+Számítógépen az `https://ntfy.sh/<téma>` cím böngészőben is megnyitható.
+
+### Miért nincs a téma neve a GitHubon
+
+A `data/notify.json` és a `data/.notify-state.json` **szándékosan ki van
+zárva** a repóból. Az ntfy témái nyilvánosak: aki ismeri a nevet, nemcsak
+olvashatja az értesítéseket, hanem **küldhet is** rá. Mivel a repó nyilvános,
+a téma neve ott bárki számára elérhető lenne. Így a nevet csak azoknak add
+oda, akiknek szánod – például egy családi csoportban, egyszer.
+
+Ha valaha kiszivárogna vagy spam érkezne rá, írj be új `topic` értéket a
+`data/notify.json` fájlba, és küldd szét az új címet.
+
+### Kézi vezérlés
+
+```
+python notify.py            csak akkor küld, ha tényleg van új kép
+python notify.py --test     próbaüzenet
+python notify.py --reset    a jelenlegi állapot rögzítése, értesítés nélkül
+```
+
+Első futáskor a szkript nem értesít, csak rögzíti a jelenlegi albumot
+kiindulópontnak – különben az első publikálás 48 képről szólna.
+Az `enabled` mezőt `false`-ra állítva kikapcsolható.
+
 ## Vízjel
 
 A `data/logo.png` rákerül minden megjelenített képre (jobb alsó sarok, lágy
