@@ -146,6 +146,33 @@ A stackelt felvételek csempéjén ott a **teljes integrációs idő** kis címk
 Egyszeri expozícióknál (telefonos kép) nem jelenik meg, hogy ne zavarja a
 családi böngészést.
 
+## Sorrend és albumborító
+
+Két jelölő van, alulvonással határolva, kis- és nagybetű mindegy:
+
+| Jelölő | Mit csinál |
+|---|---|
+| `_MAIN_` | Ez a kép megy **legelőre**, és ez lesz az **albumborító** |
+| `_ANNOT_` | Feliratozott változat – közvetlenül a `MAIN` után jön |
+
+```
+M31_MAIN_378x20sec_7560s_drizzle-2-0x_IRCUT_AW.png     ← 1. + borító
+M31_ANNOT_378x20sec_7560s_drizzle-2-0x_IRCUT_AW.png    ← 2.
+M31_378x20sec_..._v2.png                                ← 3., név szerint
+M31_1.png                                               ← 4.
+```
+
+A `MAIN` és az `ANNOT` szó **nem jelenik meg a képaláírásban** – csak sorrendet
+jelöl. A videók mindig a lista végére kerülnek.
+
+Ha nincs `_MAIN_` jelölés, a borító automatikusan az első olyan kép lesz,
+aminek a nevében nincs `annot`, `zoom`, `invert` vagy `mask`. Ha véletlenül két
+képre is `_MAIN_`-t írsz, a szkenner szól, és az elsőt használja.
+
+A jelölőt bárhová teheted a névben, de az objektum neve után a legolvashatóbb:
+`M31_MAIN_...`. Az `ANNOT` már a régi neveidben is működik (`..._aNNOT.png`),
+azt nem kell átírni.
+
 ### Írd bele a fájlnévbe
 
 A legegyszerűbb: a fájlnévbe beírod, és a szkenner kiolvassa.

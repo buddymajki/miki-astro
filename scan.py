@@ -130,9 +130,16 @@ def object_key(stem):
     return re.split(r"[_\-]", stem)[0].upper()
 
 
+# Sorrend-jelolok a fajlnevben (alahuzassal hatarolt, kis/nagybetu mindegy):
+#   _MAIN_  -> ez a kep megy elore es ez lesz az album boritoja
+#   _ANNOT_ -> feliratozott valtozat, kozvetlenul a MAIN utan
+MAIN_RE = re.compile(r"(?:^|_)main(?:_|$)", re.I)
+ANNOT_RE = re.compile(r"annot", re.I)
+
 # A cimkebol kihagyando reszek: ezek kulon, rendezett formaban ugyis
 # megjelennek a felveteli adatok kozott.
 LABEL_DROP = (
+    re.compile(r"^main$", re.I),
     re.compile(r"^\d+x\d+(?:[.,]\d+)?(?:ms|secs?|s|min|m)$", re.I),   # 931x30sec
     re.compile(r"^\d{3,6}s$", re.I),                                  # 27930s
     re.compile(r"^drizzle-\d+-\d+x$", re.I),
@@ -739,6 +746,10 @@ def scan(force=False, quiet=False):
             "bytes": stat.st_size,
             "mtime": datetime.fromtimestamp(stat.st_mtime).isoformat(timespec="minutes"),
         }
+        if MAIN_RE.search(stem):
+            item["main"] = True
+        if ANNOT_RE.search(stem):
+            item["annot"] = True
 
         # Felveteli adatok. Sorrend: FITS -> EXIF -> naplo -> fajlnev -> kezi.
         # Ami kesobb jon, az nyer.
@@ -849,18 +860,27 @@ def scan(force=False, quiet=False):
 
     objects = []
     for key, items in groups.items():
-        items.sort(key=lambda it: (it["kind"] == "video", it["name"].lower()))
+        # Sorrend: elol a _MAIN_ jelolesu kep, utana a feliratozott valtozat,
+        # aztan a tobbi nev szerint; a videok mindig a vegen.
+        items.sort(key=lambda it: (it["kind"] == "video",
+                                   not it.get("main"),
+                                   not it.get("annot"),
+                                   it["name"].lower()))
 
-        # Boritonak ne a feliratozott vagy kinagyitott valtozat keruljon,
-        # ha van "sima" kep is az objektumhoz.
+        # Borito: a _MAIN_ jelolesu kep. Ha nincs ilyen, akkor a feliratozott,
+        # kinagyitott es maszkolt valtozatokat hatrebb soroljuk.
         def cover_rank(it):
             label = (it.get("label", "") + " " + it["name"]).lower()
             technical = any(w in label for w in ("annot", "zoom", "invert", "mask"))
-            return (not it.get("thumb"), technical)
+            return (not it.get("thumb"), not it.get("main"), technical)
 
         cover = min(items, key=cover_rank) if items else None
         if cover is not None and not cover.get("thumb"):
             cover = next((it for it in items if it.get("thumb")), cover)
+
+        marked = [it["name"] for it in items if it.get("main")]
+        if len(marked) > 1:
+            print(f"  ! {key}: tobb _MAIN_ jeloles van, az elso szamit: {marked[0]}")
         objects.append({
             "id": key,
             "count": len(items),

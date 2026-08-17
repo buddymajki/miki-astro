@@ -1,12 +1,12 @@
 window.MIKI_LIBRARY = {
- "generated": "2026-08-17T21:22:08",
+ "generated": "2026-08-17T21:34:27",
  "mediaDir": "DONE",
  "stats": {
   "objects": 15,
-  "files": 67,
-  "images": 63,
+  "files": 66,
+  "images": 62,
   "videos": 4,
-  "bytes": 1000794631
+  "bytes": 965807945
  },
  "objects": [
   {
@@ -789,6 +789,43 @@ window.MIKI_LIBRARY = {
    "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAZABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmqMUqLuYDtUtyYshYc4A5J7mmBDRRRQAZxQD3ooFABRRRQB//2Q==",
    "items": [
     {
+     "file": "DONE/M31_378x20sec_7560s_drizzle-2-0x_2026-08-12_1556_og_IRCUT_AW_aNNOT.png",
+     "name": "M31_378x20sec_7560s_drizzle-2-0x_2026-08-12_1556_og_IRCUT_AW_aNNOT.png",
+     "label": "AW aNNOT",
+     "kind": "image",
+     "bytes": 6362417,
+     "mtime": "2026-08-17T20:34",
+     "annot": true,
+     "acq": {
+      "frames": 378,
+      "exposure": 20,
+      "total": 7960,
+      "filter": "IR-cut (LP nélkül)",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-10",
+      "focal": 163,
+      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
+      "framesRaw": 398,
+      "nights": 2,
+      "dates": [
+       "2026-08-10",
+       "2026-08-12"
+      ],
+      "estimated": true,
+      "note": {
+       "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
+       "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
+      }
+     },
+     "w": 1200,
+     "h": 1764,
+     "accent": "#c6a76d",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAdABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlKUAnpQqljgVbmhNtEhYjcwzgGgCoRRSE80UASxsE57015C7Zbmm0lABRRRQB/9k=",
+     "thumb": "thumbs/16df11530db73838_t.webp",
+     "preview": "thumbs/16df11530db73838_p.webp"
+    },
+    {
      "file": "DONE/M31_1.png",
      "name": "M31_1.png",
      "label": "1",
@@ -895,42 +932,6 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAdABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaUAnpQqljgVbmg+zRIWI3MM4B7UAVCMUUE0UASRsE57015C7Zbmm0lABRRRQB//Z",
      "thumb": "thumbs/85c9dbe5cc951569_t.webp",
      "preview": "thumbs/85c9dbe5cc951569_p.webp"
-    },
-    {
-     "file": "DONE/M31_378x20sec_7560s_drizzle-2-0x_2026-08-12_1556_og_IRCUT_AW_aNNOT.png",
-     "name": "M31_378x20sec_7560s_drizzle-2-0x_2026-08-12_1556_og_IRCUT_AW_aNNOT.png",
-     "label": "AW aNNOT",
-     "kind": "image",
-     "bytes": 6362417,
-     "mtime": "2026-08-17T20:34",
-     "acq": {
-      "frames": 378,
-      "exposure": 20,
-      "total": 7960,
-      "filter": "IR-cut (LP nélkül)",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-10",
-      "focal": 163,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
-      "framesRaw": 398,
-      "nights": 2,
-      "dates": [
-       "2026-08-10",
-       "2026-08-12"
-      ],
-      "estimated": true,
-      "note": {
-       "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
-       "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
-      }
-     },
-     "w": 1200,
-     "h": 1764,
-     "accent": "#c6a76d",
-     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAdABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlKUAnpQqljgVbmhNtEhYjcwzgGgCoRRSE80UASxsE57015C7Zbmm0lABRRRQB/9k=",
-     "thumb": "thumbs/16df11530db73838_t.webp",
-     "preview": "thumbs/16df11530db73838_p.webp"
     }
    ]
   },
@@ -1494,6 +1495,32 @@ window.MIKI_LIBRARY = {
    "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAeABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6KKc6FAN38QyKYDaKPxooAKSl+lJQAuKKMj0opAf/9k=",
    "items": [
     {
+     "file": "DONE/NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter_Annot.png",
+     "name": "NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter_Annot.png",
+     "label": "Astrowizafter Annot",
+     "kind": "image",
+     "bytes": 1455598,
+     "mtime": "2026-08-17T20:10",
+     "annot": true,
+     "acq": {
+      "frames": 157,
+      "exposure": 10.0,
+      "total": 1570.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-08-12",
+      "focal": 164,
+      "source": "filename"
+     },
+     "w": 1146,
+     "h": 1748,
+     "accent": "#956dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAfABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6KKcyMgBYY3DIpgNoox70UAFGTRRQAYopRjHSikB/9k=",
+     "thumb": "thumbs/515f78bc5efb1389_t.webp",
+     "preview": "thumbs/515f78bc5efb1389_p.webp"
+    },
+    {
      "file": "DONE/NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter.png",
      "name": "NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter.png",
      "label": "Astrowizafter",
@@ -1517,31 +1544,6 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAeABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6KKc6FAN38QyKYDaKPxooAKSl+lJQAuKKMj0opAf/9k=",
      "thumb": "thumbs/80c29e664b02b8b9_t.webp",
      "preview": "thumbs/80c29e664b02b8b9_p.webp"
-    },
-    {
-     "file": "DONE/NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter_Annot.png",
-     "name": "NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter_Annot.png",
-     "label": "Astrowizafter Annot",
-     "kind": "image",
-     "bytes": 1455598,
-     "mtime": "2026-08-17T20:10",
-     "acq": {
-      "frames": 157,
-      "exposure": 10.0,
-      "total": 1570.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-08-12",
-      "focal": 164,
-      "source": "filename"
-     },
-     "w": 1146,
-     "h": 1748,
-     "accent": "#956dc6",
-     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAfABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6KKcyMgBYY3DIpgNoox70UAFGTRRQAYopRjHSikB/9k=",
-     "thumb": "thumbs/515f78bc5efb1389_t.webp",
-     "preview": "thumbs/515f78bc5efb1389_p.webp"
     }
    ]
   },
@@ -1728,8 +1730,8 @@ window.MIKI_LIBRARY = {
   },
   {
    "id": "NGC7000",
-   "count": 2,
-   "bytes": 64952198,
+   "count": 1,
+   "bytes": 29965512,
    "latest": "2026-07-25T18:03",
    "cover": "thumbs/09825f12dbafcad7_t.webp",
    "accent": "#c6716d",
@@ -1772,44 +1774,6 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAdABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIjUlsVYMQ252ninW4RUPOWNWmdfJxwfWk3qXGKsZrRkHBFFKxaRiwwQT60VZAQS7ZDn8qmuy4fehBUjaMVSTPmg5qeQkYH40mtQTvEI5Nq4II+lFMwT1ainoGp//Z",
      "thumb": "thumbs/09825f12dbafcad7_t.webp",
      "preview": "thumbs/09825f12dbafcad7_p.webp"
-    },
-    {
-     "file": "DONE/NGC7000_NorthAmerican_Nebula.png",
-     "name": "NGC7000_NorthAmerican_Nebula.png",
-     "label": "NorthAmerican Nebula",
-     "kind": "image",
-     "bytes": 34986686,
-     "mtime": "2026-07-25T11:05",
-     "acq": {
-      "frames": 863,
-      "exposure": 20,
-      "total": 17220,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-02",
-      "focal": 163,
-      "source": "napló",
-      "nights": 3,
-      "mode": "alt-az (07.21) → EQ (07.23, 07.24)",
-      "drizzle": "2,0×",
-      "dates": [
-       "2026-07-21",
-       "2026-07-23",
-       "2026-07-24"
-      ],
-      "estimated": false,
-      "note": {
-       "hu": "A 07.23 + 07.24 egyesítése még hátravan.",
-       "en": "A 07.23 + 07.24 egyesítése még hátravan."
-      }
-     },
-     "w": 2154,
-     "h": 3352,
-     "accent": "#c6776d",
-     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAfABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMEf3RjJzgVJtwD3AOMjpVi2gURGRznPQVZlEaWuMYz0ovqUo6ambgDqcUVIx3MSR+VFUQPtmXzBvOAe3apL07ZPLQHbjmqgO44FTPKxQRs2Spzz2qbajvoCDK4Bxj1NFR7iO1FOzC6P/Z",
-     "thumb": "thumbs/1b4e5a364a8cae52_t.webp",
-     "preview": "thumbs/1b4e5a364a8cae52_p.webp"
     }
    ]
   },
@@ -1829,6 +1793,7 @@ window.MIKI_LIBRARY = {
      "kind": "image",
      "bytes": 996876,
      "mtime": "2026-08-17T19:47",
+     "annot": true,
      "acq": {
       "frames": 862,
       "exposure": 20.0,
