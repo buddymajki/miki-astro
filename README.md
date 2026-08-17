@@ -326,8 +326,27 @@ A `data/objects.json` tartalmazza a leírásokat és adatokat. Új objektum
 felvételéhez másolj le egy meglévő blokkot, és az `"id"` legyen pontosan az,
 ami a fájlnév elején áll (pl. `"id": "NGC7331"`).
 
-Ami nincs benne, az is megjelenik a dashboardon – csak adatlap nélkül, és a
-Wikipédiát ilyenkor a katalógusjel alapján próbálja megkeresni.
+### Ami nincs benne, az is működik
+
+Új objektumhoz **nem kötelező** adatlapot írni. Ha nincs, a dashboard a
+katalógusjelből megkeresi a Wikipédia-szócikket, és onnan veszi a leírást
+**és az összehasonlító képet** is – a szerzőt és a licencet a Wikimedia
+Commonstól kérdezi le, hogy a forrásmegjelölés pontos legyen.
+
+A címtippek katalógusonként:
+
+| Azonosító | Amit keres |
+|---|---|
+| `M10` | Messier 10, M 10 |
+| `NGC7331`, `IC5070` | NGC 7331, IC 5070 |
+| `SH2-101` | Sh2-101, Sharpless 101 |
+| `C20` | Caldwell 20, NGC 20 |
+
+Ez azért kell, mert az „M 10" cím egy egyértelműsítő lapra visz – a
+gömbhalmaz szócikke „Messier 10" néven van fent.
+
+Saját adatlapot akkor érdemes írni, ha pontos magyar leírást, mért adatokat
+vagy konkrét összehasonlító képet (például egy Hubble-felvételt) szeretnél.
 
 **Minden szöveges mező kétnyelvű**, `{"hu": "…", "en": "…"}` alakban:
 `name`, `type`, `constellation`, `distance`, `magnitude`, `size`,

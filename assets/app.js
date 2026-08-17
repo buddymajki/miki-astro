@@ -55,8 +55,9 @@ const STRINGS = {
     highlights: "Érdekességek", data: "Adatok", myStuff: "Az én anyagom",
     extLinks: "Külső hivatkozások", related: "Kapcsolódó",
     noProfile: "Nincs adatlap",
-    noProfileText: "Ez az objektum még nincs benne a data/objects.json fájlban. " +
-                   "Vedd fel oda \"id\": \"%s\" kulccsal, és itt megjelennek az adatai.",
+    noProfileText: "Ehhez az objektumhoz még nincs saját adatlap, ezért a leírás és az " +
+                   "összehasonlító kép a Wikipédiáról jön. Ha pontos adatokat szeretnél, " +
+                   "vedd fel a data/objects.json fájlba \"id\": \"%s\" kulccsal.",
 
     fType: "Típus", fConst: "Csillagkép", fDist: "Távolság", fMag: "Fényesség",
     fSize: "Látszó méret", fRaDec: "RA / Dec", fDisc: "Felfedezés", fSeason: "Láthatóság",
@@ -115,8 +116,9 @@ const STRINGS = {
     highlights: "Highlights", data: "Data", myStuff: "My imagery",
     extLinks: "External links", related: "Related",
     noProfile: "No profile yet",
-    noProfileText: "This object is not in data/objects.json yet. Add it there with " +
-                   "\"id\": \"%s\" and its details will show up here.",
+    noProfileText: "This object has no profile of its own yet, so the description and the " +
+                   "comparison image come from Wikipedia. For exact figures, add it to " +
+                   "data/objects.json with \"id\": \"%s\".",
 
     fType: "Type", fConst: "Constellation", fDist: "Distance", fMag: "Magnitude",
     fSize: "Apparent size", fRaDec: "RA / Dec", fDisc: "Discovery", fSeason: "Visibility",
@@ -431,6 +433,75 @@ function visibleObjects() {
   return list.sort(by[state.sort] || by.name);
 }
 
+/* --- automatikus összehasonlító kép adatlap nélküli objektumhoz ----------- *
+ * Ha egy objektumhoz nincs kézzel felvett referenciakép, a Wikipédia
+ * vezérképét használjuk. A szerzőt és a licencet a Wikimedia Commonstól
+ * kérdezzük le, hogy a forrásmegjelölés pontos legyen.                      */
+
+const autoRefs = new Map();          // objektum-azonosító -> referencia vagy null
+
+/** A Commons fájlnév kiszedése egy upload.wikimedia.org címből.
+    A Wikipédia lekérdezőparamétert fűz a végére, azt le kell vágni. */
+function commonsFileFromUrl(url) {
+  const clean = String(url || "").split(/[?#]/)[0];
+  const m = /\/commons\/(?:thumb\/)?[0-9a-f]\/[0-9a-f]{2}\/([^/]+)/.exec(clean);
+  if (!m) return null;
+  try { return decodeURIComponent(m[1]); } catch (_) { return m[1]; }
+}
+
+async function commonsCredit(file) {
+  try {
+    const api = "https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*"
+      + "&prop=imageinfo&iiprop=extmetadata&titles=" + encodeURIComponent("File:" + file);
+    const res = await fetch(api);
+    if (!res.ok) return null;
+    const pages = (await res.json())?.query?.pages || {};
+    const info = Object.values(pages)[0]?.imageinfo?.[0]?.extmetadata;
+    if (!info) return null;
+    const strip = (v) => String(v?.value || "").replace(/<[^>]+>/g, "").trim();
+    return { artist: strip(info.Artist), license: strip(info.LicenseShortName) };
+  } catch (_) {
+    return null;
+  }
+}
+
+/** A Wikipédia-összefoglalóból összeállít egy összehasonlító képet. */
+function deriveAutoReference(obj, summary) {
+  if (obj.info?.reference || autoRefs.has(obj.id)) return;
+  const url = summary?.original || summary?.thumb;
+  if (!url) { autoRefs.set(obj.id, null); return; }
+
+  const ref = {
+    url,
+    kind: "amateur",
+    credit: summary.title ? `${summary.title} – Wikipédia` : "Wikipédia",
+    license: "",
+    page: summary.page,
+    telescope: { hu: "A Wikipédia szócikk vezérképe", en: "Wikipedia article lead image" },
+  };
+  autoRefs.set(obj.id, ref);
+  if (vw.obj?.id === obj.id) {
+    // ha eleve összehasonlító linkre érkeztek, most már meg tudjuk mutatni
+    if (state.route.mode === "compare") vw.mode = "compare";
+    applyModeUI();
+    if (vw.compare) {
+      renderComparePane();
+      renderViewerSide();
+    }
+  }
+
+  const file = commonsFileFromUrl(url);
+  if (file) {
+    ref.commonsFile = file;
+    commonsCredit(file).then((meta) => {
+      if (!meta) return;
+      if (meta.artist) ref.credit = meta.artist;
+      if (meta.license) ref.license = meta.license;
+      if (vw.obj?.id === obj.id && vw.compare) renderViewerSide();
+    });
+  }
+}
+
 /* --- "ÚJ" jelölés: mit nem nyitott még meg a látogató --------------------- *
  * A böngésző localStorage-ában tartjuk a már megnyitott felvételek listáját.
  * Első látogatáskor az egész album "megnézettnek" számít – így csak az ezután
@@ -513,22 +584,39 @@ async function wikiFetch(wlang, title) {
       lang: wlang, title: j.title, extract: j.extract,
       page: j.content_urls?.desktop?.page,
       thumb: j.thumbnail?.source || null,
+      original: j.originalimage?.source || null,
     };
   } catch (_) {
     return null;                        // nincs net – marad a saját leírás
   }
 }
 
+/** Szócikkcím-tippek katalógusjelből, ha nincs adatlap az objektumhoz.
+    Az "M10" például "Messier 10" néven van fent, nem "M 10" néven. */
+function wikiTitleGuesses(id) {
+  const s = String(id).toUpperCase();
+  let m;
+  if ((m = /^M(\d+)$/.exec(s))) return [`Messier ${m[1]}`, `M ${m[1]}`];
+  if ((m = /^C(\d+)$/.exec(s))) return [`Caldwell ${m[1]}`, `NGC ${m[1]}`];
+  if ((m = /^SH2-(\d+)$/.exec(s))) return [`Sh2-${m[1]}`, `Sharpless ${m[1]}`];
+  if ((m = /^(NGC|IC|UGC|PGC|LDN|LBN|ABELL|HCG|CR|MEL|VDB)(\d+)$/.exec(s))) {
+    const cat = m[1] === "ABELL" ? "Abell" : m[1];
+    return [`${cat} ${m[2]}`];
+  }
+  return [spaced(s)];
+}
+
 async function wikiSummary(obj) {
   const key = `miki:wiki:${lang}:${obj.id}`;
   try {
     const hit = JSON.parse(localStorage.getItem(key) || "null");
-    if (hit && Date.now() - hit.t < WIKI_TTL) return hit.d;
+    if (hit && Date.now() - hit.t < WIKI_TTL) { deriveAutoReference(obj, hit.d); return hit.d; }
   } catch (_) {}
 
+  const guesses = obj.info ? null : wikiTitleGuesses(obj.id);
   const titles = {
-    hu: obj.info?.wiki?.hu,
-    en: obj.info?.wiki?.en || (obj.info ? null : spaced(obj.id)),
+    hu: obj.info?.wiki?.hu || (guesses ? guesses[0] : null),
+    en: obj.info?.wiki?.en || (guesses ? guesses[0] : null),
   };
   const first = lang, second = lang === "hu" ? "en" : "hu";
 
@@ -538,7 +626,21 @@ async function wikiSummary(obj) {
     const alt = await wikiFetch(second, titles[second]);
     if (alt && (!best || alt.extract.length > best.extract.length)) best = alt;
   }
-  if (best) { try { localStorage.setItem(key, JSON.stringify({ t: Date.now(), d: best })); } catch (_) {} }
+  // adatlap nélküli objektumnál a további tippeket is végigpróbáljuk, és a
+  // tőmondatos találatot (egyértelműsítő lap) nem fogadjuk el
+  if (guesses) {
+    for (const title of guesses.slice(1)) {
+      if (best && best.extract.length >= 120) break;
+      const alt = (await wikiFetch(lang, title)) || (await wikiFetch(second, title));
+      if (alt && (!best || alt.extract.length > best.extract.length)) best = alt;
+    }
+    if (best && best.extract.length < 60) best = null;
+  }
+
+  if (best) {
+    try { localStorage.setItem(key, JSON.stringify({ t: Date.now(), d: best })); } catch (_) {}
+    deriveAutoReference(obj, best);
+  }
   return best;
 }
 
@@ -901,7 +1003,21 @@ const vw = {
 
 function currentItem() { return vw.items[vw.index]; }
 
-function referenceOf(obj) { return obj?.info?.reference || null; }
+function referenceOf(obj) {
+  return obj?.info?.reference || autoRefs.get(obj?.id) || null;
+}
+
+/** A referenciakép címe: Commons-fájlnévből vagy közvetlen URL-ből. */
+function refImageUrl(ref, width) {
+  return ref.file ? commonsImage(ref.file, width) : ref.url;
+}
+
+/** Hova mutasson a "forrás" gomb: Commons fájloldal vagy a szócikk. */
+function refSourceUrl(ref) {
+  if (ref.file) return commonsPage(ref.file);
+  if (ref.commonsFile) return commonsPage(ref.commonsFile);
+  return ref.page || "";
+}
 
 function refKindLabel(ref) {
   return t(ref.kind === "hubble" ? "kindHubble" : ref.kind === "pro" ? "kindPro" : "kindAmateur");
@@ -956,13 +1072,20 @@ function renderComparePane() {
   const img = $("#vwProImg");
   const stateBox = $("#vwProState");
 
-  if (!vw.compare || !ref) { pane.classList.remove("on"); return; }
+  if (!vw.compare || !ref) {
+    // ne maradjon bent az elozo objektum kepe es cimkeje
+    pane.classList.remove("on");
+    img.removeAttribute("src");
+    img.dataset.src = "";
+    $("#vwTagPro").textContent = "";
+    return;
+  }
   pane.classList.add("on");
 
   $("#vwTagPro").innerHTML =
     `<b>${esc(L(ref.telescope))}</b><span>${esc(ref.credit)}</span>`;
 
-  const src = commonsImage(ref.file, 1600);
+  const src = refImageUrl(ref, 1600);
   if (img.dataset.src !== src) {
     img.dataset.src = src;
     img.style.opacity = "0";
@@ -1024,9 +1147,10 @@ function renderViewerSide() {
       <div class="vw-block">
         <h4>${icon("telescope")} ${esc(refKindLabel(ref))}</h4>
         <p class="vw-desc">${esc(L(ref.telescope))}</p>
-        <p class="vw-credit">${esc(t("credit"))}: ${esc(ref.credit)} · ${esc(ref.license)}</p>
-        <a class="btn" href="${esc(commonsPage(ref.file))}" target="_blank" rel="noopener">
-          ${icon("open")} ${esc(t("viewOnCommons"))}</a>
+        <p class="vw-credit">${esc(t("credit"))}: ${esc(ref.credit)}${
+          ref.license ? " · " + esc(ref.license) : ""}</p>
+        ${refSourceUrl(ref) ? `<a class="btn" href="${esc(refSourceUrl(ref))}" target="_blank" rel="noopener">
+          ${icon("open")} ${esc(t("viewOnCommons"))}</a>` : ""}
       </div>` : ""}
 
     ${!vw.compare && facts?.length ? `
@@ -1143,6 +1267,11 @@ function openViewer(objId, index, wantMode) {
     vw.seq = o.items.map((_it, i) => ({ id: objId, i }));
     vw.seqPos = index;
   }
+
+  // adatlap nélküli objektumnál a Wikipédiából szerezzük az összehasonlító
+  // képet – objektumok közti lapozáskor az oldal nem rajzolódik újra,
+  // ezért a lekérdezést itt is elindítjuk
+  if (!o.info?.reference && !autoRefs.has(o.id)) wikiSummary(o);
 
   vw.el.classList.add("open");
   document.body.classList.add("no-scroll");
