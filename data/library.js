@@ -1,12 +1,12 @@
 window.MIKI_LIBRARY = {
- "generated": "2026-08-16T19:18:55",
+ "generated": "2026-08-17T21:00:30",
  "mediaDir": "DONE",
  "stats": {
-  "objects": 12,
-  "files": 54,
-  "images": 50,
+  "objects": 15,
+  "files": 67,
+  "images": 63,
   "videos": 4,
-  "bytes": 868988894
+  "bytes": 1000794631
  },
  "objects": [
   {
@@ -224,13 +224,83 @@ window.MIKI_LIBRARY = {
   },
   {
    "id": "IC5070",
-   "count": 3,
-   "bytes": 104681968,
-   "latest": "2026-08-09T19:48",
-   "cover": "thumbs/18a1ef8f4df59885_t.webp",
-   "accent": "#c66d6d",
-   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAYABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDB5JzTiuAMUxDxUhPFAxuaKb1ooENGRxTy4wPWiigBuaKKKAP/2Q==",
+   "count": 5,
+   "bytes": 146764526,
+   "latest": "2026-08-17T20:45",
+   "cover": "thumbs/6e6d906b44088c2e_t.webp",
+   "accent": "#c66d79",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAlABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDBkUDp2pnXpVjyi43AjaTzTrm3EapsHBXJPrVXQcrd2iriinY9aKozLdqV8o4xzwx9PaknwvHpUOGUbAcdzTpZw5XC4wMZ9aztqbqS5bMi4PNFKTk0VZkIfl5o6rRRQAEKpwQT+NFFFMD/2Q==",
    "items": [
+    {
+     "file": "DONE/IC5070-versionB_1608x20sec_32160s_drizzle-2-0x_2026-08-08_1337_og_LP.png",
+     "name": "IC5070-versionB_1608x20sec_32160s_drizzle-2-0x_2026-08-08_1337_og_LP.png",
+     "label": "versionB 1608x20sec 32160s drizzle-2-0x 2026-08-08 1337 og LP",
+     "kind": "image",
+     "bytes": 40109663,
+     "mtime": "2026-08-17T20:45",
+     "acq": {
+      "exposure": 20.0,
+      "nights": 2,
+      "mode": "EQ",
+      "drizzle": "2,0×",
+      "dates": [
+       "2026-08-02",
+       "2026-08-08"
+      ],
+      "estimated": false,
+      "source": "filename",
+      "frames": 1608,
+      "framesRaw": 1676,
+      "total": 32160.0,
+      "filter": "LP",
+      "fwhm": 8.22,
+      "note": {
+       "hu": "Első kétéjszakás szett. Itt mértem ki, hogy a hard FWHM-szűrő tiszta veszteség (1396 vs 1608 kocka, azonos FWHM).",
+       "en": "Első kétéjszakás szett. Itt mértem ki, hogy a hard FWHM-szűrő tiszta veszteség (1396 vs 1608 kocka, azonos FWHM)."
+      }
+     },
+     "w": 2692,
+     "h": 4958,
+     "accent": "#c66d79",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAlABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDBkUDp2pnXpVjyi43AjaTzTrm3EapsHBXJPrVXQcrd2iriinY9aKozLdqV8o4xzwx9PaknwvHpUOGUbAcdzTpZw5XC4wMZ9aztqbqS5bMi4PNFKTk0VZkIfl5o6rRRQAEKpwQT+NFFFMD/2Q==",
+     "thumb": "thumbs/6e6d906b44088c2e_t.webp",
+     "preview": "thumbs/6e6d906b44088c2e_p.webp"
+    },
+    {
+     "file": "DONE/IC5070-versionB_1608x20sec_32160s_drizzle-2-0x_2026-08-08_1337_og_LPb.jpg",
+     "name": "IC5070-versionB_1608x20sec_32160s_drizzle-2-0x_2026-08-08_1337_og_LPb.jpg",
+     "label": "versionB 1608x20sec 32160s drizzle-2-0x 2026-08-08 1337 og LPb",
+     "kind": "image",
+     "bytes": 1972895,
+     "mtime": "2026-08-17T19:34",
+     "acq": {
+      "exposure": 20.0,
+      "nights": 2,
+      "mode": "EQ",
+      "drizzle": "2,0×",
+      "dates": [
+       "2026-08-02",
+       "2026-08-08"
+      ],
+      "estimated": false,
+      "source": "filename",
+      "frames": 1608,
+      "framesRaw": 1676,
+      "total": 32160.0,
+      "filter": "LP dual-band",
+      "fwhm": 8.22,
+      "note": {
+       "hu": "Első kétéjszakás szett. Itt mértem ki, hogy a hard FWHM-szűrő tiszta veszteség (1396 vs 1608 kocka, azonos FWHM).",
+       "en": "Első kétéjszakás szett. Itt mértem ki, hogy a hard FWHM-szűrő tiszta veszteség (1396 vs 1608 kocka, azonos FWHM)."
+      }
+     },
+     "w": 2692,
+     "h": 4958,
+     "accent": "#c66d79",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAlABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDBkUDp2pnXpVjyi43AjaTzTrm3EapsHBXJNVdByt3aKuKKdjHWiqMy3alfKOMc8MfT2pJ8Lx6VDhlGwHHc06WcOVwuMDGfWs7am6kuWzIuDzRSk5NFWZCH5eaOq0UUABCqcEE/jRRRTQH/2Q==",
+     "thumb": "thumbs/3f19b2a5015a969d_t.webp",
+     "preview": "thumbs/3f19b2a5015a969d_p.webp"
+    },
     {
      "file": "DONE/IC5070_Pelican.png",
      "name": "IC5070_Pelican.png",
@@ -340,22 +410,30 @@ window.MIKI_LIBRARY = {
   },
   {
    "id": "M27",
-   "count": 8,
-   "bytes": 70009671,
-   "latest": "2026-08-12T16:06",
-   "cover": "thumbs/5b14404ee9090efb_t.webp",
-   "accent": "#c66d6d",
-   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDnMUvailLFsZ7DFADaKKKACloooASiiigD/9k=",
+   "count": 9,
+   "bytes": 71598993,
+   "latest": "2026-08-17T20:41",
+   "cover": "thumbs/d464a08ed21aa4b0_t.webp",
+   "accent": "#c66da1",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAWABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlqO1FSzyRvt8qPy8Lg85yfWgZFRRRQAUUUUAFFFFAH//Z",
    "items": [
     {
-     "file": "DONE/M27_final.png",
-     "name": "M27_final.png",
-     "label": "final",
+     "file": "DONE/M27_1826x20sec_36520s_drizzle-2-0x_2026-08-12_1204_og_LP_AW.png",
+     "name": "M27_1826x20sec_36520s_drizzle-2-0x_2026-08-12_1204_og_LP_AW.png",
+     "label": "1826x20sec 36520s drizzle-2-0x 2026-08-12 1204 og LP AW",
      "kind": "image",
-     "bytes": 16919334,
-     "mtime": "2026-08-12T13:48",
+     "bytes": 1589322,
+     "mtime": "2026-08-17T20:41",
      "acq": {
-      "exposure": 20,
+      "frames": 1826,
+      "exposure": 20.0,
+      "total": 36520.0,
+      "filter": "LP",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "filename",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -365,11 +443,47 @@ window.MIKI_LIBRARY = {
        "2026-08-11"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 1826,
       "framesRaw": 2065,
+      "fwhm": 6.6,
+      "note": {
+       "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
+       "en": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva."
+      }
+     },
+     "w": 1429,
+     "h": 1607,
+     "accent": "#c66da1",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAWABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlqO1FSzyRvt8qPy8Lg85yfWgZFRRRQAUUUUAFFFFAH//Z",
+     "thumb": "thumbs/d464a08ed21aa4b0_t.webp",
+     "preview": "thumbs/d464a08ed21aa4b0_p.webp"
+    },
+    {
+     "file": "DONE/M27_final.png",
+     "name": "M27_final.png",
+     "label": "final",
+     "kind": "image",
+     "bytes": 16919334,
+     "mtime": "2026-08-12T13:48",
+     "acq": {
+      "frames": 1826,
+      "exposure": 20,
       "total": 36480,
       "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "napló",
+      "nights": 3,
+      "mode": "EQ",
+      "drizzle": "2,0×",
+      "dates": [
+       "2026-08-08",
+       "2026-08-09",
+       "2026-08-11"
+      ],
+      "estimated": false,
+      "framesRaw": 2065,
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -391,7 +505,15 @@ window.MIKI_LIBRARY = {
      "bytes": 4781709,
      "mtime": "2026-08-12T13:55",
      "acq": {
+      "frames": 1826,
       "exposure": 20,
+      "total": 36480,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -401,11 +523,7 @@ window.MIKI_LIBRARY = {
        "2026-08-11"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 1826,
       "framesRaw": 2065,
-      "total": 36480,
-      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -427,7 +545,15 @@ window.MIKI_LIBRARY = {
      "bytes": 1168616,
      "mtime": "2026-08-12T14:28",
      "acq": {
+      "frames": 1826,
       "exposure": 20,
+      "total": 36480,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -437,11 +563,7 @@ window.MIKI_LIBRARY = {
        "2026-08-11"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 1826,
       "framesRaw": 2065,
-      "total": 36480,
-      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -463,7 +585,15 @@ window.MIKI_LIBRARY = {
      "bytes": 4784054,
      "mtime": "2026-08-12T14:53",
      "acq": {
+      "frames": 1826,
       "exposure": 20,
+      "total": 36480,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -473,11 +603,7 @@ window.MIKI_LIBRARY = {
        "2026-08-11"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 1826,
       "framesRaw": 2065,
-      "total": 36480,
-      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -499,7 +625,15 @@ window.MIKI_LIBRARY = {
      "bytes": 15847804,
      "mtime": "2026-08-12T14:23",
      "acq": {
+      "frames": 1826,
       "exposure": 20,
+      "total": 36480,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -509,11 +643,7 @@ window.MIKI_LIBRARY = {
        "2026-08-11"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 1826,
       "framesRaw": 2065,
-      "total": 36480,
-      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -535,7 +665,15 @@ window.MIKI_LIBRARY = {
      "bytes": 5799541,
      "mtime": "2026-08-12T16:06",
      "acq": {
+      "frames": 1826,
       "exposure": 20,
+      "total": 36480,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -545,11 +683,7 @@ window.MIKI_LIBRARY = {
        "2026-08-11"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 1826,
       "framesRaw": 2065,
-      "total": 36480,
-      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -571,7 +705,15 @@ window.MIKI_LIBRARY = {
      "bytes": 2230142,
      "mtime": "2026-08-12T13:51",
      "acq": {
+      "frames": 1826,
       "exposure": 20,
+      "total": 36480,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -581,11 +723,7 @@ window.MIKI_LIBRARY = {
        "2026-08-11"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 1826,
       "framesRaw": 2065,
-      "total": 36480,
-      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -607,7 +745,15 @@ window.MIKI_LIBRARY = {
      "bytes": 18478471,
      "mtime": "2026-08-12T14:37",
      "acq": {
+      "frames": 1826,
       "exposure": 20,
+      "total": 36480,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-11",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -617,11 +763,7 @@ window.MIKI_LIBRARY = {
        "2026-08-11"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 1826,
       "framesRaw": 2065,
-      "total": 36480,
-      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -639,9 +781,9 @@ window.MIKI_LIBRARY = {
   },
   {
    "id": "M31",
-   "count": 2,
-   "bytes": 68108822,
-   "latest": "2026-08-12T16:34",
+   "count": 4,
+   "bytes": 138656029,
+   "latest": "2026-08-17T20:34",
    "cover": "thumbs/1d84e08c6147e2fc_t.webp",
    "accent": "#926dc6",
    "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAZABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmqMUqLuYDtUtyYshYc4A5J7mmBDRRRQAZxQD3ooFABRRRQB//2Q==",
@@ -654,18 +796,22 @@ window.MIKI_LIBRARY = {
      "bytes": 4140928,
      "mtime": "2026-08-09T20:15",
      "acq": {
-      "framesRaw": 398,
+      "frames": 378,
       "exposure": 20,
       "total": 7960,
       "filter": "IR-cut (LP nélkül)",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-10",
+      "focal": 163,
+      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
+      "framesRaw": 398,
       "nights": 2,
       "dates": [
        "2026-08-10",
        "2026-08-12"
       ],
-      "telescope": "ZWO Seestar S30 Pro",
       "estimated": true,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
        "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
@@ -686,18 +832,22 @@ window.MIKI_LIBRARY = {
      "bytes": 63967894,
      "mtime": "2026-08-12T16:34",
      "acq": {
-      "framesRaw": 398,
+      "frames": 378,
       "exposure": 20,
       "total": 7960,
       "filter": "IR-cut (LP nélkül)",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-10",
+      "focal": 163,
+      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
+      "framesRaw": 398,
       "nights": 2,
       "dates": [
        "2026-08-10",
        "2026-08-12"
       ],
-      "telescope": "ZWO Seestar S30 Pro",
       "estimated": true,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
        "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
@@ -709,6 +859,78 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAiABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmKKKeEITcRxVgMooooAVevNSSzNIFUn5V6D0qKigAooooAKKKKACiiigD/9k=",
      "thumb": "thumbs/5d9c979c4dc4faca_t.webp",
      "preview": "thumbs/5d9c979c4dc4faca_p.webp"
+    },
+    {
+     "file": "DONE/M31_378x20sec_7560s_drizzle-2-0x_2026-08-12_1556_og_IRCUT_AW.png",
+     "name": "M31_378x20sec_7560s_drizzle-2-0x_2026-08-12_1556_og_IRCUT_AW.png",
+     "label": "378x20sec 7560s drizzle-2-0x 2026-08-12 1556 og IRCUT AW",
+     "kind": "image",
+     "bytes": 64184790,
+     "mtime": "2026-08-17T20:32",
+     "acq": {
+      "frames": 378,
+      "exposure": 20,
+      "total": 7960,
+      "filter": "IR-cut (LP nélkül)",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-10",
+      "focal": 163,
+      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
+      "framesRaw": 398,
+      "nights": 2,
+      "dates": [
+       "2026-08-10",
+       "2026-08-12"
+      ],
+      "estimated": true,
+      "note": {
+       "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
+       "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
+      }
+     },
+     "w": 3812,
+     "h": 5603,
+     "accent": "#c6a56d",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAdABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaUAnpQqljgVbmg+zRIWI3MM4B7UAVCMUUE0UASRsE57015C7Zbmm0lABRRRQB//Z",
+     "thumb": "thumbs/85c9dbe5cc951569_t.webp",
+     "preview": "thumbs/85c9dbe5cc951569_p.webp"
+    },
+    {
+     "file": "DONE/M31_378x20sec_7560s_drizzle-2-0x_2026-08-12_1556_og_IRCUT_AW_aNNOT.png",
+     "name": "M31_378x20sec_7560s_drizzle-2-0x_2026-08-12_1556_og_IRCUT_AW_aNNOT.png",
+     "label": "378x20sec 7560s drizzle-2-0x 2026-08-12 1556 og IRCUT AW aNNOT",
+     "kind": "image",
+     "bytes": 6362417,
+     "mtime": "2026-08-17T20:34",
+     "acq": {
+      "frames": 378,
+      "exposure": 20,
+      "total": 7960,
+      "filter": "IR-cut (LP nélkül)",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-10",
+      "focal": 163,
+      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
+      "framesRaw": 398,
+      "nights": 2,
+      "dates": [
+       "2026-08-10",
+       "2026-08-12"
+      ],
+      "estimated": true,
+      "note": {
+       "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
+       "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
+      }
+     },
+     "w": 1200,
+     "h": 1764,
+     "accent": "#c6a76d",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAdABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlKUAnpQqljgVbmhNtEhYjcwzgGgCoRRSE80UASxsE57015C7Zbmm0lABRRRQB/9k=",
+     "thumb": "thumbs/16df11530db73838_t.webp",
+     "preview": "thumbs/16df11530db73838_p.webp"
     }
    ]
   },
@@ -1105,13 +1327,51 @@ window.MIKI_LIBRARY = {
   },
   {
    "id": "NGC6888",
-   "count": 3,
-   "bytes": 207618320,
-   "latest": "2026-08-16T13:21",
-   "cover": "thumbs/94546ca2a4053753_t.webp",
-   "accent": "#c6766d",
-   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAjABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDF3EGkzk80rnccgcmgEYwRSKDaTyCKKAD2PFFACUpJIA9KQfSj2oAPpRS4PpRQA3+KngDNFFAidVGOlFFFMR//2Q==",
+   "count": 4,
+   "bytes": 217598614,
+   "latest": "2026-08-17T20:18",
+   "cover": "thumbs/6056dd7a3b060138_t.webp",
+   "accent": "#b86dc6",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAZABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmaM0o6+vtUsmxow4UA57f4UwIRRR9KKBBSig0DqKADFFOoouM/9k=",
    "items": [
+    {
+     "file": "DONE/NGC6888_931x30sec_27930s_drizzle-2-0x_2026-08-16_1110_og_LP_AW.png",
+     "name": "NGC6888_931x30sec_27930s_drizzle-2-0x_2026-08-16_1110_og_LP_AW.png",
+     "label": "931x30sec 27930s drizzle-2-0x 2026-08-16 1110 og LP AW",
+     "kind": "image",
+     "bytes": 9980294,
+     "mtime": "2026-08-17T20:18",
+     "acq": {
+      "frames": 931,
+      "exposure": 30.0,
+      "total": 27930.0,
+      "filter": "LP",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-15",
+      "focal": 163,
+      "source": "filename",
+      "nights": 2,
+      "mode": "EQ",
+      "drizzle": "2,0×",
+      "dates": [
+       "2026-08-14",
+       "2026-08-15"
+      ],
+      "estimated": false,
+      "framesRaw": 1054,
+      "note": {
+       "hu": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény.",
+       "en": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény."
+      }
+     },
+     "w": 1631,
+     "h": 2036,
+     "accent": "#b86dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAZABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmaM0o6+vtUsmxow4UA57f4UwIRRR9KKBBSig0DqKADFFOoouM/9k=",
+     "thumb": "thumbs/6056dd7a3b060138_t.webp",
+     "preview": "thumbs/6056dd7a3b060138_p.webp"
+    },
     {
      "file": "DONE/NGC6888_COMPLET_HOO_final.png",
      "name": "NGC6888_COMPLET_HOO_final.png",
@@ -1221,6 +1481,67 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAfABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmyScZ9OKO3TmnKFZwG4HfFPeJdodG4PUN1FMCL60UUUAHQkHrTt/yYI5PemHpzS55yKADB7dKKX6UUAf/2Q==",
      "thumb": "thumbs/962b002621e965b1_t.webp",
      "preview": "thumbs/962b002621e965b1_p.webp"
+    }
+   ]
+  },
+  {
+   "id": "NGC6946",
+   "count": 2,
+   "bytes": 3036640,
+   "latest": "2026-08-17T20:10",
+   "cover": "thumbs/80c29e664b02b8b9_t.webp",
+   "accent": "#986dc6",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAeABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6KKc6FAN38QyKYDaKPxooAKSl+lJQAuKKMj0opAf/9k=",
+   "items": [
+    {
+     "file": "DONE/NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter.png",
+     "name": "NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter.png",
+     "label": "157x10sec 2026-08-12 drizzle-1-5x 2026-08-13 0112 og Astrowizafter",
+     "kind": "image",
+     "bytes": 1581042,
+     "mtime": "2026-08-17T20:05",
+     "acq": {
+      "frames": 157,
+      "exposure": 10.0,
+      "total": 1570.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-08-12",
+      "focal": 164,
+      "source": "filename"
+     },
+     "w": 1298,
+     "h": 1971,
+     "accent": "#986dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAeABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6KKc6FAN38QyKYDaKPxooAKSl+lJQAuKKMj0opAf/9k=",
+     "thumb": "thumbs/80c29e664b02b8b9_t.webp",
+     "preview": "thumbs/80c29e664b02b8b9_p.webp"
+    },
+    {
+     "file": "DONE/NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter_Annot.png",
+     "name": "NGC6946_157x10sec_2026-08-12_drizzle-1-5x_2026-08-13_0112_og_Astrowizafter_Annot.png",
+     "label": "157x10sec 2026-08-12 drizzle-1-5x 2026-08-13 0112 og Astrowizafter Annot",
+     "kind": "image",
+     "bytes": 1455598,
+     "mtime": "2026-08-17T20:10",
+     "acq": {
+      "frames": 157,
+      "exposure": 10.0,
+      "total": 1570.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-08-12",
+      "focal": 164,
+      "source": "filename"
+     },
+     "w": 1146,
+     "h": 1748,
+     "accent": "#956dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAfABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6KKcyMgBYY3DIpgNoox70UAFGTRRQAYopRjHSikB/9k=",
+     "thumb": "thumbs/515f78bc5efb1389_t.webp",
+     "preview": "thumbs/515f78bc5efb1389_p.webp"
     }
    ]
   },
@@ -1422,7 +1743,15 @@ window.MIKI_LIBRARY = {
      "bytes": 29965512,
      "mtime": "2026-07-25T18:03",
      "acq": {
+      "frames": 863,
       "exposure": 20,
+      "total": 17220,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-02",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "alt-az (07.21) → EQ (07.23, 07.24)",
       "drizzle": "2,0×",
@@ -1432,10 +1761,6 @@ window.MIKI_LIBRARY = {
        "2026-07-24"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 863,
-      "total": 17220,
-      "filter": "LP dual-band",
       "note": {
        "hu": "A 07.23 + 07.24 egyesítése még hátravan.",
        "en": "A 07.23 + 07.24 egyesítése még hátravan."
@@ -1456,7 +1781,15 @@ window.MIKI_LIBRARY = {
      "bytes": 34986686,
      "mtime": "2026-07-25T11:05",
      "acq": {
+      "frames": 863,
       "exposure": 20,
+      "total": 17220,
+      "filter": "LP dual-band",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-02",
+      "focal": 163,
+      "source": "napló",
       "nights": 3,
       "mode": "alt-az (07.21) → EQ (07.23, 07.24)",
       "drizzle": "2,0×",
@@ -1466,10 +1799,6 @@ window.MIKI_LIBRARY = {
        "2026-07-24"
       ],
       "estimated": false,
-      "source": "napló",
-      "frames": 863,
-      "total": 17220,
-      "filter": "LP dual-band",
       "note": {
        "hu": "A 07.23 + 07.24 egyesítése még hátravan.",
        "en": "A 07.23 + 07.24 egyesítése még hátravan."
@@ -1481,6 +1810,128 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAfABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMEf3RjJzgVJtwD3AOMjpVi2gURGRznPQVZlEaWuMYz0ovqUo6ambgDqcUVIx3MSR+VFUQPtmXzBvOAe3apL07ZPLQHbjmqgO44FTPKxQRs2Spzz2qbajvoCDK4Bxj1NFR7iO1FOzC6P/Z",
      "thumb": "thumbs/1b4e5a364a8cae52_t.webp",
      "preview": "thumbs/1b4e5a364a8cae52_p.webp"
+    }
+   ]
+  },
+  {
+   "id": "NGC7331",
+   "count": 3,
+   "bytes": 3417204,
+   "latest": "2026-08-17T19:51",
+   "cover": "thumbs/5d5ee245bf4b8e7a_t.webp",
+   "accent": "#6dc682",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAYABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaKKc23A2g575oAbRRRQAUoAzgnA9aKKYCUUUUAf/2Q==",
+   "items": [
+    {
+     "file": "DONE/NGC7331_862x20sec_2026-08-13_drizzle-2-0x_2026-08-14_2206_ANNOT.png",
+     "name": "NGC7331_862x20sec_2026-08-13_drizzle-2-0x_2026-08-14_2206_ANNOT.png",
+     "label": "862x20sec 2026-08-13 drizzle-2-0x 2026-08-14 2206 ANNOT",
+     "kind": "image",
+     "bytes": 996876,
+     "mtime": "2026-08-17T19:47",
+     "acq": {
+      "frames": 862,
+      "exposure": 20.0,
+      "total": 17240.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut (LP nélkül)",
+      "gain": 200,
+      "date": "2026-08-13",
+      "focal": 163,
+      "source": "filename",
+      "nights": 1,
+      "mode": "EQ",
+      "drizzle": "2,0×",
+      "dates": [
+       "2026-08-13"
+      ],
+      "estimated": false,
+      "framesRaw": 1093,
+      "note": {
+       "hu": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan.",
+       "en": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan."
+      }
+     },
+     "w": 1097,
+     "h": 1301,
+     "accent": "#6dc682",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAYABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaKKc23A2g575oAbRRRQAUoAzgnA9aKKYCUUUUAf/2Q==",
+     "thumb": "thumbs/5d5ee245bf4b8e7a_t.webp",
+     "preview": "thumbs/5d5ee245bf4b8e7a_p.webp"
+    },
+    {
+     "file": "DONE/NGC7331_862x20sec_2026-08-13_drizzle-2-0x_2026-08-14_2206_batched_AW59_nl_nxt_0_9_i1.png",
+     "name": "NGC7331_862x20sec_2026-08-13_drizzle-2-0x_2026-08-14_2206_batched_AW59_nl_nxt_0_9_i1.png",
+     "label": "862x20sec 2026-08-13 drizzle-2-0x 2026-08-14 2206 batched AW59 nl nxt 0 9 i1",
+     "kind": "image",
+     "bytes": 2147689,
+     "mtime": "2026-08-17T19:45",
+     "acq": {
+      "frames": 862,
+      "exposure": 20.0,
+      "total": 17240.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut (LP nélkül)",
+      "gain": 200,
+      "date": "2026-08-13",
+      "focal": 163,
+      "source": "filename",
+      "nights": 1,
+      "mode": "EQ",
+      "drizzle": "2,0×",
+      "dates": [
+       "2026-08-13"
+      ],
+      "estimated": false,
+      "framesRaw": 1093,
+      "note": {
+       "hu": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan.",
+       "en": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan."
+      }
+     },
+     "w": 2115,
+     "h": 2361,
+     "accent": "#8a6dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAWABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaKKDjsMUAFFFFABRRRTAKKKKAP/Z",
+     "thumb": "thumbs/2cb1a218c0181761_t.webp",
+     "preview": "thumbs/2cb1a218c0181761_p.webp"
+    },
+    {
+     "file": "DONE/NGC7331_862x20sec_2026-08-13_drizzle-2-0x_2026-08-14_2206_batched_ZOOMED.png",
+     "name": "NGC7331_862x20sec_2026-08-13_drizzle-2-0x_2026-08-14_2206_batched_ZOOMED.png",
+     "label": "862x20sec 2026-08-13 drizzle-2-0x 2026-08-14 2206 batched ZOOMED",
+     "kind": "image",
+     "bytes": 272639,
+     "mtime": "2026-08-17T19:51",
+     "acq": {
+      "frames": 862,
+      "exposure": 20.0,
+      "total": 17240.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut (LP nélkül)",
+      "gain": 200,
+      "date": "2026-08-13",
+      "focal": 163,
+      "source": "filename",
+      "nights": 1,
+      "mode": "EQ",
+      "drizzle": "2,0×",
+      "dates": [
+       "2026-08-13"
+      ],
+      "estimated": false,
+      "framesRaw": 1093,
+      "note": {
+       "hu": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan.",
+       "en": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan."
+      }
+     },
+     "w": 738,
+     "h": 873,
+     "accent": "#8a6dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAYABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6KKklEYjj2Z3EZbPrmgCOikooAKWiimAlFFFAH//2Q==",
+     "thumb": "thumbs/3a2a1ebfc34275b7_t.webp",
+     "preview": "thumbs/3a2a1ebfc34275b7_p.webp"
     }
    ]
   },
@@ -1525,6 +1976,45 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAOABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDAOOlKRtpmaMnGCaACikzRQI//2Q==",
      "thumb": "thumbs/337fa67fb643a3de_t.webp",
      "preview": "thumbs/337fa67fb643a3de_p.webp"
+    }
+   ]
+  },
+  {
+   "id": "STEPHAN",
+   "count": 2,
+   "bytes": 1152512,
+   "latest": "2026-08-17T19:58",
+   "cover": "thumbs/7bbf7f72b4d8227a_t.webp",
+   "accent": "#6d74c6",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAASABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaOnFApWYscmmAlFFFIAooopgFFFFID//2Q==",
+   "items": [
+    {
+     "file": "DONE/Stephan_s_Quintet_1.png",
+     "name": "Stephan_s_Quintet_1.png",
+     "label": "s Quintet 1",
+     "kind": "image",
+     "bytes": 893371,
+     "mtime": "2026-08-17T19:57",
+     "w": 501,
+     "h": 460,
+     "accent": "#6d74c6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAASABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaOnFApWYscmmAlFFFIAooopgFFFFID//2Q==",
+     "thumb": "thumbs/7bbf7f72b4d8227a_t.webp",
+     "preview": "thumbs/7bbf7f72b4d8227a_p.webp"
+    },
+    {
+     "file": "DONE/Stephan_s_Quintet_2.png",
+     "name": "Stephan_s_Quintet_2.png",
+     "label": "s Quintet 2",
+     "kind": "image",
+     "bytes": 259141,
+     "mtime": "2026-08-17T19:58",
+     "w": 746,
+     "h": 680,
+     "accent": "#6d93c6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAASABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaXkUg6053L8mmA2iiikAUUUUwCiiikB//9k=",
+     "thumb": "thumbs/a89300ed6da59093_t.webp",
+     "preview": "thumbs/a89300ed6da59093_p.webp"
     }
    ]
   },
