@@ -572,6 +572,34 @@ body.no-scroll { overflow: hidden; }
 .play-orb svg { width: 19px; height: 19px; margin-left: 3px; }
 .shot:hover .play-orb b { transform: scale(1.09); background: rgba(94, 234, 212, .9); color: #04121a; }
 
+/* --- "ÚJ" jelölés: amit a néző még nem nyitott meg --------------------------
+   Saját szín kell neki: a türkiz a darabszámé, a borostyán a becsült adaté. */
+[hidden] { display: none !important; }
+
+.new-tag {
+  position: absolute; top: 10px; left: 10px; z-index: 4;
+  display: none;
+  font-size: 10px; font-weight: 750; letter-spacing: .09em;
+  padding: 3px 9px; border-radius: 7px;
+  background: #ff5c8a; color: #23050f;
+  box-shadow: 0 4px 16px -4px rgba(255, 92, 138, .85);
+}
+.shot.is-new .new-tag { display: block; }
+.shot.is-new .play-tag { top: 40px; }        /* videónál ne fedjék egymást */
+
+.badge.new-count {
+  background: #ff5c8a; color: #23050f;
+  border-color: transparent; text-transform: none; font-weight: 700;
+}
+
+.new-dot {
+  width: 7px; height: 7px; border-radius: 99px; flex: none;
+  background: #ff5c8a;
+  box-shadow: 0 0 9px rgba(255, 92, 138, .9);
+}
+
+#newLine { color: #ff9ab8; font-weight: 650; }
+
 /* becsült adat jelölése */
 .est-chip {
   margin-left: auto;

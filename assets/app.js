@@ -77,6 +77,7 @@ const STRINGS = {
     previewNote: "előnézet – az „Eredeti” a teljes felbontás",
     thisShot: "Ez a felvétel",
 
+    newTag: "ÚJ", newCount: "%s új", newInAlbum: "%s új felvétel",
     rescanOk: "Kész: %s objektum, %s felvétel.",
     rescanFail: "Az újraolvasás nem sikerült: ",
     serverDown: "A szerver nem válaszol.",
@@ -135,6 +136,7 @@ const STRINGS = {
     previewNote: "preview – “Original” opens full resolution",
     thisShot: "This shot",
 
+    newTag: "NEW", newCount: "%s new", newInAlbum: "%s new shot(s)",
     rescanOk: "Done: %s objects, %s shots.",
     rescanFail: "Rescan failed: ",
     serverDown: "The server is not responding.",
@@ -416,6 +418,71 @@ function visibleObjects() {
   return list.sort(by[state.sort] || by.name);
 }
 
+/* --- "ÚJ" jelölés: mit nem nyitott még meg a látogató --------------------- *
+ * A böngésző localStorage-ában tartjuk a már megnyitott felvételek listáját.
+ * Első látogatáskor az egész album "megnézettnek" számít – így csak az ezután
+ * felkerülő képek kapnak jelölést, nem árasztja el a nézőt 66 db ÚJ címke.  */
+
+const SEEN_KEY = "miki:seen";
+let seen = new Set();
+
+function persistSeen() {
+  try { localStorage.setItem(SEEN_KEY, JSON.stringify([...seen])); } catch (_) {}
+}
+
+function loadSeen() {
+  const alive = new Set(allObjects().flatMap((o) => o.items.map((it) => it.file)));
+  let stored = null;
+  try { stored = JSON.parse(localStorage.getItem(SEEN_KEY) || "null"); } catch (_) {}
+
+  if (!Array.isArray(stored)) {              // első látogatás → ez a kiindulópont
+    seen = alive;
+    persistSeen();
+    return;
+  }
+  // a törölt fájlok bejegyzéseit kidobjuk, hogy ne nőjön a végtelenségig
+  seen = new Set(stored.filter((f) => alive.has(f)));
+  if (seen.size !== stored.length) persistSeen();
+}
+
+const isNew = (item) => !!item && !seen.has(item.file);
+const unseenCount = (o) => o.items.reduce((n, it) => n + (isNew(it) ? 1 : 0), 0);
+const totalUnseen = () => allObjects().reduce((n, o) => n + unseenCount(o), 0);
+
+function markSeen(item) {
+  if (!item || seen.has(item.file)) return;
+  seen.add(item.file);
+  persistSeen();
+  refreshNewBadges();
+}
+
+/** A jelöléseket helyben frissítjük, hogy ne kelljen újrarajzolni az oldalt. */
+function refreshNewBadges() {
+  $$(".shot").forEach((el) => {
+    const obj = allObjects().find((o) => o.id === el.dataset.obj);
+    const item = obj?.items[Number(el.dataset.idx)];
+    el.classList.toggle("is-new", isNew(item));
+  });
+  $$(".card[data-go]").forEach((el) => {
+    const obj = allObjects().find((o) => o.id === el.dataset.go);
+    const chip = $(".new-count", el);
+    if (!obj || !chip) return;
+    const n = unseenCount(obj);
+    chip.textContent = t("newCount", n);
+    chip.hidden = n === 0;
+  });
+  $$(".navitem[data-go]").forEach((el) => {
+    const obj = allObjects().find((o) => o.id === el.dataset.go);
+    const dot = $(".new-dot", el);
+    if (dot) dot.hidden = !obj || unseenCount(obj) === 0;
+  });
+  const line = $("#newLine");
+  if (line) {
+    const n = totalUnseen();
+    line.textContent = n ? ` · ${t("newInAlbum", n)}` : "";
+  }
+}
+
 /* --- Wikipédia (élő, netről) --------------------------------------------- */
 
 const WIKI_TTL = 30 * 24 * 3600 * 1000;
@@ -519,7 +586,9 @@ function shotThumb(item) {
 
 function shotCard(obj, item, index, delay = 0) {
   return `
-    <button class="shot" data-obj="${esc(obj.id)}" data-idx="${index}" style="animation-delay:${delay}ms">
+    <button class="shot${isNew(item) ? " is-new" : ""}" data-obj="${esc(obj.id)}" data-idx="${index}"
+            style="animation-delay:${delay}ms">
+      <span class="new-tag">${esc(t("newTag"))}</span>
       <span class="shot-media${item.kind === "video" ? " video-tile" : ""}">
         ${shotThumb(item)}
         ${item.kind === "video" ? `<span class="play-tag">${icon("play")} ${esc(lang === "hu" ? "videó" : "video")}</span>` : ""}
@@ -549,6 +618,7 @@ function objectCard(o, index) {
           : `<span style="display:block;width:100%;height:100%;background:linear-gradient(140deg,${esc(o.accent || "#2a3050")},#0a0d16)"></span>`}
         <span class="card-badges">
           <span class="badge">${esc(o.id)}</span>
+          <span class="badge new-count" ${unseenCount(o) ? "" : "hidden"}>${esc(t("newCount", unseenCount(o)))}</span>
           <span class="badge count accent">${o.count}</span>
         </span>
       </span>
@@ -580,6 +650,7 @@ function renderSidebar() {
         <span class="navitem-name">${esc(o.name)}</span>
         <span class="navitem-meta">${esc(o.id)}</span>
       </span>
+      <span class="new-dot" ${unseenCount(o) ? "" : "hidden"}></span>
       <span class="navitem-count">${o.count}</span>
     </button>`).join("")
     : `<div class="note" style="padding:12px 8px">${esc(t("noResults"))}</div>`;
@@ -617,7 +688,7 @@ function renderHome() {
       <h1>${esc(t("heroTitle"))}</h1>
       <p>${esc(t("heroText"))} &middot;
          <b>${s.objects ?? 0}</b> ${esc(t("footObjects"))},
-         <b>${s.files ?? 0}</b> ${esc(t("footShots"))}${
+         <b>${s.files ?? 0}</b> ${esc(t("footShots"))}<b id="newLine"></b>${
            state.query ? ` &middot; ${esc(t("searchFor", state.query))}` : ""}</p>
     </section>
     ${list.length
@@ -629,6 +700,7 @@ function renderHome() {
   $("#backBtn").style.display = "none";
   state.renderedId = "__home__";
   hydratePosters($("#content"));
+  refreshNewBadges();
 }
 
 /* --- objektum-adatlap ---------------------------------------------------- */
@@ -774,6 +846,7 @@ function renderObject(id) {
   $("#backBtn").style.display = "";
   state.renderedId = o.id;
   hydratePosters($("#content"));
+  refreshNewBadges();
   window.scrollTo({ top: 0 });
 
   wikiSummary(o).then((w) => {
@@ -1007,6 +1080,7 @@ function showSlide() {
   }
   $("#vwStage").classList.toggle("zoomable", item.kind !== "video" && !vw.compare);
 
+  markSeen(item);                            // ettől tűnik el róla az ÚJ jelölés
   $("#vwTagMine").innerHTML = `<b>${esc(t("mine"))}</b><span>${esc(prettyLabel(item.label))}</span>`;
   $("#vwTitle").textContent = item.name;
   $("#vwMeta").innerHTML = [
@@ -1404,6 +1478,7 @@ function wire() {
   // publikált oldalon nincs mit újraolvasni, és nincs eredeti fájl sem
   document.body.classList.toggle("static-site", !IS_LOCAL);
   await loadAll();
+  loadSeen();
   if (!state.library.objects?.length) {
     $("#content").innerHTML =
       `<div class="empty"><b>${esc(t("emptyTitle"))}</b>${esc(t("emptyText"))}</div>`;

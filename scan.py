@@ -133,7 +133,8 @@ def object_key(stem):
 # Sorrend-jelolok a fajlnevben (alahuzassal hatarolt, kis/nagybetu mindegy):
 #   _MAIN_  -> ez a kep megy elore es ez lesz az album boritoja
 #   _ANNOT_ -> feliratozott valtozat, kozvetlenul a MAIN utan
-MAIN_RE = re.compile(r"(?:^|_)main(?:_|$)", re.I)
+# Alahuzas es kotojel is elvalaszthatja: _MAIN_, _MAIN-, -MAIN_, vagy a nev vegen.
+MAIN_RE = re.compile(r"(?:^|[_-])main(?:[_-]|$)", re.I)
 ANNOT_RE = re.compile(r"annot", re.I)
 
 # A cimkebol kihagyando reszek: ezek kulon, rendezett formaban ugyis
@@ -157,7 +158,8 @@ def variant_label(stem, key):
     A kockaszam, expozicio, drizzle, datum es szuro kimarad - azok a
     felveteli adatok kozott jelennek meg, itt csak zajt csinalnanak."""
     rest = stem[len(key):] if stem.upper().startswith(key) else stem
-    tokens = [t for t in rest.replace("-", "-").split("_") if t.strip("-")]
+    rest = MAIN_RE.sub("_", rest)          # a sorrend-jelolo nem cimke
+    tokens = [t for t in rest.split("_") if t.strip("-")]
 
     kept = []
     prev_was_date = False
