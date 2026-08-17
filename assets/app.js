@@ -597,7 +597,9 @@ function wikiTitleGuesses(id) {
   const s = String(id).toUpperCase();
   let m;
   if ((m = /^M(\d+)$/.exec(s))) return [`Messier ${m[1]}`, `M ${m[1]}`];
-  if ((m = /^C(\d+)$/.exec(s))) return [`Caldwell ${m[1]}`, `NGC ${m[1]}`];
+  // A Caldwell-szam NEM azonos az NGC-szammal (C20 = NGC 7000), ezert itt
+  // nincs NGC-tartalek: rossz objektumot hozna be.
+  if ((m = /^C(\d+)$/.exec(s))) return [`Caldwell ${m[1]}`];
   if ((m = /^SH2-(\d+)$/.exec(s))) return [`Sh2-${m[1]}`, `Sharpless ${m[1]}`];
   if ((m = /^(NGC|IC|UGC|PGC|LDN|LBN|ABELL|HCG|CR|MEL|VDB)(\d+)$/.exec(s))) {
     const cat = m[1] === "ABELL" ? "Abell" : m[1];
