@@ -28,6 +28,10 @@ if errorlevel 1 (
     )
 )
 
+echo   Megjegyzes: ez a helyi nezegeto. Az interneten csak akkor frissul,
+echo   ha lefuttatod a publish.bat fajlt.
+echo.
+
 python serve.py %*
 
 echo.

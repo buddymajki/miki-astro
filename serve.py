@@ -14,10 +14,12 @@ Hasznalat:
 """
 
 import argparse
+import glob
 import json
 import mimetypes
 import os
 import re
+import shutil
 import subprocess
 import sys
 import threading
@@ -42,6 +44,36 @@ mimetypes.add_type("image/webp", ".webp")
 mimetypes.add_type("application/javascript", ".js")
 
 _scan_lock = threading.Lock()
+
+
+def find_git():
+    """git a PATH-on, vagy a GitHub Desktop csomagjaban."""
+    found = shutil.which("git")
+    if found:
+        return found
+    pattern = os.path.join(os.environ.get("LOCALAPPDATA", ""), "GitHubDesktop",
+                           "app-*", "resources", "app", "git", "cmd", "git.exe")
+    matches = sorted(glob.glob(pattern))
+    return matches[-1] if matches else None
+
+
+def pending_changes():
+    """Hany fajl varja a publikalast? (-1 = nem tudjuk megallapitani)
+
+    Ebbol lesz a helyi felulet figyelmezteto savja: a start.bat csak beolvas
+    es megjelenit, publikalni a publish.bat szokott - konnyu elfelejteni."""
+    exe = find_git()
+    if not exe or not os.path.isdir(os.path.join(ROOT, ".git")):
+        return -1
+    try:
+        proc = subprocess.run([exe, "status", "--porcelain"], cwd=ROOT, timeout=20,
+                              stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+        if proc.returncode != 0:
+            return -1
+        lines = [l for l in proc.stdout.decode("utf-8", "replace").splitlines() if l.strip()]
+        return len(lines)
+    except Exception:
+        return -1
 
 
 def safe_media_path(raw):
@@ -114,7 +146,8 @@ class Handler(SimpleHTTPRequestHandler):
         if route == "ping":
             # Ebbol tudja a felulet, hogy helyben fut - a publikalt (statikus)
             # oldalon ez a keres 404-et ad, es a helyi gombok eltunnek.
-            return self.send_json({"ok": True, "local": True})
+            # A 'pending' azt mutatja, hany valtozas var meg publikalasra.
+            return self.send_json({"ok": True, "local": True, "pending": pending_changes()})
 
         if route == "rescan":
             if not _scan_lock.acquire(blocking=False):

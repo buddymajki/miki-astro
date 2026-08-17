@@ -11,16 +11,27 @@ const SERVED = location.protocol === "http:" || location.protocol === "https:";
 /* Helyben fut (serve.py) vagy publikált statikus oldal? A helyi szerveren van
    /api/ping; a GitHub Pages-en nincs, ott elrejtjük a helyi funkciókat. */
 let IS_LOCAL = false;
+let PENDING = 0;              // hány változás vár publikálásra (helyi módban)
 
 async function detectLocal() {
   if (!SERVED) return false;
   try {
     const res = await fetch("api/ping", { cache: "no-store" });
     if (!res.ok) return false;
-    return (await res.json()).local === true;
+    const info = await res.json();
+    PENDING = Number(info.pending) > 0 ? Number(info.pending) : 0;
+    return info.local === true;
   } catch (_) {
     return false;
   }
+}
+
+/** Helyi módban emlékeztető: a start.bat nem publikál, arra a publish.bat való. */
+function renderPublishHint() {
+  const bar = $("#publishHint");
+  if (!bar) return;
+  bar.hidden = !(IS_LOCAL && PENDING > 0);
+  if (!bar.hidden) bar.innerHTML = `${icon("alert")}<span>${esc(t("pending", PENDING))}</span>`;
 }
 
 /* --- nyelvek / i18n ------------------------------------------------------ */
@@ -78,6 +89,7 @@ const STRINGS = {
     thisShot: "Ez a felvétel",
 
     newTag: "ÚJ", newCount: "%s új", newInAlbum: "%s új felvétel",
+    pending: "%s változás még nincs publikálva – futtasd a publish.bat fájlt, hogy kikerüljön az internetre.",
     rescanOk: "Kész: %s objektum, %s felvétel.",
     rescanFail: "Az újraolvasás nem sikerült: ",
     serverDown: "A szerver nem válaszol.",
@@ -137,6 +149,7 @@ const STRINGS = {
     thisShot: "This shot",
 
     newTag: "NEW", newCount: "%s new", newInAlbum: "%s new shot(s)",
+    pending: "%s change(s) not published yet – run publish.bat to put them online.",
     rescanOk: "Done: %s objects, %s shots.",
     rescanFail: "Rescan failed: ",
     serverDown: "The server is not responding.",
@@ -664,6 +677,7 @@ function renderSidebar() {
 
 /** A HTML-ben statikusan elhelyezett feliratok frissítése nyelvváltáskor. */
 function renderStatic() {
+  renderPublishHint();
   document.documentElement.lang = lang;
   $("#search").placeholder = t("searchPh");
   $("#navLabel").textContent = t("objects");

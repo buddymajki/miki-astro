@@ -288,6 +288,18 @@ body.no-scroll { overflow: hidden; }
 }
 .icon-btn svg { width: 18px; height: 18px; }
 
+/* Helyi mód: emlékeztető, hogy a start.bat nem publikál */
+.publish-hint {
+  display: flex; align-items: center; gap: 10px;
+  margin: 14px 30px -6px;
+  padding: 11px 15px;
+  border: 1px solid rgba(251, 191, 36, .32);
+  background: rgba(251, 191, 36, .09);
+  border-radius: 12px;
+  font-size: 13px; color: #e0d3ae;
+}
+.publish-hint svg { width: 16px; height: 16px; flex: none; color: #fbbf24; }
+
 .content { padding: 26px 30px 70px; }
 
 /* --- kezdőlap ------------------------------------------------------------ */
