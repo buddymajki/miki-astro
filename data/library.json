@@ -1,12 +1,12 @@
 {
- "generated": "2026-08-18T23:14:59",
+ "generated": "2026-08-28T12:09:07",
  "mediaDir": "DONE",
  "stats": {
-  "objects": 15,
-  "files": 51,
-  "images": 47,
+  "objects": 16,
+  "files": 55,
+  "images": 51,
   "videos": 4,
-  "bytes": 681693288
+  "bytes": 782082234
  },
  "objects": [
   {
@@ -254,15 +254,7 @@
      "mtime": "2026-08-17T20:41",
      "main": true,
      "acq": {
-      "frames": 1826,
       "exposure": 20.0,
-      "total": 36520.0,
-      "filter": "LP",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "filename",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -272,7 +264,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "filename",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36520.0,
+      "filter": "LP",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -295,15 +291,7 @@
      "mtime": "2026-08-18T22:06",
      "main": true,
      "acq": {
-      "frames": 1826,
       "exposure": 20.0,
-      "total": 36520.0,
-      "filter": "LP",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "filename",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -313,7 +301,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "filename",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36520.0,
+      "filter": "LP",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -336,15 +328,7 @@
      "mtime": "2026-08-18T23:14",
      "main": true,
      "acq": {
-      "frames": 1826,
       "exposure": 20.0,
-      "total": 36520.0,
-      "filter": "LP",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "filename",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -354,7 +338,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "filename",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36520.0,
+      "filter": "LP",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -376,15 +364,7 @@
      "bytes": 16919334,
      "mtime": "2026-08-12T13:48",
      "acq": {
-      "frames": 1826,
       "exposure": 20,
-      "total": 36480,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -394,7 +374,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36480,
+      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -416,15 +400,7 @@
      "bytes": 4104242,
      "mtime": "2026-08-17T21:38",
      "acq": {
-      "frames": 1826,
       "exposure": 20,
-      "total": 36480,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -434,7 +410,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36480,
+      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -456,15 +436,7 @@
      "bytes": 4784054,
      "mtime": "2026-08-12T14:53",
      "acq": {
-      "frames": 1826,
       "exposure": 20,
-      "total": 36480,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -474,7 +446,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36480,
+      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -496,15 +472,7 @@
      "bytes": 15847804,
      "mtime": "2026-08-12T14:23",
      "acq": {
-      "frames": 1826,
       "exposure": 20,
-      "total": 36480,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -514,7 +482,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36480,
+      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -536,15 +508,7 @@
      "bytes": 5799541,
      "mtime": "2026-08-12T16:06",
      "acq": {
-      "frames": 1826,
       "exposure": 20,
-      "total": 36480,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -554,7 +518,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36480,
+      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -576,15 +544,7 @@
      "bytes": 2230142,
      "mtime": "2026-08-12T13:51",
      "acq": {
-      "frames": 1826,
       "exposure": 20,
-      "total": 36480,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -594,7 +554,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36480,
+      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -616,15 +580,7 @@
      "bytes": 18478471,
      "mtime": "2026-08-12T14:37",
      "acq": {
-      "frames": 1826,
       "exposure": 20,
-      "total": 36480,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-11",
-      "focal": 163,
-      "source": "napló",
       "nights": 3,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -634,7 +590,11 @@
        "2026-08-11"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 1826,
       "framesRaw": 2065,
+      "total": 36480,
+      "filter": "LP dual-band",
       "fwhm": 6.6,
       "note": {
        "hu": "A legjobb emissziós szettem. 2065 → 1924 (szürkület-vágás) → 1826 (Roundness 95%). Nulla regisztrációs bukás. A külső haló 6,7σ-val kimutatva.",
@@ -672,10 +632,6 @@
       "exposure": 20,
       "total": 7960,
       "filter": "IR-cut (LP nélkül)",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-10",
-      "focal": 163,
       "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "framesRaw": 398,
       "nights": 2,
@@ -683,6 +639,7 @@
        "2026-08-10",
        "2026-08-12"
       ],
+      "telescope": "ZWO Seestar S30 Pro",
       "estimated": true,
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
@@ -709,10 +666,6 @@
       "exposure": 20,
       "total": 7960,
       "filter": "IR-cut (LP nélkül)",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-10",
-      "focal": 163,
       "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "framesRaw": 398,
       "nights": 2,
@@ -720,6 +673,7 @@
        "2026-08-10",
        "2026-08-12"
       ],
+      "telescope": "ZWO Seestar S30 Pro",
       "estimated": true,
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
@@ -746,10 +700,6 @@
       "exposure": 20,
       "total": 7960,
       "filter": "IR-cut (LP nélkül)",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-10",
-      "focal": 163,
       "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "framesRaw": 398,
       "nights": 2,
@@ -757,6 +707,7 @@
        "2026-08-10",
        "2026-08-12"
       ],
+      "telescope": "ZWO Seestar S30 Pro",
       "estimated": true,
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
@@ -778,22 +729,18 @@
      "bytes": 4140928,
      "mtime": "2026-08-09T20:15",
      "acq": {
-      "frames": 378,
+      "framesRaw": 398,
       "exposure": 20,
       "total": 7960,
       "filter": "IR-cut (LP nélkül)",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-10",
-      "focal": 163,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
-      "framesRaw": 398,
       "nights": 2,
       "dates": [
        "2026-08-10",
        "2026-08-12"
       ],
+      "telescope": "ZWO Seestar S30 Pro",
       "estimated": true,
+      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
        "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
@@ -1031,15 +978,7 @@
      "mtime": "2026-08-17T20:18",
      "main": true,
      "acq": {
-      "frames": 931,
       "exposure": 30.0,
-      "total": 27930.0,
-      "filter": "LP",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-15",
-      "focal": 163,
-      "source": "filename",
       "nights": 2,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -1048,7 +987,11 @@
        "2026-08-15"
       ],
       "estimated": false,
+      "source": "filename",
+      "frames": 931,
       "framesRaw": 1054,
+      "total": 27930.0,
+      "filter": "LP",
       "note": {
        "hu": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény.",
        "en": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény."
@@ -1069,15 +1012,7 @@
      "bytes": 1038268,
      "mtime": "2026-08-17T21:49",
      "acq": {
-      "frames": 931,
       "exposure": 30.0,
-      "total": 27930.0,
-      "filter": "LP",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-15",
-      "focal": 163,
-      "source": "filename",
       "nights": 2,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -1086,7 +1021,11 @@
        "2026-08-15"
       ],
       "estimated": false,
+      "source": "filename",
+      "frames": 931,
       "framesRaw": 1054,
+      "total": 27930.0,
+      "filter": "LP",
       "note": {
        "hu": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény.",
        "en": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény."
@@ -1107,15 +1046,7 @@
      "bytes": 163250822,
      "mtime": "2026-07-28T22:12",
      "acq": {
-      "frames": 771,
       "exposure": 20,
-      "total": 15420,
-      "filter": "HOO",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-15",
-      "focal": 163,
-      "source": "napló (visszaszámolt)",
       "nights": 1,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -1123,6 +1054,10 @@
        "2026-07-27"
       ],
       "estimated": true,
+      "source": "napló (visszaszámolt)",
+      "frames": 771,
+      "total": 15420,
+      "filter": "HOO",
       "note": {
        "hu": "Első HOO-feldolgozás. Telehold mellett is működött a dual-band. ⚠️ A nyers FIT-ek ELVESZTEK — csak a végső PNG van meg, egyesítés nem lehetséges.",
        "en": "Első HOO-feldolgozás. Telehold mellett is működött a dual-band. ⚠️ A nyers FIT-ek ELVESZTEK — csak a végső PNG van meg, egyesítés nem lehetséges."
@@ -1143,15 +1078,7 @@
      "bytes": 39610546,
      "mtime": "2026-07-28T21:39",
      "acq": {
-      "frames": 771,
       "exposure": 20,
-      "total": 15420,
-      "filter": "HOO",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-15",
-      "focal": 163,
-      "source": "napló (visszaszámolt)",
       "nights": 1,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -1159,6 +1086,10 @@
        "2026-07-27"
       ],
       "estimated": true,
+      "source": "napló (visszaszámolt)",
+      "frames": 771,
+      "total": 15420,
+      "filter": "HOO",
       "note": {
        "hu": "Első HOO-feldolgozás. Telehold mellett is működött a dual-band. ⚠️ A nyers FIT-ek ELVESZTEK — csak a végső PNG van meg, egyesítés nem lehetséges.",
        "en": "Első HOO-feldolgozás. Telehold mellett is működött a dual-band. ⚠️ A nyers FIT-ek ELVESZTEK — csak a végső PNG van meg, egyesítés nem lehetséges."
@@ -1179,15 +1110,7 @@
      "bytes": 4756952,
      "mtime": "2026-08-16T13:21",
      "acq": {
-      "frames": 931,
       "exposure": 30,
-      "total": 27960,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-15",
-      "focal": 163,
-      "source": "napló",
       "nights": 2,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -1196,7 +1119,11 @@
        "2026-08-15"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 931,
       "framesRaw": 1054,
+      "total": 27960,
+      "filter": "LP dual-band",
       "note": {
        "hu": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény.",
        "en": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény."
@@ -1232,11 +1159,6 @@
       "frames": 157,
       "exposure": 10.0,
       "total": 1570.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-08-12",
-      "focal": 164,
       "source": "filename"
      },
      "w": 1298,
@@ -1258,11 +1180,6 @@
       "frames": 157,
       "exposure": 10.0,
       "total": 1570.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-08-12",
-      "focal": 164,
       "source": "filename"
      },
      "w": 1151,
@@ -1407,15 +1324,7 @@
      "bytes": 29965512,
      "mtime": "2026-07-25T18:03",
      "acq": {
-      "frames": 863,
       "exposure": 20,
-      "total": 17220,
-      "filter": "LP dual-band",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-08-02",
-      "focal": 163,
-      "source": "napló",
       "nights": 3,
       "mode": "alt-az (07.21) → EQ (07.23, 07.24)",
       "drizzle": "2,0×",
@@ -1425,6 +1334,10 @@
        "2026-07-24"
       ],
       "estimated": false,
+      "source": "napló",
+      "frames": 863,
+      "total": 17220,
+      "filter": "LP dual-band",
       "note": {
        "hu": "A 07.23 + 07.24 egyesítése még hátravan.",
        "en": "A 07.23 + 07.24 egyesítése még hátravan."
@@ -1457,15 +1370,7 @@
      "mtime": "2026-08-17T19:51",
      "main": true,
      "acq": {
-      "frames": 862,
       "exposure": 20.0,
-      "total": 17240.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
-      "gain": 200,
-      "date": "2026-08-13",
-      "focal": 163,
-      "source": "filename",
       "nights": 1,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -1473,7 +1378,11 @@
        "2026-08-13"
       ],
       "estimated": false,
+      "source": "filename",
+      "frames": 862,
       "framesRaw": 1093,
+      "total": 17240.0,
+      "filter": "IR-cut (LP nélkül)",
       "note": {
        "hu": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan.",
        "en": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan."
@@ -1495,15 +1404,7 @@
      "mtime": "2026-08-17T19:47",
      "annot": true,
      "acq": {
-      "frames": 862,
       "exposure": 20.0,
-      "total": 17240.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
-      "gain": 200,
-      "date": "2026-08-13",
-      "focal": 163,
-      "source": "filename",
       "nights": 1,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -1511,7 +1412,11 @@
        "2026-08-13"
       ],
       "estimated": false,
+      "source": "filename",
+      "frames": 862,
       "framesRaw": 1093,
+      "total": 17240.0,
+      "filter": "IR-cut (LP nélkül)",
       "note": {
        "hu": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan.",
        "en": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan."
@@ -1532,15 +1437,7 @@
      "bytes": 2147689,
      "mtime": "2026-08-17T19:45",
      "acq": {
-      "frames": 862,
       "exposure": 20.0,
-      "total": 17240.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
-      "gain": 200,
-      "date": "2026-08-13",
-      "focal": 163,
-      "source": "filename",
       "nights": 1,
       "mode": "EQ",
       "drizzle": "2,0×",
@@ -1548,7 +1445,11 @@
        "2026-08-13"
       ],
       "estimated": false,
+      "source": "filename",
+      "frames": 862,
       "framesRaw": 1093,
+      "total": 17240.0,
+      "filter": "IR-cut (LP nélkül)",
       "note": {
        "hu": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan.",
        "en": "Az első galaxisom, LP szűrő nélkül. Három távolság-réteg egy képen: NGC 7331 (~40 M fényév), Deer Lick + Stephan-kvintett (~290–300 M fényév), NGC 7326 (~380 M fényév). A kézi Siril-lánc még hátravan."
@@ -1560,6 +1461,119 @@
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAWABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaKKDjsMUAFFFFABRRRTAKKKKAP/Z",
      "thumb": "thumbs/2cb1a218c0181761_t.webp",
      "preview": "thumbs/2cb1a218c0181761_p.webp"
+    }
+   ]
+  },
+  {
+   "id": "NGC7635",
+   "count": 4,
+   "bytes": 100388946,
+   "latest": "2026-08-28T12:06",
+   "cover": "thumbs/3e05df2fbf30b244_t.webp",
+   "accent": "#c66db3",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmXXn3oGR1705mw/PSnTTiQKAAAowOKYLYZ+NFA6dKKBDX60sYBbmiigCwgAjXgciiiigD/9k=",
+   "items": [
+    {
+     "file": "DONE/NGC7635_Main.png",
+     "name": "NGC7635_Main.png",
+     "label": "eredeti",
+     "kind": "image",
+     "bytes": 6193276,
+     "mtime": "2026-08-28T12:03",
+     "main": true,
+     "acq": {
+      "frames": 691,
+      "exposure": 30.0,
+      "total": 20730.0,
+      "filter": "LP",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-24",
+      "focal": 163,
+      "source": "fits"
+     },
+     "w": 2668,
+     "h": 2668,
+     "accent": "#c66db3",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmXXn3oGR1705mw/PSnTTiQKAAAowOKYLYZ+NFA6dKKBDX60sYBbmiigCwgAjXgciiiigD/9k=",
+     "thumb": "thumbs/3e05df2fbf30b244_t.webp",
+     "preview": "thumbs/3e05df2fbf30b244_p.webp"
+    },
+    {
+     "file": "DONE/NGC7635_annot.png",
+     "name": "NGC7635_annot.png",
+     "label": "annot",
+     "kind": "image",
+     "bytes": 1663540,
+     "mtime": "2026-08-28T12:02",
+     "annot": true,
+     "acq": {
+      "frames": 691,
+      "exposure": 30.0,
+      "total": 20730.0,
+      "filter": "LP",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-24",
+      "focal": 163,
+      "source": "fits"
+     },
+     "w": 934,
+     "h": 1282,
+     "accent": "#c66d72",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAbABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmSSHyfwp649Mk0K0YkzIMj0puepXjHTFMAIOelFAziigQwnJqdATGdoHNQ1LESCMHFDGhM4JAH6UVYCrjoKKLCuf/2Q==",
+     "thumb": "thumbs/c779e37055c5fda2_t.webp",
+     "preview": "thumbs/c779e37055c5fda2_p.webp"
+    },
+    {
+     "file": "DONE/NGC7635_1.png",
+     "name": "NGC7635_1.png",
+     "label": "1",
+     "kind": "image",
+     "bytes": 90595894,
+     "mtime": "2026-08-28T12:06",
+     "acq": {
+      "frames": 691,
+      "exposure": 30.0,
+      "total": 20730.0,
+      "filter": "LP",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-24",
+      "focal": 163,
+      "source": "fits"
+     },
+     "w": 3841,
+     "h": 5273,
+     "accent": "#c66d89",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAbABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmMkPk08egGSaVTH5n7wZHpTM9dueKYC0UgziigQ0nJqZATH8oHNQ4qaIkEYOKBoQkAkYoqwFXHQUUCuf/2Q==",
+     "thumb": "thumbs/dcbd137b6fe4f500_t.webp",
+     "preview": "thumbs/dcbd137b6fe4f500_p.webp"
+    },
+    {
+     "file": "DONE/NGC7635_2.png",
+     "name": "NGC7635_2.png",
+     "label": "2",
+     "kind": "image",
+     "bytes": 1936236,
+     "mtime": "2026-08-28T12:04",
+     "acq": {
+      "frames": 691,
+      "exposure": 30.0,
+      "total": 20730.0,
+      "filter": "LP",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-08-24",
+      "focal": 163,
+      "source": "fits"
+     },
+     "w": 1494,
+     "h": 1494,
+     "accent": "#c66e6d",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmQuac0TIobGAadEQSM1PdT+YQMYAAAouO2hVB45opC3PSimSNyc0ZPrRRQMCeaKKKYj//2Q==",
+     "thumb": "thumbs/6f551a05011f65d4_t.webp",
+     "preview": "thumbs/6f551a05011f65d4_p.webp"
     }
    ]
   },
