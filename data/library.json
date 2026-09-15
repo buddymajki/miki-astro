@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-15T22:17:04",
+ "generated": "2026-09-15T22:53:28",
  "mediaDir": "DONE",
  "stats": {
   "objects": 22,
-  "files": 77,
-  "images": 73,
+  "files": 78,
+  "images": 74,
   "videos": 4,
-  "bytes": 1006923433
+  "bytes": 1011308710
  },
  "objects": [
   {
@@ -1282,13 +1282,48 @@
   },
   {
    "id": "NGC6888",
-   "count": 5,
-   "bytes": 218636882,
-   "latest": "2026-08-17T21:49",
-   "cover": "thumbs/0f33d1c52025042a_t.webp",
-   "accent": "#b86dc6",
-   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAZABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmaM0o6+vtUsmxow4UA57f4UwIRRR9KKBBSig0DqKADFFOoouM/9k=",
+   "count": 6,
+   "bytes": 223022159,
+   "latest": "2026-09-15T22:49",
+   "cover": "thumbs/315b08ac90863143_t.webp",
+   "accent": "#a46dc6",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAXABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlqcpwKbTyQQOKYBmimZooGFKKKKBBiiiigZ//2Q==",
    "items": [
+    {
+     "file": "DONE/NGC6888_main.png",
+     "name": "NGC6888_main.png",
+     "label": "eredeti",
+     "kind": "image",
+     "bytes": 4385277,
+     "mtime": "2026-09-15T22:49",
+     "main": true,
+     "acq": {
+      "exposure": 30,
+      "nights": 2,
+      "mode": "EQ",
+      "drizzle": "2,0×",
+      "dates": [
+       "2026-08-14",
+       "2026-08-15"
+      ],
+      "estimated": false,
+      "source": "napló",
+      "frames": 931,
+      "framesRaw": 1054,
+      "total": 27960,
+      "filter": "LP dual-band",
+      "note": {
+       "hu": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény.",
+       "en": "A legmélyebb emissziós szettem. Két holdtalan éjszaka, 99%-os fedéssel (RA/Dec eltérés 1,49′, elforgatás +0,19°). Bónusz mérés: a Soap Bubble (PN G75.5+1.7) a mezőben van, de 7h46m után sem detektálható — érvényes negatív eredmény."
+      }
+     },
+     "w": 2467,
+     "h": 2836,
+     "accent": "#a46dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAXABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlqcpwKbTyQQOKYBmimZooGFKKKKBBiiiigZ//2Q==",
+     "thumb": "thumbs/315b08ac90863143_t.webp",
+     "preview": "thumbs/315b08ac90863143_p.webp"
+    },
     {
      "file": "DONE/NGC6888_MAIN_931x30sec_27930s_drizzle-2-0x_2026-08-16_1110_og_LP_AW.png",
      "name": "NGC6888_MAIN_931x30sec_27930s_drizzle-2-0x_2026-08-16_1110_og_LP_AW.png",
