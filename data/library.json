@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-16T11:43:26",
+ "generated": "2026-09-16T17:51:12",
  "mediaDir": "DONE",
  "stats": {
   "objects": 22,
-  "files": 78,
-  "images": 74,
+  "files": 79,
+  "images": 75,
   "videos": 4,
-  "bytes": 1013022515
+  "bytes": 1036137266
  },
  "objects": [
   {
@@ -862,9 +862,9 @@
      "mtime": "2026-09-15T19:53",
      "annot": true,
      "acq": {
-      "frames": 1076,
+      "frames": 751,
       "exposure": 30.0,
-      "total": 32280.0,
+      "total": 22530.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -888,9 +888,9 @@
      "mtime": "2026-09-15T19:56",
      "annot": true,
      "acq": {
-      "frames": 1076,
+      "frames": 751,
       "exposure": 30.0,
-      "total": 32280.0,
+      "total": 22530.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -913,9 +913,9 @@
      "bytes": 11638584,
      "mtime": "2026-09-15T19:45",
      "acq": {
-      "frames": 1076,
+      "frames": 751,
       "exposure": 30.0,
-      "total": 32280.0,
+      "total": 22530.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -938,9 +938,9 @@
      "bytes": 2510310,
      "mtime": "2026-09-15T19:56",
      "acq": {
-      "frames": 1076,
+      "frames": 751,
       "exposure": 30.0,
-      "total": 32280.0,
+      "total": 22530.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -963,9 +963,9 @@
      "bytes": 4350540,
      "mtime": "2026-09-15T19:48",
      "acq": {
-      "frames": 1076,
+      "frames": 751,
       "exposure": 30.0,
-      "total": 32280.0,
+      "total": 22530.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -988,9 +988,9 @@
      "bytes": 3448938,
      "mtime": "2026-09-15T22:15",
      "acq": {
-      "frames": 1076,
+      "frames": 751,
       "exposure": 30.0,
-      "total": 32280.0,
+      "total": 22530.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -2079,27 +2079,27 @@
   },
   {
    "id": "NGC78222",
-   "count": 2,
-   "bytes": 54030735,
-   "latest": "2026-09-15T16:11",
-   "cover": "thumbs/f0b3e69297e8b07c_t.webp",
-   "accent": "#6d79c6",
-   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAkABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDBWJmGVBJp4E0Zye1NSaRPunH0qRWJGX5PrTuKw9b2UL940UiwbxlcY+uKKVx2GwRwtEXeTa4PIIyMUzdnjkAVGA+4gcA9aBuX7xpiJBuA4JxRTdxFFFguas1rEp4BqtLbx9eaKKTKEFvHjoaKKKZJ/9k=",
+   "count": 3,
+   "bytes": 77145486,
+   "latest": "2026-09-16T13:47",
+   "cover": "thumbs/43d016eb6af17f75_t.webp",
+   "accent": "#c6745b",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAhABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDnkidhxQUZSfm5oJOMA0ikjqc1JeggJ9aKlVVYZJAopiHRFPLO5fmBzkGoSPmJ4PtSA56nigjHFKw2w+lFLtop3Cwg7fWnfxUUUASL0ooopDP/2Q==",
    "items": [
     {
-     "file": "DONE/NGC78222_main.png",
-     "name": "NGC78222_main.png",
+     "file": "DONE/NGC78222_MAIN.png",
+     "name": "NGC78222_MAIN.png",
      "label": "eredeti",
      "kind": "image",
-     "bytes": 29437849,
-     "mtime": "2026-09-15T16:11",
+     "bytes": 23114751,
+     "mtime": "2026-09-16T13:47",
      "main": true,
-     "w": 4154,
-     "h": 7427,
-     "accent": "#6d79c6",
-     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAkABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDBWJmGVBJp4E0Zye1NSaRPunH0qRWJGX5PrTuKw9b2UL940UiwbxlcY+uKKVx2GwRwtEXeTa4PIIyMUzdnjkAVGA+4gcA9aBuX7xpiJBuA4JxRTdxFFFguas1rEp4BqtLbx9eaKKTKEFvHjoaKKKZJ/9k=",
-     "thumb": "thumbs/f0b3e69297e8b07c_t.webp",
-     "preview": "thumbs/f0b3e69297e8b07c_p.webp"
+     "w": 4261,
+     "h": 7070,
+     "accent": "#c6745b",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAhABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDnkidhxQUZSfm5oJOMA0ikjqc1JeggJ9aKlVVYZJAopiHRFPLO5fmBzkGoSPmJ4PtSA56nigjHFKw2w+lFLtop3Cwg7fWnfxUUUASL0ooopDP/2Q==",
+     "thumb": "thumbs/43d016eb6af17f75_t.webp",
+     "preview": "thumbs/43d016eb6af17f75_p.webp"
     },
     {
      "file": "DONE/NGC78222_1.png",
@@ -2114,6 +2114,20 @@
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAiABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDKAdzwM1LHvT+LkdqrMxB4NORyo55oGXVunx96ioE2suSwX60Uh3IlaLY29TvBzkHtUBakdTv9qbtOcUySQZxxRTghxRQMszKN3QU1QMjgUUUgLKKNvQUUUUFH/9k=",
      "thumb": "thumbs/e751bf13f1af3290_t.webp",
      "preview": "thumbs/e751bf13f1af3290_p.webp"
+    },
+    {
+     "file": "DONE/NGC78222_2.png",
+     "name": "NGC78222_2.png",
+     "label": "2",
+     "kind": "image",
+     "bytes": 29437849,
+     "mtime": "2026-09-15T16:11",
+     "w": 4154,
+     "h": 7427,
+     "accent": "#6d79c6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAkABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDBWJmGVBJp4E0Zye1NSaRPunH0qRWJGX5PrTuKw9b2UL940UiwbxlcY+uKKVx2GwRwtEXeTa4PIIyMUzdnjkAVGA+4gcA9aBuX7xpiJBuA4JxRTdxFFFguas1rEp4BqtLbx9eaKKTKEFvHjoaKKKZJ/9k=",
+     "thumb": "thumbs/4a56434c4fe02cc2_t.webp",
+     "preview": "thumbs/4a56434c4fe02cc2_p.webp"
     }
    ]
   },
