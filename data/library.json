@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-15T22:53:28",
+ "generated": "2026-09-16T11:43:26",
  "mediaDir": "DONE",
  "stats": {
   "objects": 22,
   "files": 78,
   "images": 74,
   "videos": 4,
-  "bytes": 1011308710
+  "bytes": 1013022515
  },
  "objects": [
   {
@@ -821,37 +821,37 @@
   {
    "id": "M33",
    "count": 7,
-   "bytes": 28380593,
-   "latest": "2026-09-15T22:15",
-   "cover": "thumbs/3da2ff3139fd2098_t.webp",
-   "accent": "#9f6dc6",
-   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlgCTgUroyHDDFIpKsCO1WbudJ1Uqu0gc1QyrRRRQAUUUUAFFFFAH/2Q==",
+   "bytes": 30094398,
+   "latest": "2026-09-16T09:58",
+   "cover": "thumbs/7c57819b818b6e32_t.webp",
+   "accent": "#726dc6",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl1Xc2KfJE0XUUxG2uDV67nWaFTgAgYpgUM0UlFACnrS54oooASiiigD//2Q==",
    "items": [
     {
-     "file": "DONE/M33_main.png",
-     "name": "M33_main.png",
-     "label": "eredeti",
+     "file": "DONE/M33_MAIN_2nights_1076x30sec.png",
+     "name": "M33_MAIN_2nights_1076x30sec.png",
+     "label": "2nights",
      "kind": "image",
-     "bytes": 3448938,
-     "mtime": "2026-09-15T22:15",
+     "bytes": 5162743,
+     "mtime": "2026-09-16T09:58",
      "main": true,
      "acq": {
-      "frames": 751,
+      "frames": 1076,
       "exposure": 30.0,
-      "total": 22530.0,
+      "total": 32280.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
       "date": "2026-09-15",
       "focal": 163,
-      "source": "fits"
+      "source": "filename"
      },
-     "w": 2496,
-     "h": 2496,
-     "accent": "#9f6dc6",
-     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlgCTgUroyHDDFIpKsCO1WbudJ1Uqu0gc1QyrRRRQAUUUUAFFFFAH/2Q==",
-     "thumb": "thumbs/3da2ff3139fd2098_t.webp",
-     "preview": "thumbs/3da2ff3139fd2098_p.webp"
+     "w": 2830,
+     "h": 2830,
+     "accent": "#726dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl1Xc2KfJE0XUUxG2uDV67nWaFTgAgYpgUM0UlFACnrS54oooASiiigD//2Q==",
+     "thumb": "thumbs/7c57819b818b6e32_t.webp",
+     "preview": "thumbs/7c57819b818b6e32_p.webp"
     },
     {
      "file": "DONE/M33_Annot.png",
@@ -862,9 +862,9 @@
      "mtime": "2026-09-15T19:53",
      "annot": true,
      "acq": {
-      "frames": 751,
+      "frames": 1076,
       "exposure": 30.0,
-      "total": 22530.0,
+      "total": 32280.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -888,9 +888,9 @@
      "mtime": "2026-09-15T19:56",
      "annot": true,
      "acq": {
-      "frames": 751,
+      "frames": 1076,
       "exposure": 30.0,
-      "total": 22530.0,
+      "total": 32280.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -913,9 +913,9 @@
      "bytes": 11638584,
      "mtime": "2026-09-15T19:45",
      "acq": {
-      "frames": 751,
+      "frames": 1076,
       "exposure": 30.0,
-      "total": 22530.0,
+      "total": 32280.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -938,9 +938,9 @@
      "bytes": 2510310,
      "mtime": "2026-09-15T19:56",
      "acq": {
-      "frames": 751,
+      "frames": 1076,
       "exposure": 30.0,
-      "total": 22530.0,
+      "total": 32280.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -963,9 +963,9 @@
      "bytes": 4350540,
      "mtime": "2026-09-15T19:48",
      "acq": {
-      "frames": 751,
+      "frames": 1076,
       "exposure": 30.0,
-      "total": 22530.0,
+      "total": 32280.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
@@ -988,9 +988,9 @@
      "bytes": 3448938,
      "mtime": "2026-09-15T22:15",
      "acq": {
-      "frames": 751,
+      "frames": 1076,
       "exposure": 30.0,
-      "total": 22530.0,
+      "total": 32280.0,
       "filter": "IR-cut",
       "telescope": "ZWO Seestar S30 Pro",
       "gain": 200,
