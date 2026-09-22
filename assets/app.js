@@ -40,6 +40,19 @@ const STRINGS = {
   hu: {
     searchPh: "Keresés objektumra…",
     all: "Mind", deepsky: "Mély-ég", solar: "Naprendszer", atmosphere: "Légkör", other: "Egyéb",
+    galaxy: "Galaxisok", nebula: "Ködök", cluster: "Halmazok",
+    viewAlbum: "Album", viewMessier: "Messier-katalógus",
+    namesLabel: "Megnevezés", namesCommon: "Név", namesCatalog: "Katalógusjel",
+    namesCommonTip: "Közismert név elöl (pl. Androméda-galaxis)",
+    namesCatalogTip: "Katalógusjel elöl (pl. M31, NGC 7000)",
+    sortCatalog: "Katalógus szerint",
+    messierTitle: "Messier-katalógus",
+    messierText: "Charles Messier 110 objektuma. A színes lapokról már van saját felvételem, a szürkék még várnak rám.",
+    messierDone: "lefotózva", messierLink: "Messier-katalógus: %s / 110",
+    mAll: "Mind", mHave: "Lefotózva", mMissing: "Még hiányzik",
+    notYet: "Még nincs saját felvétel",
+    notYetText: "Erről az objektumról még nem készült képem – addig a katalógusadatok és a Wikipédia-összefoglaló látható.",
+    fMessier: "Messier-szám", fCatalogs: "Katalógusjelek",
     objects: "Objektumok", overview: "Áttekintés", object: "Objektum",
     back: "Vissza", rescan: "Újraolvasás",
     sortName: "Név szerint", sortCount: "Felvételszám", sortLatest: "Legfrissebb", sortSize: "Adatmennyiség",
@@ -101,7 +114,20 @@ const STRINGS = {
   },
   en: {
     searchPh: "Search objects…",
-    all: "All", deepsky: "Deep sky", solar: "Solar system", atmosphere: "Atmosphere", other: "Other",
+    all: "All", galaxy: "Galaxies", nebula: "Nebulae", cluster: "Clusters",
+    viewAlbum: "Album", viewMessier: "Messier catalogue",
+    namesLabel: "Naming", namesCommon: "Name", namesCatalog: "Catalogue ID",
+    namesCommonTip: "Common name first (e.g. Andromeda Galaxy)",
+    namesCatalogTip: "Catalogue ID first (e.g. M31, NGC 7000)",
+    sortCatalog: "By catalogue",
+    messierTitle: "Messier catalogue",
+    messierText: "Charles Messier's 110 objects. The coloured tiles are ones I have already photographed – the grey ones are still waiting.",
+    messierDone: "photographed", messierLink: "Messier catalogue: %s / 110",
+    mAll: "All", mHave: "Photographed", mMissing: "Still missing",
+    notYet: "No photo of my own yet",
+    notYetText: "I haven't imaged this object yet – until then, here are the catalogue data and the Wikipedia summary.",
+    fMessier: "Messier number", fCatalogs: "Designations",
+    deepsky: "Deep sky", solar: "Solar system", atmosphere: "Atmosphere", other: "Other",
     objects: "Objects", overview: "Overview", object: "Object",
     back: "Back", rescan: "Rescan",
     sortName: "By name", sortCount: "Shot count", sortLatest: "Newest", sortSize: "Data size",
@@ -186,11 +212,32 @@ const locale = () => (lang === "hu" ? "hu-HU" : "en-GB");
 
 /* --- állapot ------------------------------------------------------------- */
 
-const CATEGORY_KEYS = ["deepsky", "solar", "atmosphere", "other"];
+/* Típus-szűrők: a mély-ég objektumokat tovább bontjuk, hogy bővülő albumban
+   is gyorsan meglegyen, amit keresnek. Az objects.json "kind" mezője dönt. */
+const KIND_KEYS = ["galaxy", "nebula", "cluster", "solar", "atmosphere", "other"];
+
+/* A Messier-katalógus típuskódjai → kétnyelvű név és szűrő-csoport. */
+const MTYPES = {
+  GX:  { hu: "Galaxis",              en: "Galaxy",             kind: "galaxy" },
+  GC:  { hu: "Gömbhalmaz",           en: "Globular cluster",   kind: "cluster" },
+  OC:  { hu: "Nyílthalmaz",          en: "Open cluster",       kind: "cluster" },
+  EN:  { hu: "Emissziós köd",        en: "Emission nebula",    kind: "nebula" },
+  RN:  { hu: "Reflexiós köd",        en: "Reflection nebula",  kind: "nebula" },
+  PN:  { hu: "Planetáris köd",       en: "Planetary nebula",   kind: "nebula" },
+  SNR: { hu: "Szupernóva-maradvány", en: "Supernova remnant",  kind: "nebula" },
+  DS:  { hu: "Kettőscsillag",        en: "Double star",        kind: "other" },
+  AS:  { hu: "Aszterizma",           en: "Asterism",           kind: "other" },
+  SC:  { hu: "Csillagfelhő",         en: "Star cloud",         kind: "other" },
+};
 
 const state = {
   library: null,
   db: new Map(),
+  messier: [],            // a teljes Messier-katalógus (data/messier.json)
+  messierInfo: new Map(), // "M42" → adatlap a katalógusból (ha nincs saját az objects.json-ban)
+  section: "album",       // melyik lista van az oldalsávban: album | messier
+  names: localStorage.getItem("miki:names") === "catalog" ? "catalog" : "common",
+  mfilter: "all",         // Messier-nézet: all | have | missing
   filter: "all",
   query: "",
   sort: localStorage.getItem("miki:sort") || "latest",   // alapból a legújabb elöl
@@ -368,34 +415,170 @@ async function loadJson(path, globalFallback) {
 }
 
 async function loadAll() {
-  const [library, objects] = await Promise.all([
+  const [library, objects, messier] = await Promise.all([
     loadJson("data/library.json", "MIKI_LIBRARY"),
     loadJson("data/objects.json", "MIKI_OBJECTS"),
+    loadJson("data/messier.json", "MIKI_MESSIER"),
   ]);
   state.library = library || { stats: {}, objects: [] };
   state.db.clear();
   for (const o of (objects?.objects || [])) state.db.set(o.id.toUpperCase(), o);
+  state.messier = messier?.objects || [];
+  state.messierInfo.clear();
+  for (const m of state.messier) {
+    state.messierInfo.set(`M${m.n}`, messierProfile(m, messier.constellations || {}));
+  }
+}
+
+/** Egy Messier-katalógusbejegyzésből adatlap, ugyanolyan alakban, mint az
+    objects.json bejegyzései – így a helykitöltő oldal is ugyanúgy rajzolódik. */
+function messierProfile(m, cons) {
+  const type = MTYPES[m.type] || { hu: m.type, en: m.type, kind: "other" };
+  const mag = Number(m.mag).toFixed(1);
+  return {
+    id: `M${m.n}`,
+    name: m.name || null,
+    aliases: [`M${m.n}`, m.cat].filter(Boolean),
+    category: "deepsky",
+    kind: type.kind,
+    type: { hu: type.hu, en: type.en },
+    constellation: { hu: cons[m.con] || m.con, en: m.con },
+    constellationLat: m.con,
+    magnitude: { hu: mag.replace(".", ","), en: mag },
+    wiki: { hu: m.name?.hu || `Messier ${m.n}`, en: `Messier ${m.n}` },
+    simbad: `M${m.n}`,
+  };
+}
+
+/* --- megnevezés: közismert név vagy katalógusjel -------------------------- */
+
+const CATALOG_ID_RE = /^(M|NGC|IC|SH2-|C|UGC|PGC|LDN|LBN|ABELL|HCG|VDB|B)(\d+)$/;
+const CATALOG_PRETTY = { "SH2-": "Sh2-", ABELL: "Abell ", VDB: "vdB ", C: "C", M: "M", B: "B" };
+const CATALOG_ALIAS_RE = /^(M|NGC|IC|Sh2-|Caldwell|UGC|HCG|Arp|Abell|LBN|LDN|vdB)\s?\d/i;
+const squash = (x) => String(x).replace(/\s+/g, "").toUpperCase();
+
+/** Az azonosítóból olvasható katalógusjel: "NGC7000" → "NGC 7000", "SH2-101" → "Sh2-101". */
+function designation(id, info) {
+  const m = CATALOG_ID_RE.exec(String(id).toUpperCase());
+  if (m) return (CATALOG_PRETTY[m[1]] ?? `${m[1]} `) + m[2];
+  // nem katalógusjeles azonosító (pl. STEPHAN): az első katalógusos alias
+  return (info?.aliases || []).find((a) => CATALOG_ALIAS_RE.test(a)) || null;
+}
+
+/** A fő jel, mellette legfeljebb egy további (M/NGC/IC): "M31 · NGC 224". */
+function designations(id, info) {
+  const main = designation(id, info);
+  const list = main ? [main] : [];
+  for (const a of info?.aliases || []) {
+    if (list.length >= 2) break;
+    if (/^(M|NGC|IC)\s?\d/i.test(a) && !list.some((x) => squash(x) === squash(a))) list.push(a);
+  }
+  return list;
+}
+
+/** A katalógus szerinti sorrend kulcsa: előbb Messier, aztán NGC, IC, Sh2, a többi. */
+function catalogRank(o) {
+  const order = ["M", "NGC", "IC", "SH2-", "C"];
+  const m = CATALOG_ID_RE.exec(o.id);
+  if (!m) return [9, 0];
+  const i = order.indexOf(m[1]);
+  return [i < 0 ? 5 : i, Number(m[2])];
+}
+
+/** A név, a katalógusjel és a típus kiszámítása – az album és a helykitöltő
+    oldalak ugyanezt használják, így mindenhol egyformán jelenik meg. */
+function decorate(o, info) {
+  const codes = designations(o.id, info);
+  const code = codes[0] || null;
+  let common = info?.name ? L(info.name) : null;
+  if (common && code && squash(common) === squash(code)) common = null;
+  const byCatalog = state.names === "catalog";
+  const name = (byCatalog ? code || common : common || code) || spaced(o.id);
+  // a második sor a másik megnevezés – ha van egyáltalán
+  const alt = byCatalog ? (code ? common : null) : (common ? codes.join(" · ") : null);
+  const cat = CATALOG_ID_RE.exec(o.id);
+  return {
+    ...o,
+    info,
+    name,
+    alt: alt || null,
+    code,
+    common,
+    category: info?.category || "other",
+    kind: info?.kind || ({ solar: "solar", atmosphere: "atmosphere" }[info?.category] || "other"),
+    messierNo: cat?.[1] === "M" ? Number(cat[2]) : null,
+  };
 }
 
 /** Egyesíti a fájlrendszerből jött csoportot az adatbázis-bejegyzéssel.
     A csak helyben elérhető elemeket (videók) a publikált oldalon kihagyjuk,
     és a darabszámot is újraszámoljuk, hogy ne ígérjünk többet a valóságnál. */
 function merged(group) {
-  const info = state.db.get(group.id.toUpperCase()) || null;
+  const key = group.id.toUpperCase();
+  const info = state.db.get(key) || state.messierInfo.get(key) || null;
   const items = IS_LOCAL ? group.items : group.items.filter((it) => !it.localOnly);
-  return {
+  return decorate({
     ...group,
     items,
     count: items.length,
     bytes: items.reduce((sum, it) => sum + (it.bytes || 0), 0),
-    info,
-    name: info ? L(info.name) : spaced(group.id),
-    category: info?.category || "other",
-  };
+  }, info);
 }
 
 const allObjects = () =>
   (state.library.objects || []).map(merged).filter((o) => o.count > 0);
+
+/** Kép nélküli objektum (pl. még le nem fotózott Messier-tag) helykitöltő lapja. */
+function virtualObject(id) {
+  const key = String(id).toUpperCase();
+  const info = state.db.get(key) || state.messierInfo.get(key);
+  if (!info) return null;
+  return decorate({ id: key, items: [], count: 0, bytes: 0, latest: null, cover: null,
+                    accent: "#39405a", virtual: true }, info);
+}
+
+const findObject = (id) => allObjects().find((x) => x.id === id) || virtualObject(id);
+
+/** A Messier-katalógus sorai: minden tag, a saját albumobjektummal (ha van). */
+function messierRows() {
+  const album = new Map();
+  for (const o of allObjects()) {
+    if (o.messierNo) album.set(o.messierNo, o);
+    // más azonosítón tárolt objektum, aminek Messier-aliasa van (pl. "M 27")
+    for (const a of o.info?.aliases || []) {
+      const m = /^M\s?(\d+)$/i.exec(a);
+      if (m && !album.has(Number(m[1]))) album.set(Number(m[1]), o);
+    }
+  }
+  return state.messier.map((m) => {
+    const own = album.get(m.n);
+    return own ? { n: m.n, obj: own, have: true }
+               : { n: m.n, obj: virtualObject(`M${m.n}`), have: false };
+  });
+}
+
+function matchesQuery(o, q) {
+  if (!q) return true;
+  const info = o.info;
+  const hay = [
+    o.id, o.name, o.alt, o.code,
+    info?.name?.hu, info?.name?.en,
+    info && L(info.constellation), info && L(info.type),
+    ...(info?.aliases || []),
+    ...o.items.map((i) => i.name),
+  ].join(" ").toLowerCase();
+  // "m 31" és "m31" ugyanazt találja meg
+  return hay.includes(q) || hay.replace(/\s+/g, "").includes(q.replace(/\s+/g, ""));
+}
+
+function visibleMessier() {
+  const q = state.query.trim().toLowerCase();
+  return messierRows().filter((r) =>
+    r.obj &&
+    (state.mfilter === "all" || (state.mfilter === "have") === r.have) &&
+    (state.filter === "all" || r.obj.kind === state.filter) &&
+    matchesQuery(r.obj, q));
+}
 
 /** A statisztikát a ténylegesen látható elemekből számoljuk, hogy a
     publikált oldal ne ígérjen több felvételt, mint amennyi elérhető rajta. */
@@ -412,24 +595,15 @@ function visibleObjects() {
   const q = state.query.trim().toLowerCase();
   let list = allObjects();
 
-  if (state.filter !== "all") list = list.filter((o) => o.category === state.filter);
-
-  if (q) {
-    list = list.filter((o) => {
-      const info = o.info;
-      const hay = [
-        o.id, o.name,
-        info && L(info.name), info && info.name?.hu, info && info.name?.en,
-        info && L(info.constellation),
-        ...(info?.aliases || []),
-        ...o.items.map((i) => i.name),
-      ].join(" ").toLowerCase();
-      return hay.includes(q);
-    });
-  }
+  if (state.filter !== "all") list = list.filter((o) => o.kind === state.filter);
+  if (q) list = list.filter((o) => matchesQuery(o, q));
 
   const by = {
-    name:   (a, b) => a.name.localeCompare(b.name, locale()),
+    catalog: (a, b) => {
+      const x = catalogRank(a), y = catalogRank(b);
+      return x[0] - y[0] || x[1] - y[1] || a.name.localeCompare(b.name, locale());
+    },
+    name:   (a, b) => a.name.localeCompare(b.name, locale(), { numeric: true }),
     count:  (a, b) => b.count - a.count || a.name.localeCompare(b.name, locale()),
     latest: (a, b) => String(b.latest).localeCompare(String(a.latest)),
     size:   (a, b) => b.bytes - a.bytes,
@@ -551,7 +725,7 @@ function refreshNewBadges() {
     const item = obj?.items[Number(el.dataset.idx)];
     el.classList.toggle("is-new", isNew(item));
   });
-  $$(".card[data-go]").forEach((el) => {
+  $$(".card[data-go], .mcard[data-go]").forEach((el) => {
     const obj = allObjects().find((o) => o.id === el.dataset.go);
     const chip = $(".new-count", el);
     if (!obj || !chip) return;
@@ -738,43 +912,95 @@ function objectCard(o, index) {
                style="${o.blur ? `background-image:url(${o.blur});background-size:cover` : ""}">`
           : `<span style="display:block;width:100%;height:100%;background:linear-gradient(140deg,${esc(o.accent || "#2a3050")},#0a0d16)"></span>`}
         <span class="card-badges">
-          <span class="badge">${esc(o.id)}</span>
+          <span class="badge">${esc(o.code || o.id)}</span>
           <span class="badge new-count" ${unseenCount(o) ? "" : "hidden"}>${esc(t("newCount", unseenCount(o)))}</span>
           <span class="badge count accent">${o.count}</span>
         </span>
       </span>
       <span class="card-body">
         <span class="card-title">${esc(o.name)}</span>
-        <span class="card-sub"><i>${esc(dateLabel(o.latest))}</i></span>
+        <span class="card-sub">${o.alt ? `<span class="card-alt">${esc(o.alt)}</span><i class="dot"></i>` : ""}<i>${esc(dateLabel(o.latest))}</i></span>
+      </span>
+    </button>`;
+}
+
+/** Egy Messier-csempe: ha van saját kép, színes; ha nincs, szürke helykitöltő. */
+function messierCard(r, index) {
+  const o = r.obj;
+  const type = L(o.info?.type);
+  const title = o.common || type;
+  const sub = [o.common ? type : null, L(o.info?.constellation)].filter(Boolean).join(" · ");
+  return `
+    <button class="mcard${r.have ? "" : " missing"}" data-go="${esc(o.id)}"
+            style="animation-delay:${Math.min(index, 40) * 18}ms;--accent-glow:${esc(o.accent || "#5eead4")}88">
+      <span class="mcard-media">
+        ${r.have && o.cover
+          ? `<img src="${url(o.cover)}" alt="${esc(o.name)}" loading="lazy" decoding="async"
+               style="${o.blur ? `background-image:url(${o.blur});background-size:cover` : ""}">`
+          : `<span class="mcard-ph" data-kind="${esc(o.kind)}"></span>`}
+        <span class="mcard-no">M${r.n}</span>
+        ${r.have ? `<span class="badge count accent">${o.count}</span>` : ""}
+      </span>
+      <span class="mcard-body">
+        <span class="mcard-title">${esc(title)}</span>
+        <span class="mcard-sub">${esc(sub)}</span>
       </span>
     </button>`;
 }
 
 /* --- oldalsáv ------------------------------------------------------------ */
 
+/** Album / Messier váltó az oldalsáv tetején, a darabszámokkal. */
+function renderViews() {
+  const have = messierRows().filter((r) => r.have).length;
+  const views = [
+    ["album", "#/", t("viewAlbum"), String(allObjects().length)],
+    ["messier", "#/messier", "Messier", `${have}/${state.messier.length}`],
+  ];
+  $("#views").innerHTML = views.map(([key, href, label, n]) => `
+    <a class="view-tab ${state.section === key ? "on" : ""}" href="${href}">
+      <span>${esc(label)}</span><b>${esc(n)}</b></a>`).join("");
+}
+
 function renderChips() {
-  const present = new Set(allObjects().map((o) => o.category));
-  $("#chips").innerHTML = ["all", ...CATEGORY_KEYS]
-    .filter((k) => k === "all" || present.has(k))
-    .map((k) => `<button class="chip ${state.filter === k ? "on" : ""}" data-cat="${k}">${esc(t(k))}</button>`)
+  // a darabszám a kiválasztott nézetre vonatkozik (album vagy Messier)
+  const base = state.section === "messier"
+    ? messierRows().filter((r) => r.obj && (state.mfilter === "all" || (state.mfilter === "have") === r.have)).map((r) => r.obj)
+    : allObjects();
+  const counts = {};
+  for (const o of base) counts[o.kind] = (counts[o.kind] || 0) + 1;
+  $("#chips").innerHTML = ["all", ...KIND_KEYS]
+    .filter((k) => k === "all" || counts[k])
+    .map((k) => `<button class="chip ${state.filter === k ? "on" : ""}" data-cat="${k}">${esc(t(k))}${
+      k === "all" ? "" : ` <em>${counts[k]}</em>`}</button>`)
     .join("");
 }
 
-function renderSidebar() {
-  const list = visibleObjects();
-  $("#objlist").innerHTML = list.length ? list.map((o) => `
-    <button class="navitem ${state.route.id === o.id ? "on" : ""}" data-go="${esc(o.id)}">
-      ${o.cover
+function navItem(o, missing = false) {
+  return `
+    <button class="navitem ${state.route.id === o.id ? "on" : ""}${missing ? " missing" : ""}" data-go="${esc(o.id)}">
+      ${o.cover && !missing
         ? `<img class="navitem-thumb" src="${url(o.cover)}" alt="" loading="lazy">`
-        : `<span class="navitem-thumb" style="background:linear-gradient(135deg,${esc(o.accent || "#39405a")},#11151f)"></span>`}
+        : missing
+          ? `<span class="navitem-thumb ph">${esc(o.code || "")}</span>`
+          : `<span class="navitem-thumb" style="background:linear-gradient(135deg,${esc(o.accent || "#39405a")},#11151f)"></span>`}
       <span class="navitem-txt">
         <span class="navitem-name">${esc(o.name)}</span>
-        <span class="navitem-meta">${esc(o.id)}</span>
+        <span class="navitem-meta">${esc(o.alt || (o.code && o.code !== o.name ? o.code : "") || L(o.info?.type) || o.id)}</span>
       </span>
-      <span class="new-dot" ${unseenCount(o) ? "" : "hidden"}></span>
-      <span class="navitem-count">${o.count}</span>
-    </button>`).join("")
-    : `<div class="note" style="padding:12px 8px">${esc(t("noResults"))}</div>`;
+      <span class="new-dot" ${!missing && unseenCount(o) ? "" : "hidden"}></span>
+      <span class="navitem-count">${missing ? "–" : o.count}</span>
+    </button>`;
+}
+
+function renderSidebar() {
+  renderViews();
+  const messier = state.section === "messier";
+  const html = messier
+    ? visibleMessier().map((r) => navItem(r.obj, !r.have)).join("")
+    : visibleObjects().map((o) => navItem(o)).join("");
+  $("#navLabel").textContent = messier ? t("viewMessier") : t("objects");
+  $("#objlist").innerHTML = html || `<div class="note" style="padding:12px 8px">${esc(t("noResults"))}</div>`;
 
   const s = visibleStats();
   $("#sidefoot").innerHTML = `
@@ -788,15 +1014,20 @@ function renderStatic() {
   renderPublishHint();
   document.documentElement.lang = lang;
   $("#search").placeholder = t("searchPh");
-  $("#navLabel").textContent = t("objects");
   $$("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
   $$("#langs button").forEach((b) => b.classList.toggle("on", b.dataset.lang === lang));
 
   const sort = $("#sort");
-  sort.innerHTML = [["name", "sortName"], ["count", "sortCount"],
+  sort.innerHTML = [["name", "sortName"], ["catalog", "sortCatalog"], ["count", "sortCount"],
                     ["latest", "sortLatest"], ["size", "sortSize"]]
     .map(([v, k]) => `<option value="${v}">${esc(t(k))}</option>`).join("");
   sort.value = state.sort;
+
+  const names = $("#names");
+  names.title = t("namesLabel");
+  names.innerHTML = [["common", "namesCommon", "namesCommonTip"], ["catalog", "namesCatalog", "namesCatalogTip"]]
+    .map(([v, k, tip]) => `<button data-names="${v}" class="${state.names === v ? "on" : ""}"
+        title="${esc(t(tip))}">${esc(t(k))}</button>`).join("");
 }
 
 /* --- kezdőlap ------------------------------------------------------------ */
@@ -812,6 +1043,8 @@ function renderHome() {
          <b>${s.objects ?? 0}</b> ${esc(t("footObjects"))},
          <b>${s.files ?? 0}</b> ${esc(t("footShots"))}<b id="newLine"></b>${
            state.query ? ` &middot; ${esc(t("searchFor", state.query))}` : ""}</p>
+      ${state.messier.length ? `<a class="hero-link" href="#/messier">${icon("star")} ${esc(t("messierLink",
+         messierRows().filter((r) => r.have).length))} ${icon("next")}</a>` : ""}
     </section>
     ${list.length
       ? `<div class="grid">${list.map(objectCard).join("")}</div>`
@@ -825,11 +1058,45 @@ function renderHome() {
   refreshNewBadges();
 }
 
+/* --- Messier-katalógus ---------------------------------------------------- */
+
+function renderMessier() {
+  const rows = messierRows();
+  const have = rows.filter((r) => r.have).length;
+  const list = visibleMessier();
+  const pct = rows.length ? (have / rows.length) * 100 : 0;
+
+  $("#content").innerHTML = `
+    <section class="hero">
+      <h1>${esc(t("messierTitle"))}</h1>
+      <p>${esc(t("messierText"))}${state.query ? ` &middot; ${esc(t("searchFor", state.query))}` : ""}</p>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="${rows.length}" aria-valuenow="${have}">
+        <div class="progress-bar" style="width:${pct.toFixed(1)}%"></div>
+      </div>
+      <div class="progress-row">
+        <span><b>${have}</b> / ${rows.length} ${esc(t("messierDone"))}</span>
+        <div class="seg" id="mfilter">${[["all", "mAll"], ["have", "mHave"], ["missing", "mMissing"]]
+          .map(([v, k]) => `<button data-mfilter="${v}" class="${state.mfilter === v ? "on" : ""}">${esc(t(k))}</button>`)
+          .join("")}</div>
+      </div>
+    </section>
+    ${list.length
+      ? `<div class="mgrid">${list.map(messierCard).join("")}</div>`
+      : `<div class="empty"><b>${esc(t("noResults"))}</b>${esc(t("noResultsSub"))}</div>`}
+  `;
+
+  $("#crumb").textContent = t("messierTitle");
+  $("#backBtn").style.display = "none";
+  state.renderedId = "__messier__";
+}
+
 /* --- objektum-adatlap ---------------------------------------------------- */
 
 function factRows(info) {
   const constellation = L(info.constellation);
+  const codes = (info.aliases || []).filter((a) => CATALOG_ALIAS_RE.test(a));
   const rows = [
+    [t("fCatalogs"), codes.length ? esc(codes.join(" · ")) : null],
     [t("fType"), L(info.type)],
     [t("fConst"), constellation && constellation !== "–"
       ? `${constellation}${info.constellationLat && info.constellationLat !== constellation
@@ -862,12 +1129,16 @@ function externalLinks(o) {
 }
 
 function renderObject(id) {
-  const o = allObjects().find((x) => x.id === id);
+  const o = findObject(id);
   if (!o) { location.hash = "#/"; return; }
 
   const info = o.info;
   const cover = o.items.find((i) => i.preview || i.thumb);
-  const related = (info?.related || []).map((rid) => allObjects().find((x) => x.id === rid)).filter(Boolean);
+  const related = (info?.related || []).map(findObject).filter(Boolean);
+  // helykitöltőnél (még nincs saját kép) a másik nyelvű név helyett a jelek
+  const otherLang = info?.name ? (lang === "hu" ? info.name.en : info.name.hu) : null;
+  const subtitle = state.names === "catalog" ? o.alt
+    : (otherLang && otherLang !== o.name ? otherLang : null);
   const facts = info ? L(info.facts) : null;
   // az objektum legtöbb expozíciót tartalmazó felvétele képviseli a felszerelést
   const bestAcq = o.items.map((i) => i.acq).filter(Boolean)
@@ -880,25 +1151,28 @@ function renderObject(id) {
 
   $("#content").innerHTML = `
   <article class="detail">
-    <header class="detail-hero">
-      ${cover ? `<img src="${url(cover.preview || cover.thumb)}" alt="${esc(o.name)}">` : ""}
+    <header class="detail-hero${o.virtual ? " placeholder" : ""}">
+      ${cover ? `<img src="${url(cover.preview || cover.thumb)}" alt="${esc(o.name)}">`
+              : o.virtual ? `<span class="ph-code">${esc(o.code || o.id)}</span>` : ""}
       <div class="detail-hero-in">
         <div class="kicker">
-          <span class="badge accent">${esc(o.id)}</span>
+          <span class="badge accent">${esc(o.code || o.id)}</span>
           ${info ? `<span>${esc(t(o.category))}</span><i class="dot"></i><span>${esc(L(info.type))}</span>`
                  : `<span>${esc(t("noProfile"))}</span>`}
         </div>
         <h1>${esc(o.name)}</h1>
-        ${info && L(info.name) !== (lang === "hu" ? info.name?.en : info.name?.hu)
-          ? `<p class="en">${esc(lang === "hu" ? info.name?.en : info.name?.hu)}</p>` : ""}
+        ${subtitle ? `<p class="en">${esc(subtitle)}</p>` : ""}
         ${info?.aliases?.length
           ? `<div class="aliases">${info.aliases.map((a) => `<span class="alias">${esc(a)}</span>`).join("")}</div>` : ""}
       </div>
     </header>
 
-    <div class="shots">${o.items.map((it, i) => shotCard(o, it, i, i * 35)).join("")}</div>
+    ${o.virtual
+      ? `<section class="panel notyet">${icon("telescope")}
+           <div><b>${esc(t("notYet"))}</b><p>${esc(t("notYetText"))}</p></div></section>`
+      : `<div class="shots">${o.items.map((it, i) => shotCard(o, it, i, i * 35)).join("")}</div>`}
 
-    <details class="details-box">
+    <details class="details-box"${o.virtual ? " open" : ""}>
       <summary>${icon("info")} ${esc(t("details"))}</summary>
       <div class="detail-grid">
       <div class="detail-info">
@@ -935,6 +1209,7 @@ function renderObject(id) {
             <p class="note">${esc(t("noProfileText", o.id))}</p>
           </section>`}
 
+        ${o.virtual ? "" : `
         <section class="panel">
           <h3>${icon("folder")} ${esc(t("myStuff"))}</h3>
           <dl class="kv">
@@ -942,7 +1217,7 @@ function renderObject(id) {
             <div class="kv-row"><dt>${esc(t("fBytes"))}</dt><dd>${esc(bytes(o.bytes))}</dd></div>
             <div class="kv-row"><dt>${esc(t("fLatest"))}</dt><dd>${esc(dateLabel(o.latest))}</dd></div>
           </dl>
-        </section>
+        </section>`}
 
         ${bestAcq && acqRows(bestAcq) ? `
           <section class="panel">
@@ -971,7 +1246,7 @@ function renderObject(id) {
     </details>
   </article>`;
 
-  $("#crumb").innerHTML = `<span>${esc(t("object"))} /</span> ${esc(o.name)}`;
+  $("#crumb").innerHTML = `<span>${esc(state.section === "messier" ? t("messierTitle") : t("object"))} /</span> ${esc(o.name)}`;
   $("#backBtn").style.display = "";
   state.renderedId = o.id;
   hydratePosters($("#content"));
@@ -1141,7 +1416,7 @@ function renderViewerSide() {
 
   $("#vwSide").innerHTML = `
     <div class="vw-head">
-      <span class="badge accent">${esc(o.id)}</span>
+      <span class="badge accent">${esc(o.code || o.id)}</span>
       <h2>${esc(o.name)}</h2>
       ${info ? `<p class="vw-sub">${esc(L(info.type))}${
         L(info.constellation) && L(info.constellation) !== "–"
@@ -1393,19 +1668,34 @@ function render() {
   renderChips();
   renderSidebar();
   if (state.route.view === "object") renderObject(state.route.id);
+  else if (state.route.view === "messier") renderMessier();
   else renderHome();
 }
 
+/** A lista-nézet címe, ahová a Vissza gomb visz. */
+const sectionHash = () => (state.section === "messier" ? "#/messier" : "#/");
+
 function applyHash() {
   const m = location.hash.match(/^#\/o\/([^/]+)(?:\/(\d+))?(?:\/(info|compare))?/);
-  state.route = m
-    ? { view: "object", id: decodeURIComponent(m[1]).toUpperCase(),
-        shot: m[2] === undefined ? null : Number(m[2]), mode: m[3] || null }
-    : { view: "home", id: null, shot: null, mode: null };
+  const prevSection = state.section;
+  if (m) {
+    state.route = { view: "object", id: decodeURIComponent(m[1]).toUpperCase(),
+                    shot: m[2] === undefined ? null : Number(m[2]), mode: m[3] || null };
+    // kép nélküli (helykitöltő) lap csak a Messier-katalógusból nyílhat
+    if (!allObjects().some((o) => o.id === state.route.id)) state.section = "messier";
+  } else if (/^#\/messier\b/.test(location.hash)) {
+    state.route = { view: "messier", id: null, shot: null, mode: null };
+    state.section = "messier";
+  } else {
+    state.route = { view: "home", id: null, shot: null, mode: null };
+    state.section = "album";
+  }
+  if (prevSection !== state.section) renderChips();
 
   // Objektumok közti lapozás közben a háttéroldalt nem rajzoljuk újra – a
   // nézegető úgyis eltakarja, és így nem indul fölösleges Wikipédia-kérés.
-  const wantedPage = state.route.view === "home" ? "__home__" : state.route.id;
+  const wantedPage = state.route.view === "home" ? "__home__"
+    : state.route.view === "messier" ? "__messier__" : state.route.id;
   const stayInViewer = state.route.shot !== null && vw.el.classList.contains("open");
 
   if (stayInViewer || wantedPage === state.renderedId) renderSidebar();
@@ -1443,14 +1733,18 @@ function wire() {
     if (b) setLang(b.dataset.lang);
   });
 
-  $("#backBtn").addEventListener("click", () => { location.hash = "#/"; });
+  $("#backBtn").addEventListener("click", () => { location.hash = sectionHash(); });
   $("#navToggle").addEventListener("click", () => document.body.classList.toggle("nav-open"));
   $("#scrim").addEventListener("click", () => document.body.classList.remove("nav-open"));
 
   $("#search").addEventListener("input", (e) => {
     state.query = e.target.value;
-    if (state.route.view === "object" && state.query) location.hash = "#/";
-    else { renderSidebar(); if (state.route.view === "home") renderHome(); }
+    if (state.route.view === "object" && state.query) location.hash = sectionHash();
+    else {
+      renderSidebar();
+      if (state.route.view === "home") renderHome();
+      else if (state.route.view === "messier") renderMessier();
+    }
   });
 
   $("#sort").addEventListener("change", (e) => {
@@ -1463,8 +1757,25 @@ function wire() {
     const chip = e.target.closest("[data-cat]");
     if (!chip) return;
     state.filter = chip.dataset.cat;
-    if (state.route.view === "object") location.hash = "#/";
+    if (state.route.view === "object") location.hash = sectionHash();
     else render();
+  });
+
+  $("#names").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-names]");
+    if (!b || b.dataset.names === state.names) return;
+    state.names = b.dataset.names;
+    localStorage.setItem("miki:names", state.names);
+    render();
+  });
+
+  $("#content").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-mfilter]");
+    if (!b) return;
+    state.mfilter = b.dataset.mfilter;
+    renderChips();
+    renderSidebar();
+    renderMessier();
   });
 
   document.addEventListener("click", (e) => {
@@ -1600,7 +1911,7 @@ function wire() {
       return;
     }
     if (e.key === "/") { e.preventDefault(); $("#search").focus(); }
-    if (e.key === "Escape" && state.route.view === "object") location.hash = "#/";
+    if (e.key === "Escape" && state.route.view === "object") location.hash = sectionHash();
   });
 
   // --- újraolvasás

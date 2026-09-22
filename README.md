@@ -96,6 +96,24 @@ Ha előbb meg akarod nézni, mit csinálna:
 python scan.py --dry-run
 ```
 
+## Megnevezés, szűrők, Messier-katalógus
+
+- **Megnevezés-kapcsoló** (a fejlécben: *Név* / *Katalógusjel*). *Név* módban
+  elöl a közismert név áll (Androméda-galaxis), alatta a jelek (M31 · NGC 224);
+  *Katalógusjel* módban fordítva. Ahol nincs közismert név (pl. NGC 7822),
+  ott mindkét módban a katalógusjel látszik. A választást a böngésző megjegyzi.
+- **Rendezés „Katalógus szerint”**: Messier → NGC → IC → Sh2 → a többi, számsorrendben.
+- **Típus-szűrők** az oldalsávban: Galaxisok, Ködök, Halmazok, Naprendszer,
+  Légkör, Egyéb. A típust az `objects.json` `"kind"` mezője adja
+  (`galaxy`, `nebula`, `cluster`, `solar`, `atmosphere`, `other`).
+- **Messier-katalógus** (oldalsáv teteje, vagy `#/messier`): mind a 110 objektum.
+  Ahol van saját kép, színes csempe; a többi szürke helykitöltő, ami a
+  katalógusadatokat és a Wikipédia-összefoglalót mutatja. Szűrhető:
+  *Lefotózva* / *Még hiányzik*. Az adatok a `data/messier.json`-ban vannak.
+  Ha egy Messier-objektum albumba kerül (`M42_...png`), a lapja magától kiszínesedik.
+- **Elgépelt objektumkód** a fájlnévben: a `scan.py` `KEY_FIXES` táblája
+  javítja (pl. `IGC1396` → `IC1396`, `NGC78222` → `NGC7822`), a fájlhoz nem nyúl.
+
 ## Nyelv
 
 A felület magyarul és angolul is megy. Váltás a bal felső sarokban lévő

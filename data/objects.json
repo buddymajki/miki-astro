@@ -1,5 +1,5 @@
 {
- "_comment": "Miki-Astro object database / objektum-adatbazis. Kulcs = a fajlnev elso tagja (NGC6888_x.png -> id NGC6888). Minden szoveges mezo ketnyelvu: {\"hu\": ..., \"en\": ...}. A 'reference' a profi osszehasonlito kep: 'file' egy Wikimedia Commons fajlnev, 'kind' = hubble | pro | amateur.",
+ "_comment": "Miki-Astro object database / objektum-adatbazis. Kulcs = a fajlnev elso tagja (NGC6888_x.png -> id NGC6888). Minden szoveges mezo ketnyelvu: {\"hu\": ..., \"en\": ...}. A 'reference' a profi osszehasonlito kep: 'file' egy Wikimedia Commons fajlnev, 'kind' = hubble | pro | amateur. A 'kind' a weboldal tipus-szuroje: galaxy | nebula | cluster | solar | atmosphere | other.",
  "objects": [
   {
    "id": "M31",
@@ -13,6 +13,7 @@
     "UGC 454"
    ],
    "category": "deepsky",
+   "kind": "galaxy",
    "constellationLat": "Andromeda",
    "ra": "00h 42m 44s",
    "dec": "+41° 16′ 09″",
@@ -76,7 +77,10 @@
      "hu": "Összehasonlító felvétel – a teljes galaxis",
      "en": "Reference photo – the whole galaxy"
     }
-   }
+   },
+   "related": [
+    "M33"
+   ]
   },
   {
    "id": "M27",
@@ -90,6 +94,7 @@
     "Almacsutka-köd"
    ],
    "category": "deepsky",
+   "kind": "nebula",
    "constellationLat": "Vulpecula",
    "ra": "19h 59m 36s",
    "dec": "+22° 43′ 16″",
@@ -167,6 +172,7 @@
     "Sharpless 105"
    ],
    "category": "deepsky",
+   "kind": "nebula",
    "constellationLat": "Cygnus",
    "ra": "20h 12m 07s",
    "dec": "+38° 21′ 18″",
@@ -247,6 +253,7 @@
     "Boszorkányseprű-köd"
    ],
    "category": "deepsky",
+   "kind": "nebula",
    "constellationLat": "Cygnus",
    "ra": "20h 45m 38s",
    "dec": "+30° 42′ 30″",
@@ -327,6 +334,7 @@
     "Hálózat-köd"
    ],
    "category": "deepsky",
+   "kind": "nebula",
    "constellationLat": "Cygnus",
    "ra": "20h 56m 24s",
    "dec": "+31° 43′ 00″",
@@ -407,6 +415,7 @@
     "Sharpless 117"
    ],
    "category": "deepsky",
+   "kind": "nebula",
    "constellationLat": "Cygnus",
    "ra": "20h 59m 17s",
    "dec": "+44° 31′ 44″",
@@ -486,6 +495,7 @@
     "IC 5067"
    ],
    "category": "deepsky",
+   "kind": "nebula",
    "constellationLat": "Cygnus",
    "ra": "20h 50m 48s",
    "dec": "+44° 21′ 00″",
@@ -566,6 +576,7 @@
     "γ Cyg Nebula"
    ],
    "category": "deepsky",
+   "kind": "nebula",
    "constellationLat": "Cygnus",
    "ra": "20h 16m 48s",
    "dec": "+41° 57′ 24″",
@@ -646,6 +657,7 @@
     "LBN 100"
    ],
    "category": "deepsky",
+   "kind": "nebula",
    "constellationLat": "Cygnus",
    "ra": "20h 00m 00s",
    "dec": "+35° 17′ 00″",
@@ -723,6 +735,7 @@
     "solar eclipse"
    ],
    "category": "solar",
+   "kind": "solar",
    "constellationLat": "",
    "ra": "–",
    "dec": "–",
@@ -801,6 +814,7 @@
     "NGC 7317–7320"
    ],
    "category": "deepsky",
+   "kind": "galaxy",
    "constellationLat": "Pegasus",
    "ra": "22h 35m 58s",
    "dec": "+33° 57′ 36″",
@@ -881,6 +895,7 @@
     "full moon"
    ],
    "category": "solar",
+   "kind": "solar",
    "constellationLat": "",
    "ra": "–",
    "dec": "–",
@@ -958,6 +973,7 @@
     "northern lights"
    ],
    "category": "atmosphere",
+   "kind": "atmosphere",
    "constellationLat": "",
    "ra": "–",
    "dec": "–",
@@ -1036,6 +1052,7 @@
     "Deer Lick-csoport"
    ],
    "category": "deepsky",
+   "kind": "galaxy",
    "constellationLat": "Pegasus",
    "ra": "22h 37m 04s",
    "dec": "+34° 24′ 56″",
@@ -1117,6 +1134,7 @@
     "UGC 11597"
    ],
    "category": "deepsky",
+   "kind": "galaxy",
    "constellationLat": "Cepheus",
    "ra": "20h 34m 52s",
    "dec": "+60° 09′ 14″",
@@ -1181,6 +1199,284 @@
      "en": "Reference photo – the whole galaxy"
     }
    }
+  },
+  {
+   "id": "M33",
+   "name": {
+    "hu": "Háromszög-galaxis",
+    "en": "Triangulum Galaxy"
+   },
+   "aliases": [
+    "M33",
+    "NGC 598",
+    "UGC 1117"
+   ],
+   "category": "deepsky",
+   "kind": "galaxy",
+   "constellationLat": "Triangulum",
+   "type": {
+    "hu": "Spirálgalaxis (SA(s)cd)",
+    "en": "Spiral galaxy (SA(s)cd)"
+   },
+   "constellation": {
+    "hu": "Háromszög",
+    "en": "Triangulum"
+   },
+   "distance": {
+    "hu": "kb. 2,7 millió fényév",
+    "en": "about 2.7 million light-years"
+   },
+   "magnitude": {
+    "hu": "5,7",
+    "en": "5.7"
+   },
+   "season": {
+    "hu": "Ősz – tél",
+    "en": "Autumn – winter"
+   },
+   "wiki": {
+    "hu": "Háromszög-galaxis",
+    "en": "Triangulum Galaxy"
+   },
+   "simbad": "M33",
+   "related": [
+    "M31"
+   ]
+  },
+  {
+   "id": "M101",
+   "name": {
+    "hu": "Szélkerék-galaxis",
+    "en": "Pinwheel Galaxy"
+   },
+   "aliases": [
+    "M101",
+    "NGC 5457",
+    "Arp 26"
+   ],
+   "category": "deepsky",
+   "kind": "galaxy",
+   "constellationLat": "Ursa Major",
+   "type": {
+    "hu": "Spirálgalaxis (SAB(rs)cd)",
+    "en": "Spiral galaxy (SAB(rs)cd)"
+   },
+   "constellation": {
+    "hu": "Nagy Medve",
+    "en": "Ursa Major"
+   },
+   "distance": {
+    "hu": "kb. 21 millió fényév",
+    "en": "about 21 million light-years"
+   },
+   "magnitude": {
+    "hu": "7,9",
+    "en": "7.9"
+   },
+   "discovery": {
+    "hu": "1781 – Pierre Méchain",
+    "en": "1781 – Pierre Méchain"
+   },
+   "season": {
+    "hu": "Tavasz – nyár (cirkumpoláris)",
+    "en": "Spring – summer (circumpolar)"
+   },
+   "wiki": {
+    "hu": "Szélkerék-galaxis",
+    "en": "Pinwheel Galaxy"
+   },
+   "simbad": "M101"
+  },
+  {
+   "id": "IC1396",
+   "name": {
+    "hu": "Elefántormány-köd",
+    "en": "Elephant's Trunk Nebula"
+   },
+   "aliases": [
+    "IC 1396",
+    "Sh2-131",
+    "IC 1396A",
+    "Trumpler 37"
+   ],
+   "category": "deepsky",
+   "kind": "nebula",
+   "constellationLat": "Cepheus",
+   "type": {
+    "hu": "Emissziós köd nyílthalmazzal",
+    "en": "Emission nebula with open cluster"
+   },
+   "constellation": {
+    "hu": "Cefeusz",
+    "en": "Cepheus"
+   },
+   "distance": {
+    "hu": "kb. 2400 fényév",
+    "en": "about 2,400 light-years"
+   },
+   "season": {
+    "hu": "Nyár – ősz (cirkumpoláris)",
+    "en": "Summer – autumn (circumpolar)"
+   },
+   "wiki": {
+    "hu": "IC 1396",
+    "en": "IC 1396"
+   },
+   "simbad": "IC 1396"
+  },
+  {
+   "id": "NGC281",
+   "name": {
+    "hu": "Pacman-köd",
+    "en": "Pacman Nebula"
+   },
+   "aliases": [
+    "NGC 281",
+    "IC 11",
+    "Sh2-184"
+   ],
+   "category": "deepsky",
+   "kind": "nebula",
+   "constellationLat": "Cassiopeia",
+   "type": {
+    "hu": "Emissziós köd (H II régió)",
+    "en": "Emission nebula (H II region)"
+   },
+   "constellation": {
+    "hu": "Kassziopeia",
+    "en": "Cassiopeia"
+   },
+   "distance": {
+    "hu": "kb. 9500 fényév",
+    "en": "about 9,500 light-years"
+   },
+   "discovery": {
+    "hu": "1883 – E. E. Barnard",
+    "en": "1883 – E. E. Barnard"
+   },
+   "season": {
+    "hu": "Ősz – tél (cirkumpoláris)",
+    "en": "Autumn – winter (circumpolar)"
+   },
+   "wiki": {
+    "hu": "NGC 281",
+    "en": "NGC 281"
+   },
+   "simbad": "NGC 281"
+  },
+  {
+   "id": "NGC6939",
+   "name": {
+    "hu": "NGC 6939",
+    "en": "NGC 6939"
+   },
+   "aliases": [
+    "NGC 6939",
+    "Collinder 423"
+   ],
+   "category": "deepsky",
+   "kind": "cluster",
+   "constellationLat": "Cepheus",
+   "type": {
+    "hu": "Nyílthalmaz",
+    "en": "Open cluster"
+   },
+   "constellation": {
+    "hu": "Cefeusz",
+    "en": "Cepheus"
+   },
+   "magnitude": {
+    "hu": "7,8",
+    "en": "7.8"
+   },
+   "season": {
+    "hu": "Nyár – ősz (cirkumpoláris)",
+    "en": "Summer – autumn (circumpolar)"
+   },
+   "wiki": {
+    "hu": "NGC 6939",
+    "en": "NGC 6939"
+   },
+   "simbad": "NGC 6939",
+   "related": [
+    "NGC6946"
+   ]
+  },
+  {
+   "id": "NGC7635",
+   "name": {
+    "hu": "Buborék-köd",
+    "en": "Bubble Nebula"
+   },
+   "aliases": [
+    "NGC 7635",
+    "Sh2-162",
+    "Caldwell 11"
+   ],
+   "category": "deepsky",
+   "kind": "nebula",
+   "constellationLat": "Cassiopeia",
+   "type": {
+    "hu": "Emissziós köd (csillagszél-buborék)",
+    "en": "Emission nebula (stellar-wind bubble)"
+   },
+   "constellation": {
+    "hu": "Kassziopeia",
+    "en": "Cassiopeia"
+   },
+   "distance": {
+    "hu": "kb. 7100 fényév",
+    "en": "about 7,100 light-years"
+   },
+   "discovery": {
+    "hu": "1787 – William Herschel",
+    "en": "1787 – William Herschel"
+   },
+   "season": {
+    "hu": "Ősz – tél (cirkumpoláris)",
+    "en": "Autumn – winter (circumpolar)"
+   },
+   "wiki": {
+    "hu": "Buborék-köd",
+    "en": "Bubble Nebula"
+   },
+   "simbad": "NGC 7635"
+  },
+  {
+   "id": "NGC7822",
+   "name": {
+    "hu": "NGC 7822",
+    "en": "NGC 7822"
+   },
+   "aliases": [
+    "NGC 7822",
+    "Sh2-171",
+    "Ced 214"
+   ],
+   "category": "deepsky",
+   "kind": "nebula",
+   "constellationLat": "Cepheus",
+   "type": {
+    "hu": "Emissziós köd (csillagkeletkezési régió)",
+    "en": "Emission nebula (star-forming region)"
+   },
+   "constellation": {
+    "hu": "Cefeusz",
+    "en": "Cepheus"
+   },
+   "distance": {
+    "hu": "kb. 3000 fényév",
+    "en": "about 3,000 light-years"
+   },
+   "season": {
+    "hu": "Ősz – tél (cirkumpoláris)",
+    "en": "Autumn – winter (circumpolar)"
+   },
+   "wiki": {
+    "hu": "NGC 7822",
+    "en": "NGC 7822"
+   },
+   "simbad": "NGC 7822"
   }
  ]
 }

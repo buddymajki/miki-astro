@@ -120,14 +120,28 @@ def normalize_name(filename):
     return stem + ext
 
 
-def object_key(stem):
-    """Az objektum azonositoja a fajlnev elso tagjabol."""
+# Elgepelt objektumkodok javitasa - a fajlhoz nem nyulunk, csak a csoportositas
+# es a megjelenites hasznalja a helyes kodot.
+KEY_FIXES = {
+    "IGC1396": "IC1396",
+    "NGC78222": "NGC7822",
+}
+
+
+def raw_object_key(stem):
+    """A fajlnev elso tagja, ahogy le van irva."""
     m = CATALOG_RE.match(stem)
     if m:
         return canonical_catalog(m)
     # katalogusjel nelkuli nevnel az alahuzas es a kotojel is hatarnak szamit,
     # igy a "MOON-100.jpg" is a MOON objektumhoz kerul
     return re.split(r"[_\-]", stem)[0].upper()
+
+
+def object_key(stem):
+    """Az objektum azonositoja (az elgepelesek javitva)."""
+    key = raw_object_key(stem)
+    return KEY_FIXES.get(key, key)
 
 
 # Sorrend-jelolok a fajlnevben (alahuzassal hatarolt, kis/nagybetu mindegy):
@@ -772,7 +786,7 @@ def scan(force=False, quiet=False):
         item = {
             "file": rel,
             "name": name,
-            "label": variant_label(stem, key),
+            "label": variant_label(stem, raw_object_key(stem)),
             "kind": "video" if is_video else "image",
             "bytes": stat.st_size,
             "mtime": datetime.fromtimestamp(stat.st_mtime).isoformat(timespec="minutes"),
@@ -966,19 +980,20 @@ def scan(force=False, quiet=False):
 
 
 def mirror_objects_js():
-    """A kezzel szerkesztett objects.json-t atmasolja JS valtozatba,
-    hogy a dashboard file:// alol (dupla kattintassal) is lassa."""
-    src = os.path.join(DATA_DIR, "objects.json")
-    if not os.path.exists(src):
-        return
-    try:
-        with open(src, "r", encoding="utf-8") as fh:
-            data = json.load(fh)
-    except Exception as exc:
-        print(f"  ! a data/objects.json nem olvashato: {exc}")
-        return
-    with open(os.path.join(DATA_DIR, "objects.js"), "w", encoding="utf-8") as fh:
-        fh.write("window.MIKI_OBJECTS = " + json.dumps(data, ensure_ascii=False) + ";\n")
+    """A kezzel szerkesztett objects.json-t es messier.json-t atmasolja JS
+    valtozatba, hogy a dashboard file:// alol (dupla kattintassal) is lassa."""
+    for name, var in (("objects", "MIKI_OBJECTS"), ("messier", "MIKI_MESSIER")):
+        src = os.path.join(DATA_DIR, name + ".json")
+        if not os.path.exists(src):
+            continue
+        try:
+            with open(src, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+        except Exception as exc:
+            print(f"  ! a data/{name}.json nem olvashato: {exc}")
+            continue
+        with open(os.path.join(DATA_DIR, name + ".js"), "w", encoding="utf-8") as fh:
+            fh.write(f"window.{var} = " + json.dumps(data, ensure_ascii=False) + ";\n")
 
 
 def human_bytes(n):

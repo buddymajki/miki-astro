@@ -91,6 +91,8 @@
       </div>
     </div>
 
+    <nav class="views" id="views"></nav>
+
     <div class="search">
       <svg><use href="#i-search"/></svg>
       <input id="search" type="search" autocomplete="off" spellcheck="false">
@@ -115,6 +117,7 @@
         <svg><use href="#i-back"/></svg> <span data-i18n="back"></span>
       </button>
       <div class="topbar-title" id="crumb"></div>
+      <div class="seg" id="names" role="group"></div>
       <select class="select hide-sm" id="sort"></select>
       <button class="btn primary" id="rescan">
         <svg><use href="#i-refresh"/></svg> <span class="hide-sm" data-i18n="rescan"></span>
@@ -175,6 +178,7 @@
 <!-- ezek azért kellenek, hogy a file:// megnyitás is működjön -->
 <script src="data/library.js" onerror="void 0"></script>
 <script src="data/objects.js" onerror="void 0"></script>
+<script src="data/messier.js" onerror="void 0"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
