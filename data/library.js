@@ -1,12 +1,12 @@
 window.MIKI_LIBRARY = {
- "generated": "2026-09-22T17:33:39",
+ "generated": "2026-09-22T20:37:48",
  "mediaDir": "DONE",
  "stats": {
-  "objects": 24,
-  "files": 88,
-  "images": 84,
+  "objects": 26,
+  "files": 90,
+  "images": 86,
   "videos": 4,
-  "bytes": 1089842003
+  "bytes": 1093506636
  },
  "objects": [
   {
@@ -167,6 +167,48 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAOABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDnEj3cCn+QfSrsWnyW7bmZHB9zTmnhjVt6N8o7UzSMU1uZhhOelFTm7iJyEaigLI//2Q==",
      "thumb": "thumbs/f535f071014afa09_t.webp",
      "preview": "thumbs/f535f071014afa09_p.webp"
+    }
+   ]
+  },
+  {
+   "id": "C19",
+   "count": 1,
+   "bytes": 3074392,
+   "latest": "2026-09-22T20:35",
+   "cover": "thumbs/1ac2813b010be9e3_t.webp",
+   "accent": "#c6906d",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAMABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmUXcCcgYGeajfrSg01utADaKKKAP/2Q==",
+   "items": [
+    {
+     "file": "DONE/C19_MAIN_138x30sec_IRCUT.png",
+     "name": "C19_MAIN_138x30sec_IRCUT.png",
+     "label": "eredeti",
+     "kind": "image",
+     "bytes": 3074392,
+     "mtime": "2026-09-22T20:35",
+     "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 138,
+      "exposure": 30.0,
+      "total": 4140.0,
+      "filter": "IR-cut",
+      "telescope": "ZWO Seestar S30 Pro",
+      "gain": 200,
+      "date": "2026-09-01",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 3058,
+     "h": 1764,
+     "accent": "#c6906d",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAMABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmUXcCcgYGeajfrSg01utADaKKKAP/2Q==",
+     "thumb": "thumbs/1ac2813b010be9e3_t.webp",
+     "preview": "thumbs/1ac2813b010be9e3_p.webp"
     }
    ]
   },
@@ -396,6 +438,48 @@ window.MIKI_LIBRARY = {
      "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAdABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlKUAnpQqljgVbmhNtEhYjcwzgGgCoRRSE80UASxsE57015C7Zbmm0lABRRRQB/9k=",
      "thumb": "thumbs/052e73c601204c7c_t.webp",
      "preview": "thumbs/052e73c601204c7c_p.webp"
+    }
+   ]
+  },
+  {
+   "id": "M15",
+   "count": 1,
+   "bytes": 590241,
+   "latest": "2026-09-22T19:51",
+   "cover": "thumbs/90f85bd6b282981a_t.webp",
+   "accent": "#6d82c6",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDDoopWbdjgDAxxQAlFFFABRRRQAUUUUAf/2Q==",
+   "items": [
+    {
+     "file": "DONE/M15_main_preview.png",
+     "name": "M15_main_preview.png",
+     "label": "preview",
+     "kind": "image",
+     "bytes": 590241,
+     "mtime": "2026-09-22T19:51",
+     "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 25,
+      "exposure": 30.0,
+      "total": 720.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-08-28",
+      "focal": 163,
+      "source": "fits"
+     },
+     "w": 1532,
+     "h": 1530,
+     "accent": "#6d82c6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDDoopWbdjgDAxxQAlFFFABRRRQAUUUUAf/2Q==",
+     "thumb": "thumbs/90f85bd6b282981a_t.webp",
+     "preview": "thumbs/90f85bd6b282981a_p.webp"
     }
    ]
   },
@@ -843,14 +927,10 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
+      "telescope": "ZWO Seestar S30 Pro",
       "frames": 1462,
       "exposure": 30.0,
       "total": 43860.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-17",
-      "focal": 163,
       "source": "filename"
      },
      "w": 3836,
@@ -874,9 +954,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "framesRaw": 398,
       "exposure": 20.0,
       "total": 7560.0,
@@ -886,6 +963,7 @@ window.MIKI_LIBRARY = {
        "2026-08-10",
        "2026-08-12"
       ],
+      "telescope": "ZWO Seestar S30 Pro",
       "source": "filename",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
@@ -913,14 +991,10 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
+      "telescope": "ZWO Seestar S30 Pro",
       "frames": 1462,
       "exposure": 30.0,
       "total": 43860.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-17",
-      "focal": 163,
       "source": "filename"
      },
      "w": 4303,
@@ -943,9 +1017,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "framesRaw": 398,
       "exposure": 20.0,
       "total": 7560.0,
@@ -955,6 +1026,7 @@ window.MIKI_LIBRARY = {
        "2026-08-10",
        "2026-08-12"
       ],
+      "telescope": "ZWO Seestar S30 Pro",
       "source": "filename",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
@@ -982,9 +1054,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "framesRaw": 398,
       "exposure": 20.0,
       "total": 7560.0,
@@ -994,6 +1063,7 @@ window.MIKI_LIBRARY = {
        "2026-08-10",
        "2026-08-12"
       ],
+      "telescope": "ZWO Seestar S30 Pro",
       "source": "filename",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
@@ -1021,9 +1091,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "framesRaw": 398,
       "exposure": 20.0,
       "total": 7560.0,
@@ -1033,6 +1100,7 @@ window.MIKI_LIBRARY = {
        "2026-08-10",
        "2026-08-12"
       ],
+      "telescope": "ZWO Seestar S30 Pro",
       "source": "filename",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
