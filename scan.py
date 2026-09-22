@@ -147,6 +147,7 @@ LABEL_DROP = (
     re.compile(r"^drz-?\d*(?:-\d+)?x?$", re.I),
     re.compile(r"^\d{4}-\d{2}-\d{2}$"),                               # datum
     re.compile(r"^og$", re.I),
+    re.compile(r"^bort(?:le|el)-?\d(?:-\d)?$", re.I),              # bortle3
 )
 LABEL_DROP_FILTERS = {"LP", "IRCUT", "HOO", "SHO", "HSO", "LRGB", "RGB",
                       "HA", "OIII", "SII", "UHC", "NB", "BB"}
@@ -300,6 +301,31 @@ GAIN_RE = re.compile(r"(?:gain|g)[\s_-]?(\d{2,4})(?![0-9])", re.I)
 
 UNIT_SECONDS = {"ms": 0.001, "s": 1, "sec": 1, "secs": 1, "m": 60, "min": 60}
 
+# Egbolt-sotetseg a fajlnevben: "bortle3", "bortel3", "Bortle-4", "bortle5-6".
+# Ha van, a kep nem az alapertelmezett helyszinen (equipment.json "site") keszult.
+BORTLE_RE = re.compile(r"(?:^|[_-])bort(?:le|el)[-]?(\d(?:-\d)?)(?=[_.]|$)", re.I)
+
+# Egy konkret felveteli szetthez tartozo mezok. Ha a fajlnevben mas szett
+# szerepel, mint az objektum-szintu forrasban, ezeket nem vesszuk at onnan.
+SESSION_FIELDS = {"frames", "framesRaw", "exposure", "total", "nights", "dates", "date",
+                  "estimated", "source", "note", "drizzle", "fwhm", "mode", "filter"}
+
+
+def same_session(layer, tokens):
+    """Ugyanarra a szettre vonatkozik-e egy objektum-szintu forras, mint a fajlnev?
+
+    Fajlnevbeli kockaszam nelkul mindig igen (regi kepek: marad a mostani adat).
+    Kulonben az expozicionak egyeznie kell, a kockaszamnak pedig +-25%-on belul
+    lennie (a nyers es a megtartott kockaszam kozott lehet elteres)."""
+    if "frames" not in tokens:
+        return True
+    if not layer.get("exposure"):
+        return "frames" not in layer and "framesRaw" not in layer
+    if abs(float(layer["exposure"]) - tokens["exposure"]) > 0.01:
+        return False
+    n = layer.get("frames") or layer.get("framesRaw")
+    return not n or abs(n - tokens["frames"]) <= 0.25 * tokens["frames"]
+
 # ismert szurojelolesek a fajlnevben
 FILTER_TOKENS = {
     "HOO": "HOO", "SHO": "SHO", "HSO": "HSO", "LRGB": "LRGB", "RGB": "RGB",
@@ -323,6 +349,9 @@ def parse_acq_tokens(stem):
     g = GAIN_RE.search(stem)
     if g:
         acq["gain"] = int(g.group(1))
+    b = BORTLE_RE.search(stem)
+    if b:
+        acq["bortle"] = b.group(1).replace("-", "–")
     for token in re.split(r"[^A-Za-z0-9]+", stem):
         key = token.upper()
         if key in FILTER_TOKENS:
@@ -753,19 +782,35 @@ def scan(force=False, quiet=False):
         if ANNOT_RE.search(stem):
             item["annot"] = True
 
-        # Felveteli adatok. Sorrend: FITS -> EXIF -> naplo -> fajlnev -> kezi.
-        # Ami kesobb jon, az nyer.
-        acq = dict(fits_acq.get(key, {}))
-        if not is_video:
-            acq.update({k: v for k, v in exif_acq(path, gear, Image).items() if v not in (None, "")})
-        acq.update({k: v for k, v in
-                    pick_album_set(album_sets, key, item["mtime"]).items() if v not in (None, "")})
+        # Felveteli adatok. Sorrend: helyszin -> FITS -> EXIF -> naplo -> kezi (objektum)
+        # -> fajlnev -> kezi (fajl). Ami kesobb jon, az nyer.
+        # Ha a fajlnevben van kockaszam (pl. 1462x30sec), az egy konkret szett:
+        # az objektum-szintu forrasokbol csak az jon at, ami ugyanarra a szettre
+        # vonatkozik - igy egy objektumon belul tobbfele expozicio is lehet.
         tokens = parse_acq_tokens(stem)
+        acq = dict(gear.get("site") or {})
+        layers = [fits_acq.get(key, {})]
+        if not is_video:
+            layers.append(exif_acq(path, gear, Image))
+        layers.append(pick_album_set(album_sets, key, item["mtime"]))
+        layers.append((gear.get("byObject") or {}).get(key, {}))
+        for layer in layers:
+            layer = {k: v for k, v in layer.items() if v not in (None, "")}
+            if not same_session(layer, tokens):
+                layer = {k: v for k, v in layer.items() if k not in SESSION_FIELDS}
+            acq.update(layer)
+        if tokens.get("bortle") and tokens["bortle"] != acq.get("bortle"):
+            acq.pop("location", None)             # mashol keszult
+        for token in re.split(r"[^A-Za-z0-9]+", stem):
+            place = (gear.get("locations") or {}).get(token.upper())
+            if place:
+                acq.update(place)
+                break
         if tokens:
             acq.update(tokens)
             if "frames" in tokens:
                 acq["source"] = "filename"
-        acq.update((gear.get("byObject") or {}).get(key, {}))
+                acq.pop("estimated", None)        # a fajlnevbeli kockaszam pontos
         acq.update((gear.get("byFile") or {}).get(name, {}))
         if acq.get("frames") and acq.get("exposure") and not acq.get("total"):
             acq["total"] = round(acq["frames"] * acq["exposure"], 1)

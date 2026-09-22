@@ -1,5 +1,5 @@
 {
- "_comment": "Felszereles es felveteli adatok. Mindegyik resz opcionalis. A scan.py sorrendje: FITS (feldolgozo mappak) -> EXIF -> fajlnev -> byObject -> byFile. Ami lejjebb van, az nyer.",
+ "_comment": "Felszereles es felveteli adatok. Mindegyik resz opcionalis. A scan.py sorrendje: site -> FITS (feldolgozo mappak) -> EXIF -> naplo -> byObject -> fajlnev -> byFile. Ami lejjebb van, az nyer.",
 
  "_processingRoots": "Hol keresse a stackelt FITS fajlokat. Alapertelmezes: a viewer mappa szuloje (d:\\STAR).",
  "processingRoots": ["d:\\STAR"],
@@ -9,6 +9,19 @@
   "S30 Pro": "ZWO Seestar S30 Pro",
   "Seestar S50": "ZWO Seestar S50",
   "Pixel 8 Pro": "Google Pixel 8 Pro"
+ },
+
+ "_site": "Az alapertelmezett megfigyelohely. Ha a fajlnevben 'bortle3' / 'bortel3' szerepel, a kep mashol keszult: a Bortle-ertek a fajlnevbol jon, a helyszin kimarad (vagy a 'locations' alapjan kitoltodik).",
+ "site": {
+  "location": {"hu": "Kriens-Obernau (LU), Svájc", "en": "Kriens-Obernau (LU), Switzerland"},
+  "bortle": "5–6"
+ },
+
+ "_locations": "Opcionalis helyszin-jelolok a fajlnevben (nagybetuvel). Pl. 'M31_HOLZEGG_bortle3_600x30sec.png' -> a HOLZEGG kulcs alapjan.",
+ "_locationsExample": {
+  "HOLZEGG": {"location": {"hu": "Holzegg, Svájc", "en": "Holzegg, Switzerland"}, "bortle": "3"}
+ },
+ "locations": {
  },
 
  "_byObject": "Objektumonkenti alapertelmezes vagy javitas. Kulcs = objektum azonosito.",

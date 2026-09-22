@@ -70,6 +70,7 @@ const STRINGS = {
     aDate: "Rögzítve", aSingle: "egyetlen expozíció",
     aKept: "Nyers → megtartott", aNights: "Éjszakák", aMode: "Mechanika",
     aDrizzle: "Drizzle", aFwhm: "FWHM", aSource: "Adat forrása",
+    aSite: "Helyszín", aSky: "Égbolt", aSessions: "Felvételi szettek",
     estimated: "becsült", estimatedWhy: "A kockaszám az integrációs időből visszaszámolt – az eldobott kockákat nem tartalmazza.",
     hUnit: "ó", mUnit: "p", nightUnit: "éj",
 
@@ -131,6 +132,7 @@ const STRINGS = {
     aDate: "Captured", aSingle: "single exposure",
     aKept: "Raw → kept", aNights: "Nights", aMode: "Mount mode",
     aDrizzle: "Drizzle", aFwhm: "FWHM", aSource: "Data source",
+    aSite: "Location", aSky: "Sky", aSessions: "Imaging sets",
     estimated: "estimated", estimatedWhy: "Frame count reconstructed from integration time – it does not account for discarded frames.",
     hUnit: "h", mUnit: "m", nightUnit: "night(s)",
 
@@ -323,6 +325,8 @@ function acqRows(acq) {
   if (acq.focal) rows.push([t("aFocal"), `${Math.round(acq.focal)} mm`]);
   if (acq.fnumber) rows.push([t("aAperture"), `f/${acq.fnumber}`]);
   if (acq.iso) rows.push([t("aIso"), String(acq.iso)]);
+  if (acq.location) rows.push([t("aSite"), L(acq.location)]);
+  if (acq.bortle) rows.push([t("aSky"), `Bortle ${acq.bortle}`]);
   if (acq.date) rows.push([t("aDate"), dateLabel(acq.date)]);
   else if (acq.dates?.length) rows.push([t("aDate"), acq.dates.map(dateLabel).join(", ")]);
   if (acq.source) rows.push([t("aSource"), acq.source]);
@@ -868,6 +872,11 @@ function renderObject(id) {
   // az objektum legtöbb expozíciót tartalmazó felvétele képviseli a felszerelést
   const bestAcq = o.items.map((i) => i.acq).filter(Boolean)
     .sort((a, b) => (b.total || 0) - (a.total || 0))[0];
+  // ha az objektumhoz több, eltérő expozíciós szett tartozik, mindet felsoroljuk
+  const sessions = [...new Map(o.items.map((i) => i.acq)
+    .filter((a) => a && acqFrames(a) > 1 && a.exposure)
+    .sort((a, b) => (b.total || 0) - (a.total || 0))
+    .map((a) => [`${acqFrames(a)}x${a.exposure}`, acqSummary(a)])).values()];
 
   $("#content").innerHTML = `
   <article class="detail">
@@ -939,6 +948,8 @@ function renderObject(id) {
           <section class="panel">
             <h3>${icon("telescope")} ${esc(t("acquisition"))}
               ${bestAcq.estimated ? `<span class="est-chip">${esc(t("estimated"))}</span>` : ""}</h3>
+            ${sessions.length > 1 ? `<dl class="kv"><div class="kv-row"><dt>${esc(t("aSessions"))}</dt>
+              <dd>${sessions.map(esc).join("<br>")}</dd></div></dl>` : ""}
             <dl class="kv">${acqRows(bestAcq)}</dl>
             ${acqEstimateNote(bestAcq)}
             ${bestAcq.note ? `<p class="note" style="margin-top:10px">${esc(L(bestAcq.note))}</p>` : ""}

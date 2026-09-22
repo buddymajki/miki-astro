@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T12:56:13",
+ "generated": "2026-09-22T13:48:45",
  "mediaDir": "DONE",
  "stats": {
   "objects": 22,
@@ -26,6 +26,11 @@
      "bytes": 1216905,
      "mtime": "2026-01-20T02:52",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "Google Pixel 8 Pro",
       "exposure": 15.9995,
       "frames": 1,
@@ -51,6 +56,11 @@
      "bytes": 834220,
      "mtime": "2026-01-20T02:59",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "Google Pixel 8 Pro",
       "exposure": 15.9996,
       "frames": 1,
@@ -76,6 +86,11 @@
      "bytes": 1097419,
      "mtime": "2026-01-20T02:50",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "Google Pixel 8 Pro",
       "exposure": 15.9995,
       "frames": 1,
@@ -101,6 +116,11 @@
      "bytes": 790044,
      "mtime": "2026-01-20T02:55",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "Google Pixel 8 Pro",
       "exposure": 15.9996,
       "frames": 1,
@@ -126,6 +146,11 @@
      "bytes": 955699,
      "mtime": "2026-01-20T02:56",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "Google Pixel 8 Pro",
       "exposure": 15.9996,
       "frames": 1,
@@ -162,6 +187,11 @@
      "bytes": 79815915,
      "mtime": "2026-07-31T18:54",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 30,
       "nights": 1,
       "mode": "EQ",
@@ -207,6 +237,11 @@
      "mtime": "2026-08-17T19:34",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20.0,
       "nights": 2,
       "mode": "EQ",
@@ -215,7 +250,6 @@
        "2026-08-02",
        "2026-08-08"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 1608,
       "framesRaw": 1676,
@@ -253,6 +287,13 @@
      "bytes": 21839631,
      "mtime": "2026-09-04T18:43",
      "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 4066,
      "h": 6945,
      "accent": "#c6746d",
@@ -279,6 +320,13 @@
      "bytes": 278078,
      "mtime": "2026-09-15T09:24",
      "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 1656,
      "h": 1104,
      "accent": "#c6b86d",
@@ -306,6 +354,11 @@
      "mtime": "2026-08-17T20:41",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20.0,
       "nights": 3,
       "mode": "EQ",
@@ -315,7 +368,6 @@
        "2026-08-09",
        "2026-08-11"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 1826,
       "framesRaw": 2065,
@@ -343,6 +395,11 @@
      "mtime": "2026-08-18T22:06",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20.0,
       "nights": 3,
       "mode": "EQ",
@@ -352,7 +409,6 @@
        "2026-08-09",
        "2026-08-11"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 1826,
       "framesRaw": 2065,
@@ -380,6 +436,11 @@
      "mtime": "2026-08-18T23:14",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20.0,
       "nights": 3,
       "mode": "EQ",
@@ -389,7 +450,6 @@
        "2026-08-09",
        "2026-08-11"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 1826,
       "framesRaw": 2065,
@@ -416,6 +476,11 @@
      "bytes": 16919334,
      "mtime": "2026-08-12T13:48",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 3,
       "mode": "EQ",
@@ -452,6 +517,11 @@
      "bytes": 4104242,
      "mtime": "2026-08-17T21:38",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 3,
       "mode": "EQ",
@@ -488,6 +558,11 @@
      "bytes": 4784054,
      "mtime": "2026-08-12T14:53",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 3,
       "mode": "EQ",
@@ -524,6 +599,11 @@
      "bytes": 15847804,
      "mtime": "2026-08-12T14:23",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 3,
       "mode": "EQ",
@@ -560,6 +640,11 @@
      "bytes": 5799541,
      "mtime": "2026-08-12T16:06",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 3,
       "mode": "EQ",
@@ -596,6 +681,11 @@
      "bytes": 2230142,
      "mtime": "2026-08-12T13:51",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 3,
       "mode": "EQ",
@@ -632,6 +722,11 @@
      "bytes": 18478471,
      "mtime": "2026-08-12T14:37",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 3,
       "mode": "EQ",
@@ -680,26 +775,20 @@
      "mtime": "2026-09-22T12:26",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "frames": 1462,
-      "exposure": 20,
-      "total": 7960,
+      "exposure": 30.0,
+      "total": 43860.0,
       "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
+      "filter": "IR-cut",
       "gain": 200,
       "date": "2026-09-17",
       "focal": 163,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
-      "framesRaw": 398,
-      "nights": 2,
-      "dates": [
-       "2026-08-10",
-       "2026-08-12"
-      ],
-      "estimated": true,
-      "note": {
-       "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
-       "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
-      }
+      "source": "filename"
      },
      "w": 3836,
      "h": 3840,
@@ -717,26 +806,29 @@
      "mtime": "2026-08-17T20:34",
      "annot": true,
      "acq": {
-      "frames": 378,
-      "exposure": 20,
-      "total": 7960,
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
       "gain": 200,
-      "date": "2026-09-17",
       "focal": 163,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "framesRaw": 398,
+      "exposure": 20.0,
+      "total": 7560.0,
+      "filter": "IR-cut",
       "nights": 2,
       "dates": [
        "2026-08-10",
        "2026-08-12"
       ],
-      "estimated": true,
+      "source": "filename",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
        "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
-      }
+      },
+      "frames": 378
      },
      "w": 1200,
      "h": 1764,
@@ -753,26 +845,20 @@
      "bytes": 15277541,
      "mtime": "2026-09-22T12:23",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "frames": 1462,
-      "exposure": 20,
-      "total": 7960,
+      "exposure": 30.0,
+      "total": 43860.0,
       "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
+      "filter": "IR-cut",
       "gain": 200,
       "date": "2026-09-17",
       "focal": 163,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
-      "framesRaw": 398,
-      "nights": 2,
-      "dates": [
-       "2026-08-10",
-       "2026-08-12"
-      ],
-      "estimated": true,
-      "note": {
-       "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
-       "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
-      }
+      "source": "filename"
      },
      "w": 4303,
      "h": 7313,
@@ -789,26 +875,29 @@
      "bytes": 4140928,
      "mtime": "2026-08-09T20:15",
      "acq": {
-      "frames": 378,
-      "exposure": 20,
-      "total": 7960,
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
       "gain": 200,
-      "date": "2026-09-17",
       "focal": 163,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "framesRaw": 398,
+      "exposure": 20.0,
+      "total": 7560.0,
+      "filter": "IR-cut (LP nélkül)",
       "nights": 2,
       "dates": [
        "2026-08-10",
        "2026-08-12"
       ],
-      "estimated": true,
+      "source": "filename",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
        "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
-      }
+      },
+      "frames": 378
      },
      "w": 1728,
      "h": 2160,
@@ -825,26 +914,29 @@
      "bytes": 64184790,
      "mtime": "2026-08-17T20:32",
      "acq": {
-      "frames": 378,
-      "exposure": 20,
-      "total": 7960,
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
       "gain": 200,
-      "date": "2026-09-17",
       "focal": 163,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "framesRaw": 398,
+      "exposure": 20.0,
+      "total": 7560.0,
+      "filter": "IR-cut",
       "nights": 2,
       "dates": [
        "2026-08-10",
        "2026-08-12"
       ],
-      "estimated": true,
+      "source": "filename",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
        "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
-      }
+      },
+      "frames": 378
      },
      "w": 3812,
      "h": 5603,
@@ -861,26 +953,29 @@
      "bytes": 10586126,
      "mtime": "2026-08-18T22:49",
      "acq": {
-      "frames": 378,
-      "exposure": 20,
-      "total": 7960,
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut (LP nélkül)",
       "gain": 200,
-      "date": "2026-09-17",
       "focal": 163,
-      "source": "RAW mappa (E:\\Stargazing\\RAW\\M31_sub)",
       "framesRaw": 398,
+      "exposure": 20.0,
+      "total": 7560.0,
+      "filter": "IR-cut",
       "nights": 2,
       "dates": [
        "2026-08-10",
        "2026-08-12"
       ],
-      "estimated": true,
+      "source": "filename",
       "note": {
        "hu": "Ez a szett nincs a megfigyelési naplóban – az adat az E:\\Stargazing\\RAW\\M31_sub mappában megmaradt 398 nyers kockából származik (193 db 08-10-én, 205 db 08-12-én). A megtartott kockaszám nem ismert, ezért az integráció a nyers anyagra vonatkozik.",
        "en": "This set is not in the observing log – the figures come from the 398 raw frames left in E:\\Stargazing\\RAW\\M31_sub (193 on 08-10, 205 on 08-12). The kept-frame count is unknown, so the integration refers to the raw material."
-      }
+      },
+      "frames": 378
      },
      "w": 3611,
      "h": 4995,
@@ -909,6 +1004,11 @@
      "mtime": "2026-09-16T09:58",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "frames": 1076,
       "exposure": 30.0,
       "total": 32280.0,
@@ -930,6 +1030,11 @@
      "mtime": "2026-09-16T09:58",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "frames": 1076,
       "exposure": 30.0,
       "total": 32280.0,
@@ -950,6 +1055,13 @@
      "bytes": 2038890,
      "mtime": "2026-09-15T19:53",
      "annot": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 1229,
      "h": 1764,
      "accent": "#8fc66d",
@@ -965,6 +1077,13 @@
      "bytes": 944393,
      "mtime": "2026-09-15T19:56",
      "annot": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 988,
      "h": 993,
      "accent": "#85c66d",
@@ -979,6 +1098,13 @@
      "kind": "image",
      "bytes": 11638584,
      "mtime": "2026-09-15T19:45",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 3429,
      "h": 5833,
      "accent": "#c66da2",
@@ -993,6 +1119,13 @@
      "kind": "image",
      "bytes": 5129992,
      "mtime": "2026-09-16T09:54",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2830,
      "h": 2830,
      "accent": "#8b6dc6",
@@ -1007,6 +1140,13 @@
      "kind": "image",
      "bytes": 5225211,
      "mtime": "2026-09-16T09:49",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2830,
      "h": 2830,
      "accent": "#8c6dc6",
@@ -1021,6 +1161,13 @@
      "kind": "image",
      "bytes": 2510310,
      "mtime": "2026-09-15T19:56",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 1764,
      "h": 1764,
      "accent": "#ab6dc6",
@@ -1035,6 +1182,13 @@
      "kind": "image",
      "bytes": 4350540,
      "mtime": "2026-09-15T19:48",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2638,
      "h": 2634,
      "accent": "#c66d8b",
@@ -1049,6 +1203,13 @@
      "kind": "image",
      "bytes": 3448938,
      "mtime": "2026-09-15T22:15",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2496,
      "h": 2496,
      "accent": "#9f6dc6",
@@ -1076,6 +1237,11 @@
      "mtime": "2026-07-29T22:48",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
       "fnumber": 5.0,
       "focal": 160.0,
@@ -1097,6 +1263,11 @@
      "bytes": 460712,
      "mtime": "2026-07-29T22:48",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
       "fnumber": 5.0,
       "focal": 160.0,
@@ -1118,6 +1289,11 @@
      "bytes": 173989,
      "mtime": "2026-07-29T22:48",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
       "fnumber": 5.0,
       "focal": 160.0,
@@ -1139,6 +1315,11 @@
      "bytes": 48038,
      "mtime": "2026-08-01T23:14",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
       "fnumber": 5.0,
       "focal": 160.0,
@@ -1159,6 +1340,11 @@
      "bytes": 25654,
      "mtime": "2026-08-08T06:24",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
       "fnumber": 5.0,
       "focal": 160.0,
@@ -1180,6 +1366,11 @@
      "bytes": 1011495,
      "mtime": "2026-08-09T05:43",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
       "fnumber": 5.0,
       "focal": 160.0,
@@ -1201,6 +1392,11 @@
      "bytes": 24867,
      "mtime": "2026-08-09T06:05",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
       "fnumber": 5.0,
       "focal": 160.0,
@@ -1220,6 +1416,13 @@
      "kind": "video",
      "bytes": 13136678,
      "mtime": "2026-07-29T22:42",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "accent": "#c6864f",
      "web": "thumbs/2b27a92c664efcad_v.mp4",
      "webBytes": 688971,
@@ -1236,6 +1439,13 @@
      "kind": "video",
      "bytes": 79402425,
      "mtime": "2026-07-29T22:45",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "accent": "#c68954",
      "web": "thumbs/4c5cafe63e835b85_v.mp4",
      "webBytes": 11411122,
@@ -1252,6 +1462,13 @@
      "kind": "video",
      "bytes": 45600942,
      "mtime": "2026-07-29T22:55",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "accent": "#c68c57",
      "web": "thumbs/db9a2c2e59ebd0cb_v.mp4",
      "webBytes": 4313223,
@@ -1280,6 +1497,13 @@
      "bytes": 6155052,
      "mtime": "2026-09-04T22:21",
      "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2727,
      "h": 2727,
      "accent": "#c6746d",
@@ -1294,6 +1518,13 @@
      "kind": "image",
      "bytes": 10356457,
      "mtime": "2026-09-04T18:32",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 3729,
      "h": 6003,
      "accent": "#c66da7",
@@ -1308,6 +1539,13 @@
      "kind": "image",
      "bytes": 6196218,
      "mtime": "2026-09-04T22:39",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2727,
      "h": 2727,
      "accent": "#c67d6a",
@@ -1322,6 +1560,13 @@
      "kind": "image",
      "bytes": 6220693,
      "mtime": "2026-09-04T22:44",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2727,
      "h": 2727,
      "accent": "#c6745c",
@@ -1349,6 +1594,11 @@
      "mtime": "2026-09-15T22:49",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 30,
       "nights": 2,
       "mode": "EQ",
@@ -1384,6 +1634,11 @@
      "mtime": "2026-08-17T20:18",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 30.0,
       "nights": 2,
       "mode": "EQ",
@@ -1392,7 +1647,6 @@
        "2026-08-14",
        "2026-08-15"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 931,
       "framesRaw": 1054,
@@ -1418,6 +1672,11 @@
      "bytes": 1038268,
      "mtime": "2026-08-17T21:49",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 30.0,
       "nights": 2,
       "mode": "EQ",
@@ -1426,7 +1685,6 @@
        "2026-08-14",
        "2026-08-15"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 931,
       "framesRaw": 1054,
@@ -1452,6 +1710,11 @@
      "bytes": 163250822,
      "mtime": "2026-07-28T22:12",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 1,
       "mode": "EQ",
@@ -1484,6 +1747,11 @@
      "bytes": 39610546,
      "mtime": "2026-07-28T21:39",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 1,
       "mode": "EQ",
@@ -1516,6 +1784,11 @@
      "bytes": 4756952,
      "mtime": "2026-08-16T13:21",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 30,
       "nights": 2,
       "mode": "EQ",
@@ -1561,6 +1834,13 @@
      "bytes": 5522681,
      "mtime": "2026-09-13T20:51",
      "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2500,
      "h": 1962,
      "accent": "#c66dba",
@@ -1576,6 +1856,13 @@
      "bytes": 1054213,
      "mtime": "2026-09-14T21:51",
      "annot": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 739,
      "h": 587,
      "accent": "#b2c66d",
@@ -1602,6 +1889,13 @@
      "bytes": 5522681,
      "mtime": "2026-09-13T20:51",
      "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2500,
      "h": 1962,
      "accent": "#c66dba",
@@ -1618,6 +1912,11 @@
      "mtime": "2026-08-17T20:05",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "frames": 157,
       "exposure": 10.0,
       "total": 1570.0,
@@ -1639,6 +1938,11 @@
      "mtime": "2026-08-17T21:56",
      "annot": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "frames": 157,
       "exposure": 10.0,
       "total": 1570.0,
@@ -1659,6 +1963,13 @@
      "bytes": 1054213,
      "mtime": "2026-09-14T21:51",
      "annot": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 739,
      "h": 587,
      "accent": "#b2c66d",
@@ -1686,6 +1997,11 @@
      "mtime": "2026-09-09T00:33",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 10,
       "nights": 1,
       "mode": "alt-az",
@@ -1718,6 +2034,11 @@
      "mtime": "2026-09-09T09:53",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 10,
       "nights": 1,
       "mode": "alt-az",
@@ -1750,6 +2071,11 @@
      "mtime": "2026-09-09T10:06",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 10,
       "nights": 1,
       "mode": "alt-az",
@@ -1782,6 +2108,11 @@
      "mtime": "2026-09-09T10:09",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 10,
       "nights": 1,
       "mode": "alt-az",
@@ -1813,6 +2144,11 @@
      "bytes": 16528598,
      "mtime": "2026-09-08T21:43",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 10,
       "nights": 1,
       "mode": "alt-az",
@@ -1855,6 +2191,11 @@
      "bytes": 2406656,
      "mtime": "2026-07-22T11:13",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 10,
       "nights": 1,
       "mode": "alt-az",
@@ -1897,6 +2238,11 @@
      "bytes": 29965512,
      "mtime": "2026-07-25T18:03",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20,
       "nights": 3,
       "mode": "alt-az (07.21) → EQ (07.23, 07.24)",
@@ -1943,6 +2289,11 @@
      "mtime": "2026-08-17T19:51",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20.0,
       "nights": 1,
       "mode": "EQ",
@@ -1950,7 +2301,6 @@
       "dates": [
        "2026-08-13"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 862,
       "framesRaw": 1093,
@@ -1977,6 +2327,11 @@
      "mtime": "2026-08-17T19:47",
      "annot": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20.0,
       "nights": 1,
       "mode": "EQ",
@@ -1984,7 +2339,6 @@
       "dates": [
        "2026-08-13"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 862,
       "framesRaw": 1093,
@@ -2010,6 +2364,11 @@
      "bytes": 2147689,
      "mtime": "2026-08-17T19:45",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 20.0,
       "nights": 1,
       "mode": "EQ",
@@ -2017,7 +2376,6 @@
       "dates": [
        "2026-08-13"
       ],
-      "estimated": false,
       "source": "filename",
       "frames": 862,
       "framesRaw": 1093,
@@ -2054,6 +2412,13 @@
      "bytes": 6193276,
      "mtime": "2026-08-28T12:03",
      "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2668,
      "h": 2668,
      "accent": "#c66db3",
@@ -2069,6 +2434,13 @@
      "bytes": 1663540,
      "mtime": "2026-08-28T12:02",
      "annot": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 934,
      "h": 1282,
      "accent": "#c66d72",
@@ -2083,6 +2455,13 @@
      "kind": "image",
      "bytes": 90595894,
      "mtime": "2026-08-28T12:06",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 3841,
      "h": 5273,
      "accent": "#c66d89",
@@ -2097,6 +2476,13 @@
      "kind": "image",
      "bytes": 1936236,
      "mtime": "2026-08-28T12:04",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 1494,
      "h": 1494,
      "accent": "#c66e6d",
@@ -2123,6 +2509,13 @@
      "bytes": 23114751,
      "mtime": "2026-09-16T13:47",
      "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 4261,
      "h": 7070,
      "accent": "#c6745b",
@@ -2137,6 +2530,13 @@
      "kind": "image",
      "bytes": 24592886,
      "mtime": "2026-09-15T15:57",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 4263,
      "h": 7274,
      "accent": "#c6716d",
@@ -2151,6 +2551,13 @@
      "kind": "image",
      "bytes": 29437849,
      "mtime": "2026-09-15T16:11",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 4154,
      "h": 7427,
      "accent": "#6d79c6",
@@ -2177,6 +2584,11 @@
      "bytes": 12604702,
      "mtime": "2026-07-29T19:43",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "exposure": 30,
       "nights": 1,
       "mode": "EQ",
@@ -2222,10 +2634,14 @@
      "mtime": "2026-08-17T19:57",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "frames": 862,
-      "exposure": 20,
-      "total": 17240,
-      "source": "napló (az NGC 7331 szettjéből kivágva)",
+      "exposure": 20.0,
+      "total": 17240.0,
       "filter": "IR-cut (LP nélkül)",
       "nights": 1,
       "dates": [
@@ -2233,6 +2649,7 @@
       ],
       "drizzle": "2,0×",
       "telescope": "ZWO Seestar S30 Pro",
+      "source": "filename",
       "note": {
        "hu": "Ezek a képek az NGC 7331 felvételéből kivágott részletek – ugyanabban a mezőben van a két objektum, tehát a felvételi adatok is közösek.",
        "en": "These are crops from the NGC 7331 exposure – both objects share the same field, so the acquisition data is the same."
@@ -2253,10 +2670,14 @@
      "bytes": 259141,
      "mtime": "2026-08-17T19:58",
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "frames": 862,
-      "exposure": 20,
-      "total": 17240,
-      "source": "napló (az NGC 7331 szettjéből kivágva)",
+      "exposure": 20.0,
+      "total": 17240.0,
       "filter": "IR-cut (LP nélkül)",
       "nights": 1,
       "dates": [
@@ -2264,6 +2685,7 @@
       ],
       "drizzle": "2,0×",
       "telescope": "ZWO Seestar S30 Pro",
+      "source": "filename",
       "note": {
        "hu": "Ezek a képek az NGC 7331 felvételéből kivágott részletek – ugyanabban a mezőben van a két objektum, tehát a felvételi adatok is közösek.",
        "en": "These are crops from the NGC 7331 exposure – both objects share the same field, so the acquisition data is the same."
@@ -2296,6 +2718,11 @@
      "mtime": "2026-07-27T13:46",
      "main": true,
      "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
       "telescope": "ZWO Seestar S30 Pro",
       "exposure": 0.007,
       "frames": 1,
@@ -2318,6 +2745,13 @@
      "kind": "image",
      "bytes": 1431769,
      "mtime": "2026-08-13T13:02",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "w": 2160,
      "h": 3840,
      "accent": "#c65f09",
@@ -2332,6 +2766,13 @@
      "kind": "video",
      "bytes": 15041118,
      "mtime": "2026-08-16T13:53",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6"
+     },
      "accent": "#c64905",
      "web": "thumbs/a4a2da0da77cf2b1_v.mp4",
      "webBytes": 4660956,

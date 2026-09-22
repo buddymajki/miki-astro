@@ -188,6 +188,15 @@ SH2-101_120x120s_Ha_v2.png
 | kockaszám × expozíció | `931x30s`, `250x60sec`, `40x2min` | **az egység kötelező** (`s`, `sec`, `min`, `m`, `ms`) |
 | gain | `gain200`, `g200` | |
 | szűrő | `HOO`, `SHO`, `LRGB`, `RGB`, `Ha`, `OIII`, `SII`, `LP`, `IRCUT`, `UHC`, `dual`, `NB`, `BB` | |
+| égbolt (Bortle) | `bortle3`, `bortel3`, `bortle5-6` | ha nincs, az alapértelmezett helyszín (`site`: Kriens-Obernau, Bortle 5–6) |
+| helyszín | pl. `HOLZEGG` | csak ha fel van véve az `equipment.json` → `locations` alá |
+
+**Több szett egy objektumon belül.** Ha a fájlnévben kockaszám × expozíció
+szerepel, az a kép saját szettje: pl. `M31_378x20sec_...` és
+`M31_1462x30sec_...` külön adatot kap, és az objektum oldalán mindkét szett
+látszik. A napló / FITS / `byObject` adataiból ilyenkor csak az kerül át,
+ami ugyanarra a szettre vonatkozik (azonos expozíció, ±25% kockaszám).
+A régi, kockaszám nélküli fájlnevek adata nem változik.
 
 Az egység azért kötelező, mert e nélkül a `2160x3840` képméret is
 kockaszámnak látszana.
@@ -218,7 +227,7 @@ A `data/equipment.json` fájlban:
                                 "note": {"hu": "Két éjszaka", "en": "Two nights"} } }
 ```
 
-Sorrend: FITS → EXIF → fájlnév → `byObject` → `byFile`. Ami lejjebb van, az nyer.
+Sorrend: `site` → FITS → EXIF → napló → `byObject` → fájlnév → `byFile`. Ami lejjebb van, az nyer.
 
 ## Értesítés a családnak
 
