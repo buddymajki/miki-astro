@@ -8,6 +8,9 @@
 
 const SERVED = location.protocol === "http:" || location.protocol === "https:";
 
+// a scan.py által generált előnézet szélessége (PREVIEW_W)
+const PREVIEW_PX = 2400;
+
 /* Helyben fut (serve.py) vagy publikált statikus oldal? A helyi szerveren van
    /api/ping; a GitHub Pages-en nincs, ott elrejtjük a helyi funkciókat. */
 let IS_LOCAL = false;
@@ -98,9 +101,19 @@ const STRINGS = {
     credit: "Forrás", viewOnCommons: "Megnyitás a Wikimedia Commons-on",
     kindHubble: "Hubble űrtávcső", kindPro: "Profi obszervatórium", kindAmateur: "Referenciakép",
 
-    hintImage: "Görgetés / kattintás = nagyítás · húzás = mozgatás · ← → = lapozás",
+    hintImage: "Görgetés vagy csippentés = nagyítás · húzás = mozgatás · ← → = lapozás",
+    browse: "Lapozás",
+    scopeSimilar: "Hasonló", scopeList: "Lista", scopeObject: "Csak ez",
+    scopeSimilarTip: "Ugyanolyan típusú objektumok, katalógus szerinti sorrendben",
+    scopeListTip: "A bal oldali lista sorrendjében, az összes látható objektum",
+    scopeObjectTip: "Csak ennek az objektumnak a felvételei",
+    objectsUnit: "objektum", shotsUnit: "kép",
+    zoomIn: "Nagyítás", zoomOut: "Kicsinyítés",
+    zoomFit: "Teljes kép", zoomOne: "Pixelpontos nézet (1:1)",
+    hdLoading: "Nagy felbontás betöltése…", hdReady: "Nagy felbontás",
+    fullRes: "Teljes felbontás",
     hintVideo: "Videó – az eredeti fájl játszik le",
-    previewNote: "előnézet – az „Eredeti” a teljes felbontás",
+    previewNote: "előnézet – nagyításra betölt a nagy felbontás",
     thisShot: "Ez a felvétel",
 
     newTag: "ÚJ", newCount: "%s új", newInAlbum: "%s új felvétel",
@@ -173,9 +186,19 @@ const STRINGS = {
     credit: "Credit", viewOnCommons: "Open on Wikimedia Commons",
     kindHubble: "Hubble Space Telescope", kindPro: "Professional observatory", kindAmateur: "Reference image",
 
-    hintImage: "Scroll / click = zoom · drag = pan · ← → = next image",
+    hintImage: "Scroll or pinch = zoom · drag = pan · ← → = next image",
+    browse: "Browsing",
+    scopeSimilar: "Similar", scopeList: "List", scopeObject: "This one",
+    scopeSimilarTip: "Objects of the same type, in catalogue order",
+    scopeListTip: "Every visible object, in the order of the sidebar list",
+    scopeObjectTip: "Only the shots of this object",
+    objectsUnit: "objects", shotsUnit: "shots",
+    zoomIn: "Zoom in", zoomOut: "Zoom out",
+    zoomFit: "Whole image", zoomOne: "Pixel-for-pixel view (1:1)",
+    hdLoading: "Loading full resolution…", hdReady: "Full resolution",
+    fullRes: "Full resolution",
     hintVideo: "Video – playing the original file",
-    previewNote: "preview – “Original” opens full resolution",
+    previewNote: "preview – zooming loads the full-resolution version",
     thisShot: "This shot",
 
     newTag: "NEW", newCount: "%s new", newInAlbum: "%s new shot(s)",
@@ -1015,6 +1038,7 @@ function renderStatic() {
   document.documentElement.lang = lang;
   $("#search").placeholder = t("searchPh");
   $$("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
+  $$("[data-i18n-title]").forEach((el) => { el.title = t(el.dataset.i18nTitle); });
   $$("#langs button").forEach((b) => b.classList.toggle("on", b.dataset.lang === lang));
 
   const sort = $("#sort");
@@ -1279,14 +1303,24 @@ function renderObject(id) {
    kapcsolóból négy állapot jönne ki, ami mobilon zavaros. */
 const MODES = ["photo", "info", "compare"];
 
+/* Lapozási kör: mihez tartozzon a nyilakkal bejárható sorozat.
+   – similar: ugyanolyan típusú objektumok (galaxis → galaxis), katalógus szerint,
+     a Messier-nézetben viszont a Messier-sorrend,
+   – list:    minden, ami a bal oldali listában látszik, annak sorrendjében,
+   – object:  csak az éppen nézett objektum felvételei.                        */
+const SCOPES = ["similar", "list", "object"];
+
 const vw = {
   el: null, obj: null, items: [], index: 0,
   mode: "photo",
   compare: false,                                   // származtatott: mode === "compare"
   prefMode: localStorage.getItem("miki:mode") === "info" ? "info" : "photo",
+  scope: SCOPES.includes(localStorage.getItem("miki:scope")) ? localStorage.getItem("miki:scope") : "similar",
   seq: [], seqPos: 0,
   pushed: false,
   img: null, scale: 1, tx: 0, ty: 0,
+  hd: false, hdLoading: false,      // betöltött-e már a nagyfelbontású változat
+  pointers: new Map(),              // csippentéshez: az éppen lenyomott ujjak
 };
 
 function currentItem() { return vw.items[vw.index]; }
@@ -1321,6 +1355,23 @@ function paintedSize(item) {
   return { w: item.w * scale, h: item.h * scale };
 }
 
+/** Meddig lehet nagyítani: a legnagyobb elérhető változat pixelpontos nézetéig
+    (plusz egy kis ráhagyás, hogy a részletek szabad szemmel is kényelmesek legyenek). */
+function maxZoom(item) {
+  const fit = paintedSize(item);
+  const px = item?.zoom ? (item.zoomW || item.w) : Math.min(item?.w || 0, PREVIEW_PX);
+  if (!fit.w || !px) return 6;
+  return Math.max(2, Math.min(14, (px / fit.w) * 1.35));
+}
+
+/** Az a nagyítás, ahol a kép pixelei éppen a képernyő pixeleire esnek. */
+function oneToOneZoom(item) {
+  const fit = paintedSize(item);
+  const px = item?.zoom ? (item.zoomW || item.w) : Math.min(item?.w || 0, PREVIEW_PX);
+  if (!fit.w || !px) return 2;
+  return Math.max(1, Math.min(maxZoom(item), px / fit.w));
+}
+
 function applyZoom() {
   if (!vw.img) return;
   const item = currentItem();
@@ -1332,16 +1383,19 @@ function applyZoom() {
   vw.ty = Math.min(maxY, Math.max(-maxY, vw.ty));
   vw.img.style.transform = `translate(${vw.tx}px, ${vw.ty}px) scale(${vw.scale})`;
   vw.img.classList.toggle("zoomed", vw.scale > 1.01);
+  if (vw.scale > 1.15) ensureHD();          // nagyításkor jöjjön a részletgazdag kép
+  updateZoomUI();
 }
 
 function resetZoom() {
   vw.scale = 1; vw.tx = 0; vw.ty = 0;
   if (vw.img) { vw.img.style.transform = ""; vw.img.classList.remove("zoomed"); }
+  updateZoomUI();
 }
 
 function zoomAt(clientX, clientY, next) {
   if (!vw.img || vw.compare) return;
-  next = Math.min(8, Math.max(1, next));
+  next = Math.min(maxZoom(currentItem()), Math.max(1, next));
   const rect = $("#vwMine").getBoundingClientRect();
   const ox = (clientX - (rect.left + rect.width / 2) - vw.tx) / vw.scale;
   const oy = (clientY - (rect.top + rect.height / 2) - vw.ty) / vw.scale;
@@ -1350,6 +1404,57 @@ function zoomAt(clientX, clientY, next) {
   vw.scale = next;
   if (vw.scale <= 1.01) resetZoom();
   else applyZoom();
+}
+
+/** Nagyítás a kép közepéből (gombok, billentyűzet). */
+function zoomBy(factor) {
+  const rect = $("#vwMine").getBoundingClientRect();
+  zoomAt(rect.left + rect.width / 2, rect.top + rect.height / 2, vw.scale * factor);
+}
+
+/** A nagyfelbontású változat betöltése – csak ha tényleg belenagyítanak,
+    hogy a lapozás ne töltsön le fölöslegesen több megabájtot. */
+function ensureHD() {
+  const item = currentItem();
+  if (!item || !item.zoom || vw.hd || vw.hdLoading || item.kind === "video") return;
+  vw.hdLoading = true;
+  setHdChip("loading");
+  const pre = new Image();
+  pre.onload = () => {
+    vw.hdLoading = false;
+    if (currentItem() !== item || !vw.img) return;   // közben lapoztak
+    vw.hd = true;
+    vw.img.src = pre.src;
+    setHdChip("ready");
+    updateZoomUI();
+  };
+  pre.onerror = () => { vw.hdLoading = false; setHdChip(""); };
+  pre.src = url(item.zoom);
+}
+
+function setHdChip(mode) {
+  const chip = $("#vwHd");
+  if (!chip) return;
+  chip.hidden = !mode;
+  chip.classList.toggle("loading", mode === "loading");
+  chip.textContent = mode === "loading" ? t("hdLoading") : mode === "ready" ? t("hdReady") : "";
+}
+
+/** A nagyítás gombsorának frissítése: százalék, tiltott gombok. */
+function updateZoomUI() {
+  const box = $("#vwZoom");
+  if (!box) return;
+  const item = currentItem();
+  const usable = !!vw.img && !vw.compare && item?.kind !== "video";
+  box.hidden = !usable;
+  if (!usable) return;
+  const max = maxZoom(item);
+  $("#vwZoomVal").textContent = Math.round(vw.scale * 100) + "%";
+  $$("#vwZoom [data-zoom]").forEach((b) => {
+    if (b.dataset.zoom === "out") b.disabled = vw.scale <= 1.01;
+    if (b.dataset.zoom === "in") b.disabled = vw.scale >= max - 0.01;
+    if (b.dataset.zoom === "fit") b.disabled = vw.scale <= 1.01;
+  });
 }
 
 /* --- összehasonlító panel ------------------------------------------------- */
@@ -1483,8 +1588,11 @@ function showSlide() {
 
   const media = $("#vwMedia");
   media.innerHTML = "";
-  resetZoom();
   vw.img = null;
+  vw.hd = false;
+  vw.hdLoading = false;
+  setHdChip("");
+  resetZoom();
 
   if (item.kind === "video") {
     const video = document.createElement("video");
@@ -1511,12 +1619,19 @@ function showSlide() {
   $("#vwTitle").textContent = item.name;
   $("#vwMeta").innerHTML = [
     acqSummary(item.acq), px(item.w, item.h), bytes(item.bytes), dateLabel(item.mtime),
-    item.preview ? t("previewNote") : "",
+    item.zoom ? t("previewNote") : "",
   ].filter(Boolean).map(esc).join(' <i class="dot"></i> ');
 
   // körbeér, ezért a nyilak sosem tiltottak
   $("#vwPrev").disabled = vw.seq.length < 2;
   $("#vwNext").disabled = vw.seq.length < 2;
+
+  // publikált oldalon nincs eredeti fájl, de a nagyfelbontású változat megnyitható
+  const open = $("#vwOpen");
+  open.hidden = !IS_LOCAL && !(item.zoom || item.preview || item.web);
+  $("span", open).textContent = IS_LOCAL ? t("original") : t("fullRes");
+  updateZoomUI();
+  renderBrowse();
 
   $("#vwRail").innerHTML = vw.items.map((it, i) => {
     const cls = i === vw.index ? "on" : "";
@@ -1549,7 +1664,7 @@ function openViewer(objId, index, wantMode) {
   vw.mode = MODES.includes(wantMode) ? wantMode : vw.prefMode;
   if (vw.mode === "compare" && !referenceOf(o)) vw.mode = vw.prefMode;
 
-  vw.seq = buildSequence();
+  vw.seq = buildSequence(o);
   vw.seqPos = vw.seq.findIndex((s) => s.id === objId && s.i === index);
   if (vw.seqPos < 0) {                     // szűrő miatt kiesett – csak ezen az objektumon lapozunk
     vw.seq = o.items.map((_it, i) => ({ id: objId, i }));
@@ -1570,6 +1685,7 @@ function openViewer(objId, index, wantMode) {
     resetZoom();
     renderComparePane();
     renderViewerSide();
+    renderBrowse();
     return;
   }
 
@@ -1584,6 +1700,7 @@ function openViewer(objId, index, wantMode) {
 }
 
 function closeViewer() {
+  vw.pointers.clear();
   if (!vw.el.classList.contains("open")) return;
   vw.el.classList.remove("open");
   document.body.classList.remove("no-scroll");
@@ -1607,10 +1724,75 @@ function dismissViewer() {
   else closeViewer();
 }
 
-/** Az összes látható objektum összes felvétele egyetlen sorozatban –
-    így a nyilakkal át lehet lapozni a következő objektumra is. */
-function buildSequence() {
-  return visibleObjects().flatMap((o) => o.items.map((_it, i) => ({ id: o.id, i })));
+/** Az a lista, amiből a lapozás sorozata készül: a Messier-nézetből nyitva a
+    lefotózott Messier-objektumok szám szerint, különben a látható album. */
+function browseBase() {
+  if (state.section === "messier") {
+    const seen = new Set();
+    return messierRows().filter((r) => r.have).map((r) => r.obj)
+      .filter((o) => !seen.has(o.id) && seen.add(o.id));
+  }
+  return visibleObjects();
+}
+
+/** A lapozási körbe tartozó objektumok, a választott körnek megfelelően. */
+function sequenceObjects(obj) {
+  if (!obj) return [];
+  if (vw.scope === "object") return [obj];
+  let list = browseBase();
+  if (vw.scope === "similar" && state.section !== "messier") {
+    const same = list.filter((o) => o.kind === obj.kind);
+    if (same.length > 1) {
+      list = same.slice().sort((a, b) => {
+        const x = catalogRank(a), y = catalogRank(b);
+        return x[0] - y[0] || x[1] - y[1] || a.name.localeCompare(b.name, locale());
+      });
+    }
+  }
+  // szűrő miatt kieshetett az éppen nézett objektum – az mindig maradjon benne
+  if (!list.some((o) => o.id === obj.id)) list = [obj, ...list];
+  return list;
+}
+
+/** A lapozási kör összes felvétele egyetlen sorozatban – így a nyilakkal
+    át lehet lapozni a következő objektumra is, de nem összevissza. */
+function buildSequence(obj) {
+  return sequenceObjects(obj).flatMap((o) => o.items.map((_it, i) => ({ id: o.id, i })));
+}
+
+/** A lapozósáv: melyik körben vagyunk, és hol tartunk benne. */
+function renderBrowse() {
+  const box = $("#vwBrowse");
+  if (!box || !vw.obj) return;
+  const objs = sequenceObjects(vw.obj);
+  const at = objs.findIndex((o) => o.id === vw.obj.id);
+  // ha egy típusból csak egy objektum van, a "hasonló" kör az egész listára esik
+  // vissza – ilyenkor a felirat is azt mondja, ne a típust ígérje
+  const sameKind = objs.length > 1 && objs.every((o) => o.kind === vw.obj.kind);
+  const listLabel = state.section === "messier" ? t("messierTitle") : t("viewAlbum");
+  const label = vw.scope === "object" ? vw.obj.name
+    : vw.scope === "similar" && sameKind && state.section !== "messier" ? t(vw.obj.kind)
+    : listLabel;
+  box.innerHTML = `
+    <span class="vw-browse-label">${esc(t("browse"))}</span>
+    <div class="seg">${SCOPES.map((sc) => `<button data-scope="${sc}"
+        class="${vw.scope === sc ? "on" : ""}" title="${esc(t(sc === "similar" ? "scopeSimilarTip"
+          : sc === "list" ? "scopeListTip" : "scopeObjectTip"))}">${esc(t(sc === "similar" ? "scopeSimilar"
+          : sc === "list" ? "scopeList" : "scopeObject"))}</button>`).join("")}</div>
+    <span class="vw-browse-pos">${esc(label)}${objs.length > 1
+      ? ` <i class="dot"></i> ${at + 1} / ${objs.length} ${esc(t("objectsUnit"))}` : ""}
+      <i class="dot"></i> ${vw.seqPos + 1} / ${vw.seq.length} ${esc(t("shotsUnit"))}</span>`;
+}
+
+function setScope(next) {
+  if (!SCOPES.includes(next) || next === vw.scope || !vw.obj) return;
+  vw.scope = next;
+  localStorage.setItem("miki:scope", next);
+  vw.seq = buildSequence(vw.obj);
+  const at = vw.seq.findIndex((s) => s.id === vw.obj.id && s.i === vw.index);
+  vw.seqPos = at < 0 ? 0 : at;
+  renderBrowse();
+  renderViewerSide();
 }
 
 /** Lapozás a teljes album sorrendjében – az utolsó után az elsőre ér körbe. */
@@ -1624,7 +1806,7 @@ function step(delta) {
 
 /** Ugrás a következő/előző objektum első képére – szintén körbeér. */
 function stepObject(delta) {
-  const list = visibleObjects();
+  const list = sequenceObjects(vw.obj);
   if (list.length < 2) return;
   const at = list.findIndex((o) => o.id === vw.obj?.id);
   const next = list[((at < 0 ? 0 : at) + delta + list.length) % list.length];
@@ -1651,7 +1833,8 @@ function swipeAction(dx, dy, width, height) {
 async function shellAction(action) {
   const item = currentItem();
   if (!item) return;
-  if (!IS_LOCAL) { window.open(url(item.file), "_blank"); return; }
+  // publikált oldalon az eredeti nincs fent: a legnagyobb webes változat nyílik meg
+  if (!IS_LOCAL) { window.open(url(item.zoom || item.preview || item.file), "_blank"); return; }
   try {
     const res = await fetch(`/api/${action}?p=${encodeURIComponent(item.file)}`);
     const j = await res.json();
@@ -1816,15 +1999,54 @@ function wire() {
     zoomAt(e.clientX, e.clientY, vw.scale * (e.deltaY < 0 ? 1.22 : 1 / 1.22));
   }, { passive: false });
 
-  /* Egy gesztus háromféle lehet:
-     – nagyítva húzás   = a kép mozgatása,
-     – vízszintes húzás = lapozás (mobilon swipe, mindhárom módban),
-     – rövid koppintás  = nagyítás ki/be.                                   */
+  $("#vwZoom").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-zoom]");
+    if (!b) return;
+    const item = currentItem();
+    if (b.dataset.zoom === "in") { ensureHD(); zoomBy(1.6); }
+    else if (b.dataset.zoom === "out") zoomBy(1 / 1.6);
+    else if (b.dataset.zoom === "fit") resetZoom();
+    else if (b.dataset.zoom === "one") {
+      ensureHD();
+      zoomAt(window.innerWidth / 2, window.innerHeight / 2, oneToOneZoom(item));
+    }
+  });
+
+  $("#vwBrowse").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-scope]");
+    if (b) setScope(b.dataset.scope);
+  });
+
+  /* Egy gesztus négyféle lehet:
+     – két ujjal csippentés = nagyítás,
+     – nagyítva húzás       = a kép mozgatása,
+     – vízszintes húzás     = lapozás (mobilon swipe, mindhárom módban),
+     – rövid koppintás      = nagyítás ki/be.                               */
   let gesture = null;
+  let pinch = null;
+
+  const pinchInfo = () => {
+    const [a, b] = [...vw.pointers.values()];
+    return {
+      dist: Math.hypot(a.x - b.x, a.y - b.y),
+      x: (a.x + b.x) / 2, y: (a.y + b.y) / 2,
+    };
+  };
 
   stage.addEventListener("pointerdown", (e) => {
     if (e.button > 0) return;
-    if (e.target.closest("video, .vw-nav")) return;   // videóvezérlők és a nyilak maradjanak
+    if (e.target.closest("video, .vw-nav, .vw-zoom")) return;  // vezérlők maradjanak
+    vw.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+    if (vw.pointers.size === 2 && vw.img && !vw.compare) {
+      gesture = null;                       // a csippentés elnyomja a húzást
+      const info = pinchInfo();
+      pinch = { dist: info.dist, scale: vw.scale };
+      ensureHD();
+      return;
+    }
+    if (vw.pointers.size > 1) return;
+
     gesture = {
       x: e.clientX, y: e.clientY, tx: vw.tx, ty: vw.ty,
       onImage: e.target === vw.img,
@@ -1835,6 +2057,13 @@ function wire() {
   });
 
   stage.addEventListener("pointermove", (e) => {
+    if (vw.pointers.has(e.pointerId)) vw.pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+    if (pinch && vw.pointers.size >= 2) {
+      const info = pinchInfo();
+      if (info.dist > 0) zoomAt(info.x, info.y, pinch.scale * (info.dist / pinch.dist));
+      return;
+    }
     if (!gesture) return;
     const dx = e.clientX - gesture.x, dy = e.clientY - gesture.y;
     if (Math.abs(dx) + Math.abs(dy) > 6) gesture.moved = true;
@@ -1846,8 +2075,19 @@ function wire() {
     }
   });
 
+  const endPointer = (e) => {
+    vw.pointers.delete(e.pointerId);
+    if (pinch && vw.pointers.size < 2) {
+      pinch = null;
+      vw.swallowClick = true;               // a csippentés vége ne zárja be a nézegetőt
+      gesture = null;
+    }
+  };
+
   stage.addEventListener("pointerup", (e) => {
-    if (!gesture) return;
+    const wasPinch = !!pinch;
+    endPointer(e);
+    if (wasPinch || !gesture) return;
     const g = gesture;
     gesture = null;
     if (vw.img) vw.img.classList.remove("dragging");
@@ -1857,10 +2097,14 @@ function wire() {
 
     const dx = e.clientX - g.x, dy = e.clientY - g.y;
     if (swipeAction(dx, dy, stage.clientWidth, stage.clientHeight)) return;
-    if (!g.moved && g.onImage) zoomAt(e.clientX, e.clientY, vw.scale > 1.01 ? 1 : 2.8);
+    if (!g.moved && g.onImage) {
+      if (vw.scale > 1.01) resetZoom();
+      else { ensureHD(); zoomAt(e.clientX, e.clientY, 2.8); }
+    }
   });
 
-  stage.addEventListener("pointercancel", () => {
+  stage.addEventListener("pointercancel", (e) => {
+    endPointer(e);
     gesture = null;
     if (vw.img) vw.img.classList.remove("dragging");
   });
@@ -1902,6 +2146,9 @@ function wire() {
       else if (e.key === "ArrowUp") { stepObject(-1); e.preventDefault(); }
       else if (e.key === "ArrowDown") { stepObject(1); e.preventDefault(); }
       else if (e.key === "0") resetZoom();
+      else if (e.key === "+" || e.key === "=") { ensureHD(); zoomBy(1.6); }
+      else if (e.key === "-") zoomBy(1 / 1.6);
+      else if (e.key === "1") { ensureHD(); zoomAt(window.innerWidth / 2, window.innerHeight / 2, oneToOneZoom(currentItem())); }
       else if (e.key === "c" || e.key === "C") setMode(vw.mode === "compare" ? vw.prefMode : "compare");
       else if (e.key === "i" || e.key === "I") setMode(vw.mode === "info" ? "photo" : "info");
       return;

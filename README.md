@@ -96,6 +96,33 @@ Ha előbb meg akarod nézni, mit csinálna:
 python scan.py --dry-run
 ```
 
+## Nézegető: nagyítás és lapozás
+
+**Nagyítás.** A kép jobb alsó sarkában van a `−`, a százalék, a `+`, az `1:1`
+és a „teljes kép” gomb. Ezen kívül: egérgörgő, két ujjal csippentés, koppintás
+vagy kattintás a képre, billentyűn `+` / `−` / `1` / `0`. Nagyítva a kép húzható.
+
+A nézegető először a 2400 px-es előnézetet mutatja (gyorsan betölt), és amint
+tényleg belenagyítasz, magától letölti a **4200 px-es változatot** – ilyenkor
+jobb felül villan a „Nagy felbontás” felirat. Ezt a `scan.py` készíti
+(`ZOOM_W`, `ZOOM_QUALITY`), csak a 2600 px-nél szélesebb képekhez, `_z.webp`
+néven. Asztrofotónál ez képenként pár száz kB. A publikált oldalon a fejléc
+„Teljes felbontás” gombja ezt a változatot nyitja meg külön lapon (az eredeti
+100–150 MB-os fájlok nem kerülnek fel a GitHubra).
+
+**Lapozás.** A nyilak nem összevissza ugrálnak: a kép alatti sávban választható,
+mi legyen a lapozás köre.
+
+| Kör | Mit jár be |
+|---|---|
+| **Hasonló** (alapértelmezett) | Az azonos típusú objektumok (galaxis → galaxis, köd → köd), katalógus szerinti sorrendben. A Messier-nézetből nyitva a lefotózott Messier-objektumok szám szerint. |
+| **Lista** | Minden látható objektum, a bal oldali lista sorrendjében (a szűrőt és a rendezést követi). |
+| **Csak ez** | Csak az éppen nézett objektum felvételei. |
+
+A sáv azt is mutatja, hol tartasz: „Galaxisok · 2 / 6 objektum · 5 / 31 kép”.
+A `←` `→` a köv./előző képre lép (az objektum végén átlép a következőre),
+a `↑` `↓` egyből a következő objektumra ugrik. A választás megmarad.
+
 ## Megnevezés, szűrők, Messier-katalógus
 
 - **Megnevezés-kapcsoló** (a fejlécben: *Név* / *Katalógusjel*). *Név* módban

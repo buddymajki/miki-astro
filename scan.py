@@ -60,6 +60,13 @@ ASSET_VERSION = "webp1"       # a gyorsitotar kulcsaban: formatumvaltasnal ujrag
 THUMB_QUALITY = 78
 PREVIEW_QUALITY = 80
 
+# Nagyitashoz keszulo nagyfelbontasu valtozat. Csak akkor keszul el, ha az
+# eredeti ennel erdemben nagyobb - kulonben csak duplan tarolnank ugyanazt.
+# Asztrofotonal ez alig nehany szaz KB, de a nezegetoben elesre nagyithato kep.
+ZOOM_W = 4200
+ZOOM_MIN_W = 2600
+ZOOM_QUALITY = 72
+
 # Vizjel: a data/logo.png rakerul a GENERALT kepekre (bebyeg + elonezet).
 # Az eredeti fajlokhoz a program soha nem nyul hozza.
 LOGO_PATH = os.path.join(DATA_DIR, "logo.png")
@@ -691,8 +698,8 @@ def stamp_logo(image, Image):
     return Image.alpha_composite(image.convert("RGBA"), layer).convert("RGB")
 
 
-def build_thumbs(src, thumb_path, preview_path, Image):
-    """Visszaadja: (szelesseg, magassag, accent, blur) vagy None hiba eseten."""
+def build_thumbs(src, thumb_path, preview_path, Image, zoom_path=None):
+    """Visszaadja: (szelesseg, magassag, accent, blur, zoom szelesseg vagy 0)."""
     with Image.open(src) as raw:
         raw.load()
         image = to_rgb(raw, Image)
@@ -707,7 +714,13 @@ def build_thumbs(src, thumb_path, preview_path, Image):
     stamp_logo(preview, Image).save(preview_path, ASSET_FORMAT, quality=PREVIEW_QUALITY, method=5)
     stamp_logo(thumb, Image).save(thumb_path, ASSET_FORMAT, quality=THUMB_QUALITY, method=5)
 
-    return width, height, accent, blur
+    zoom_w = 0
+    if zoom_path and width > ZOOM_MIN_W:
+        zoom = resize_to_width(image, ZOOM_W, Image)
+        stamp_logo(zoom, Image).save(zoom_path, ASSET_FORMAT, quality=ZOOM_QUALITY, method=4)
+        zoom_w = zoom.size[0]
+
+    return width, height, accent, blur, zoom_w
 
 
 # --------------------------------------------------------------------------
@@ -849,7 +862,7 @@ def scan(force=False, quiet=False):
                     frame = os.path.join(THUMB_DIR, digest + "_frame.png")
                     if grab_video_frame(path, frame):
                         try:
-                            width, height, accent, blur = build_thumbs(
+                            width, height, accent, blur, _zoom = build_thumbs(
                                 frame, thumb_path, preview_path, Image)
                             meta.update({"w": width, "h": height, "accent": accent, "blur": blur})
                         except Exception as exc:
@@ -881,18 +894,25 @@ def scan(force=False, quiet=False):
                 item["localOnly"] = True
         else:
             n_images += 1
+            zoom_name = digest + "_z" + ASSET_EXT
+            zoom_path = os.path.join(THUMB_DIR, zoom_name)
             cached = cache.get(signature)
             have_files = os.path.exists(thumb_path) and os.path.exists(preview_path)
-            if cached and have_files and not force:
+            # a nagyitasi valtozat kesobb keszult, mint a tobbi: a regi
+            # gyorsitotar-bejegyzesbol meg hianyzik, ilyenkor ujra kell generalni
+            have_zoom = "zoomW" in (cached or {}) and (
+                not cached.get("zoomW") or os.path.exists(zoom_path))
+            if cached and have_files and have_zoom and not force:
                 meta = cached
             else:
                 if not quiet:
                     print(f"  [{index}/{len(files)}] bebyeg keszul: {name}")
                 try:
-                    width, height, accent, blur = build_thumbs(
-                        path, thumb_path, preview_path, Image
+                    width, height, accent, blur, zoom_w = build_thumbs(
+                        path, thumb_path, preview_path, Image, zoom_path
                     )
-                    meta = {"w": width, "h": height, "accent": accent, "blur": blur}
+                    meta = {"w": width, "h": height, "accent": accent, "blur": blur,
+                            "zoomW": zoom_w}
                 except Exception as exc:                       # serult / ismeretlen kep
                     print(f"  ! nem sikerult feldolgozni: {name} ({exc})")
                     meta = None
@@ -900,9 +920,13 @@ def scan(force=False, quiet=False):
             if meta:
                 new_cache[signature] = meta
                 keep_thumbs.update((thumb_name, preview_name))
-                item.update(meta)
+                item.update({k: v for k, v in meta.items() if k != "zoomW"})
                 item["thumb"] = f"thumbs/{thumb_name}"
                 item["preview"] = f"thumbs/{preview_name}"
+                if meta.get("zoomW"):
+                    keep_thumbs.add(zoom_name)
+                    item["zoom"] = f"thumbs/{zoom_name}"
+                    item["zoomW"] = meta["zoomW"]
 
         groups.setdefault(key, []).append(item)
 
