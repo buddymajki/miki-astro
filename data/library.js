@@ -1,12 +1,12 @@
 window.MIKI_LIBRARY = {
- "generated": "2026-09-24T13:14:36",
+ "generated": "2026-09-25T23:34:58",
  "mediaDir": "DONE",
  "stats": {
-  "objects": 34,
-  "files": 110,
-  "images": 106,
+  "objects": 35,
+  "files": 111,
+  "images": 107,
   "videos": 4,
-  "bytes": 1248636778
+  "bytes": 1254321394
  },
  "objects": [
   {
@@ -207,10 +207,6 @@ window.MIKI_LIBRARY = {
       "exposure": 30.0,
       "total": 4140.0,
       "filter": "IR-cut",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "date": "2026-09-01",
-      "focal": 163,
       "source": "filename"
      },
      "w": 1769,
@@ -305,6 +301,43 @@ window.MIKI_LIBRARY = {
      "preview": "thumbs/d2abfe5713ccb9be_p.webp",
      "zoom": "thumbs/d2abfe5713ccb9be_z.webp",
      "zoomW": 4066
+    }
+   ]
+  },
+  {
+   "id": "IC1805",
+   "count": 1,
+   "bytes": 5684616,
+   "latest": "2026-09-25T23:33",
+   "cover": "thumbs/40eec132721aed3a_t.webp",
+   "accent": "#c66d88",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAWABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmfKb0zTxEB978akgkChhJyuKJHWRWKqFAXsaCrEUmwPiMhl7HFFRAkCimK4obnnpTi/BCjANFFIBAOKKKKYj/2Q==",
+   "items": [
+    {
+     "file": "DONE/IC1805_465x30sec_MAIN_1nightfaststack2.png",
+     "name": "IC1805_465x30sec_MAIN_1nightfaststack2.png",
+     "label": "1nightfaststack2",
+     "kind": "image",
+     "bytes": 5684616,
+     "mtime": "2026-09-25T23:33",
+     "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 465,
+      "exposure": 30.0,
+      "total": 13950.0,
+      "source": "filename"
+     },
+     "w": 2143,
+     "h": 2370,
+     "accent": "#c66d88",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAWABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmfKb0zTxEB978akgkChhJyuKJHWRWKqFAXsaCrEUmwPiMhl7HFFRAkCimK4obnnpTi/BCjANFFIBAOKKKKYj/2Q==",
+     "thumb": "thumbs/40eec132721aed3a_t.webp",
+     "preview": "thumbs/40eec132721aed3a_p.webp"
     }
    ]
   },
@@ -479,16 +512,7 @@ window.MIKI_LIBRARY = {
        "hu": "Kriens-Obernau (LU), Svájc",
        "en": "Kriens-Obernau (LU), Switzerland"
       },
-      "bortle": "5–6",
-      "frames": 25,
-      "exposure": 30.0,
-      "total": 720.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-08-28",
-      "focal": 163,
-      "source": "fits"
+      "bortle": "5–6"
      },
      "w": 1532,
      "h": 1530,
@@ -525,11 +549,6 @@ window.MIKI_LIBRARY = {
       "frames": 36,
       "exposure": 30.0,
       "total": 1080.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-08-28",
-      "focal": 163,
       "source": "filename"
      },
      "w": 2025,
@@ -1519,11 +1538,6 @@ window.MIKI_LIBRARY = {
       "frames": 14,
       "exposure": 30.0,
       "total": 420.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-08-28",
-      "focal": 163,
       "source": "filename"
      },
      "w": 2261,
@@ -1561,11 +1575,6 @@ window.MIKI_LIBRARY = {
       "frames": 196,
       "exposure": 30.0,
       "total": 5880.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-07",
-      "focal": 163,
       "source": "filename"
      },
      "w": 2911,
@@ -1605,11 +1614,6 @@ window.MIKI_LIBRARY = {
       "frames": 22,
       "exposure": 30.0,
       "total": 660.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-08-28",
-      "focal": 163,
       "source": "filename"
      },
      "w": 3456,
@@ -1649,11 +1653,6 @@ window.MIKI_LIBRARY = {
       "frames": 81,
       "exposure": 30.0,
       "total": 2430.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-20",
-      "focal": 163,
       "source": "filename"
      },
      "w": 1632,
@@ -2889,11 +2888,6 @@ window.MIKI_LIBRARY = {
       "frames": 606,
       "exposure": 30.0,
       "total": 18180.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "LP",
-      "gain": 200,
-      "date": "2026-09-22",
-      "focal": 163,
       "source": "filename"
      },
      "w": 1995,
@@ -2919,11 +2913,6 @@ window.MIKI_LIBRARY = {
       "frames": 606,
       "exposure": 30.0,
       "total": 18180.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "LP",
-      "gain": 200,
-      "date": "2026-09-22",
-      "focal": 163,
       "source": "filename"
      },
      "w": 1513,
@@ -2949,11 +2938,6 @@ window.MIKI_LIBRARY = {
       "frames": 606,
       "exposure": 30.0,
       "total": 18180.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "LP",
-      "gain": 200,
-      "date": "2026-09-22",
-      "focal": 163,
       "source": "filename"
      },
      "w": 1513,
@@ -3173,11 +3157,6 @@ window.MIKI_LIBRARY = {
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-23",
-      "focal": 163,
       "source": "filename"
      },
      "w": 955,
@@ -3204,11 +3183,6 @@ window.MIKI_LIBRARY = {
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-23",
-      "focal": 163,
       "source": "filename"
      },
      "w": 4027,
@@ -3236,11 +3210,6 @@ window.MIKI_LIBRARY = {
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-23",
-      "focal": 163,
       "source": "filename"
      },
      "w": 1717,
@@ -3266,11 +3235,6 @@ window.MIKI_LIBRARY = {
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-23",
-      "focal": 163,
       "source": "filename"
      },
      "w": 3793,
@@ -3298,11 +3262,6 @@ window.MIKI_LIBRARY = {
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-23",
-      "focal": 163,
       "source": "filename"
      },
      "w": 4027,
@@ -3330,11 +3289,6 @@ window.MIKI_LIBRARY = {
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-23",
-      "focal": 163,
       "source": "filename"
      },
      "w": 4797,
@@ -3420,9 +3374,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "frames": 680,
       "exposure": 30.0,
       "total": 20400.0,
@@ -3449,9 +3400,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "frames": 680,
       "exposure": 30.0,
       "total": 20400.0,
@@ -3479,9 +3427,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "frames": 680,
       "exposure": 30.0,
       "total": 20400.0,
@@ -3509,9 +3454,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "frames": 680,
       "exposure": 30.0,
       "total": 20400.0,
@@ -3539,9 +3481,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "frames": 680,
       "exposure": 30.0,
       "total": 20400.0,
@@ -3567,9 +3506,6 @@ window.MIKI_LIBRARY = {
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 163,
       "frames": 680,
       "exposure": 30.0,
       "total": 20400.0,
