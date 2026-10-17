@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-07T20:19:31",
+ "generated": "2026-10-17T11:04:42",
  "mediaDir": "DONE",
  "stats": {
-  "objects": 54,
-  "files": 173,
-  "images": 169,
+  "objects": 55,
+  "files": 179,
+  "images": 175,
   "videos": 4,
-  "bytes": 1704090157
+  "bytes": 1759333571
  },
  "objects": [
   {
@@ -2740,6 +2740,209 @@
    ]
   },
   {
+   "id": "M74",
+   "count": 6,
+   "bytes": 55243414,
+   "latest": "2026-10-17T11:00",
+   "cover": "thumbs/13158551696770fd_t.webp",
+   "accent": "#716dc6",
+   "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmKWgVLNKJNuEVcDHHegCKiiigAFFFFABRRRQB/9k=",
+   "items": [
+    {
+     "file": "DONE/M74_696x30sec_crop_BGE_SPCC_AW16_MAIN.png",
+     "name": "M74_696x30sec_crop_BGE_SPCC_AW16_MAIN.png",
+     "label": "crop BGE SPCC AW16",
+     "kind": "image",
+     "bytes": 2969519,
+     "mtime": "2026-10-17T10:59",
+     "main": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 696,
+      "exposure": 30.0,
+      "total": 20880.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-10-15",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 1369,
+     "h": 1369,
+     "accent": "#716dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmKWgVLNKJNuEVcDHHegCKiiigAFFFFABRRRQB/9k=",
+     "thumb": "thumbs/13158551696770fd_t.webp",
+     "preview": "thumbs/13158551696770fd_p.webp"
+    },
+    {
+     "file": "DONE/M74_696x30sec_crop_BGE_SPCC_AW16_annot.png",
+     "name": "M74_696x30sec_crop_BGE_SPCC_AW16_annot.png",
+     "label": "crop BGE SPCC AW16 annot",
+     "kind": "image",
+     "bytes": 17258882,
+     "mtime": "2026-10-17T11:00",
+     "annot": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 696,
+      "exposure": 30.0,
+      "total": 20880.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-10-15",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 3097,
+     "h": 7382,
+     "accent": "#c69b6d",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAwABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmOop3OKbTixIHTgY4FADG60UGigB5Xbgb1Py54ox7jpmkP4dKX8ulADWHT5h0ooNFACk/TpTvy6UhXnt0pGbZ2ByKAA9ulFMMme1FAH//2Q==",
+     "thumb": "thumbs/8c1ba112ad4f1e96_t.webp",
+     "preview": "thumbs/8c1ba112ad4f1e96_p.webp",
+     "zoom": "thumbs/8c1ba112ad4f1e96_z.webp",
+     "zoomW": 3097
+    },
+    {
+     "file": "DONE/M74_696x30sec_crop_BGE_SPCC_AW16_annot_overlay.png",
+     "name": "M74_696x30sec_crop_BGE_SPCC_AW16_annot_overlay.png",
+     "label": "crop BGE SPCC AW16 annot overlay",
+     "kind": "image",
+     "bytes": 15644964,
+     "mtime": "2026-10-17T11:00",
+     "annot": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 696,
+      "exposure": 30.0,
+      "total": 20880.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-10-15",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 3097,
+     "h": 3009,
+     "accent": "#b36dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAATABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmOop3NN7U4ksBnsMUAMbrRQaKAFB4FKTRRQAxjRRRQB//2Q==",
+     "thumb": "thumbs/0b0a1bc015870114_t.webp",
+     "preview": "thumbs/0b0a1bc015870114_p.webp",
+     "zoom": "thumbs/0b0a1bc015870114_z.webp",
+     "zoomW": 3097
+    },
+    {
+     "file": "DONE/M74_696x30sec_crop_BGE_SPCC_AW16_annot_table.png",
+     "name": "M74_696x30sec_crop_BGE_SPCC_AW16_annot_table.png",
+     "label": "crop BGE SPCC AW16 annot table",
+     "kind": "image",
+     "bytes": 5249882,
+     "mtime": "2026-10-17T11:00",
+     "annot": true,
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 696,
+      "exposure": 30.0,
+      "total": 20880.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-10-15",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 3665,
+     "h": 5176,
+     "accent": "#c69e6d",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAcABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDm2bPRVHy44o/AfdpD+HSjGfT7tACE9OB0ooPbp0ooAD+HSl656dKXgnoPu1HKc7eO1ADm4NFQ0UAf/9k=",
+     "thumb": "thumbs/62b5567e48493dba_t.webp",
+     "preview": "thumbs/62b5567e48493dba_p.webp",
+     "zoom": "thumbs/62b5567e48493dba_z.webp",
+     "zoomW": 3665
+    },
+    {
+     "file": "DONE/M74_696x30sec_crop_BGE_SPCC_AW16_1.png",
+     "name": "M74_696x30sec_crop_BGE_SPCC_AW16_1.png",
+     "label": "crop BGE SPCC AW16 1",
+     "kind": "image",
+     "bytes": 13047685,
+     "mtime": "2026-10-17T10:57",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 696,
+      "exposure": 30.0,
+      "total": 20880.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-10-15",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 2863,
+     "h": 2863,
+     "accent": "#b36dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmaM0lOJyBwBgY4oASikxRSAVqBRRTAKKKKAP/2Q==",
+     "thumb": "thumbs/69af63a63b21119e_t.webp",
+     "preview": "thumbs/69af63a63b21119e_p.webp",
+     "zoom": "thumbs/69af63a63b21119e_z.webp",
+     "zoomW": 2863
+    },
+    {
+     "file": "DONE/M74_696x30sec_crop_BGE_SPCC_AW16_2.png",
+     "name": "M74_696x30sec_crop_BGE_SPCC_AW16_2.png",
+     "label": "crop BGE SPCC AW16 2",
+     "kind": "image",
+     "bytes": 1072482,
+     "mtime": "2026-10-17T10:58",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 696,
+      "exposure": 30.0,
+      "total": 20880.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-10-15",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 824,
+     "h": 825,
+     "accent": "#7c6dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDmQMmlZGXG5SM+tKjbXB9Knurr7QF+UDAxxQBWopaKAEFLRRQAlFFFAH//2Q==",
+     "thumb": "thumbs/26784ebebdb4dfcf_t.webp",
+     "preview": "thumbs/26784ebebdb4dfcf_p.webp"
+    }
+   ]
+  },
+  {
    "id": "M76",
    "count": 2,
    "bytes": 395769,
@@ -4665,11 +4868,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 1169,
@@ -4693,9 +4891,6 @@
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 160,
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
@@ -4727,11 +4922,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 4352,
@@ -4760,11 +4950,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 5184,
@@ -4793,11 +4978,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 3621,
@@ -4826,11 +5006,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 4314,
@@ -4855,9 +5030,6 @@
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 160,
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
@@ -4883,9 +5055,6 @@
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 160,
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
@@ -4911,9 +5080,6 @@
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 160,
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
@@ -4941,9 +5107,6 @@
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 160,
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
@@ -4971,9 +5134,6 @@
        "en": "Kriens-Obernau (LU), Switzerland"
       },
       "bortle": "5–6",
-      "telescope": "ZWO Seestar S30 Pro",
-      "gain": 200,
-      "focal": 160,
       "frames": 271,
       "exposure": 30.0,
       "total": 8130.0,
@@ -5004,11 +5164,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 4206,
@@ -5036,11 +5191,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 4206,
@@ -5068,11 +5218,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 3387,
@@ -5100,11 +5245,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 3387,
@@ -5132,11 +5272,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 1169,
@@ -5162,11 +5297,6 @@
       "frames": 973,
       "exposure": 30.0,
       "total": 29190.0,
-      "telescope": "ZWO Seestar S30 Pro",
-      "filter": "IR-cut",
-      "gain": 200,
-      "date": "2026-09-24",
-      "focal": 160,
       "source": "filename"
      },
      "w": 4206,
