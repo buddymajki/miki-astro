@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-17T11:30:04",
+ "generated": "2026-10-17T11:58:24",
  "mediaDir": "DONE",
  "stats": {
   "objects": 55,
-  "files": 181,
-  "images": 177,
+  "files": 183,
+  "images": 179,
   "videos": 4,
-  "bytes": 1766699400
+  "bytes": 1767842874
  },
  "objects": [
   {
@@ -2741,9 +2741,9 @@
   },
   {
    "id": "M74",
-   "count": 8,
-   "bytes": 62609243,
-   "latest": "2026-10-17T11:27",
+   "count": 10,
+   "bytes": 63752717,
+   "latest": "2026-10-17T11:54",
    "cover": "thumbs/5b9d19e8a3c271fd_t.webp",
    "accent": "#c66d95",
    "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDl6CCOooU4INTTz+aF+UDAxxQBBRS0UAJS0UUAFFFFAH//2Q==",
@@ -3001,6 +3001,66 @@
      "preview": "thumbs/e1bcebcd93f87688_p.webp",
      "zoom": "thumbs/e1bcebcd93f87688_z.webp",
      "zoomW": 2863
+    },
+    {
+     "file": "DONE/M74_696x30sec_withoutdrizzle_crop_BGE_SPCC_1.png",
+     "name": "M74_696x30sec_withoutdrizzle_crop_BGE_SPCC_1.png",
+     "label": "withoutdrizzle crop BGE SPCC 1",
+     "kind": "image",
+     "bytes": 893469,
+     "mtime": "2026-10-17T11:54",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 696,
+      "exposure": 30.0,
+      "total": 20880.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-10-15",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 860,
+     "h": 860,
+     "accent": "#8d6dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaKKfI+/HygYGOKAI6KWigAooooAKKKKAP//Z",
+     "thumb": "thumbs/3978afc03b91b813_t.webp",
+     "preview": "thumbs/3978afc03b91b813_p.webp"
+    },
+    {
+     "file": "DONE/M74_696x30sec_withoutdrizzle_crop_BGE_SPCC_2.png",
+     "name": "M74_696x30sec_withoutdrizzle_crop_BGE_SPCC_2.png",
+     "label": "withoutdrizzle crop BGE SPCC 2",
+     "kind": "image",
+     "bytes": 250005,
+     "mtime": "2026-10-17T11:54",
+     "acq": {
+      "location": {
+       "hu": "Kriens-Obernau (LU), Svájc",
+       "en": "Kriens-Obernau (LU), Switzerland"
+      },
+      "bortle": "5–6",
+      "frames": 696,
+      "exposure": 30.0,
+      "total": 20880.0,
+      "telescope": "ZWO Seestar S30 Pro",
+      "filter": "IR-cut",
+      "gain": 200,
+      "date": "2026-10-15",
+      "focal": 163,
+      "source": "filename"
+     },
+     "w": 450,
+     "h": 449,
+     "accent": "#846dc6",
+     "blur": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAAUABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDlaCCOopUO1geuKnuZ1m27UC4GOKAK9FFFABRRRQAUUUUAf//Z",
+     "thumb": "thumbs/493b73837b3f6d9b_t.webp",
+     "preview": "thumbs/493b73837b3f6d9b_p.webp"
     }
    ]
   },
